@@ -15,7 +15,7 @@
         <div class="sideList">
             <dl ng-repeat="item in menu track by $index">
                 <dt ng-click="navShow($index)">{{item.name}}<i></i></dt>
-                <dd ng-repeat="childItem in item.items track by $index" ng-show="item.isShow"><a href="javascript:;">{{childItem.name}}</a></dd>
+                <dd class="hide-animation" ng-repeat="childItem in item.items track by $index" ng-show="item.isShow"><a href="javascript:;">{{childItem.name}}</a></dd>
             </dl>
         </div>
     </div>
@@ -38,8 +38,9 @@
     <div class="copyright">Company 2015-2020  1.0</div>
 
     <script src="angular.js"></script>
+    <script src="angular-animate.js"></script>
     <script>
-        var shop = angular.module("shop", []);
+        var shop = angular.module("shop", ["ngAnimate"]);
         shop.service("MainMenuService", [function () {
             var menu = [{
                 name: "订单管理",
@@ -112,7 +113,7 @@
                 setAllMenuHide();
                 $scope.menu[i].isShow = true;
             };
-        }]);
+        }]);        
     </script>
 </body>
 </html>
