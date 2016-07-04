@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/***支付方式***/
+.info .w-150{width: 150px}
+.payMethodBtn{margin-top: 30px}
+.payMethodLeft{display: inline-block;width: 150px;text-align: right;}
+.payMethodRight{margin-left: 5px;line-height: 26px;}
+.turnBtn{margin-left: 167px}
+.w130{width: 130px}
+.payMethodTextarea{min-width:750px;min-height: 340px}
+.h-30{height: 30px;width: 100%;}
+.margin-L5{margin-left: 5px}
+.paddingL20{padding-left: 20px}
+.h-23{height: 23px}
+.noBottom{border-bottom-style:none }
+.paddingL20{padding-left: 20px}
+.marginLR10{margin: auto 10px}
+
+.webDescribe {float: left;}
+.info .w90 { width: 90px}
+.info .w170 {width: 170px}
+.info .w205 {width: 205px}
+.info .w215 {width: 225px}
+.info .input-w98{width: 98px}
+.webDescribeBtn {float: left; margin-top: 60px; width: 100%;text-align: center;margin-bottom: 20px}
+.switchTypeW80 {display: inline-block;width: 80px}
+.switchTypeW50 {display: inline-block;width: 70px}
+.switchTypeW90 {display: inline-block;width: 90px}
+.tip-message{margin-left: 20px;color: #a9a9a9}
+.margin-LR5{margin: auto 5px}
+.margin-L2{margin-left: 2px}
+.margin-R5{margin-right: 5px}
+.input-w249{width: 228px}
+.marginL15{margin-left: 15px}
+
+.goodsLookTablef{border-collapse:collapse;}
+.goodsLookTablef tr td{height: 36px}
+.margin35{margin:35px auto auto 50px}
+
+.vertical-top{vertical-align: top}
+.width128{width: 128px}
+.width-148{width: 148px}
+.checkType{margin: auto 5px auto 0;vertical-align: -2px;cursor: pointer}
+.width60{width: 60px}
+.setweightSpan1{ display: inline-block;}
+.setweightSpan1_txt{height: 24px; line-height: 24px; border: 1px solid #ddd; padding: 0 10px; font-size: 12px; color: #a9a9a9;outline: none;}
+.SEOtextarea{width:311px;height: 120px }
+.inputW-20{width: 25px}
+.selectH-26{height: 24px;vertical-align: -2px}
+
+/*商品咨询设置*/
+.consultTextarea{height: 30px;width: 360px}
+.consulteBtn{margin-bottom: 20px}
+.consulteSpan3{display: inline-block;margin: 0 auto 10px 30px;font-size: 14px;font-weight: bold}
+.switchTypeW49 {display: inline-block;width: 50px}
+.consulteUL{float: left;margin-bottom: 50px}
+.info .marginT20{margin-top: 20px}
+
+/*仪表盘*/
+.dashCon{margin: 30px auto auto 10px;}
+.dashTitle{margin-bottom: 20px;width: 230px}
+.dashcon1{border: 1px solid #ddd;width: 702px;height: 149px}
+.dashcon2{border: 1px solid #ddd;width:1033px;height: 188px}
+.dashcon3{border: 1px solid #ddd;width:1033px;height: 232px;margin-bottom: 58px}
+.dashcon1>li{float: left;;height:100%;width: 233px;border-right: 1px solid #ddd}
+.dashcon2>li{float: left;;height:100%;width: 257px;border-right: 1px solid #ddd}
+.dashcon1> .noBordR{border-right-style: none}
+.dashcon2> .noBordR{border-right-style: none}
+.ser-show{margin-left: 718px;margin-top: -150px}
+.col-f69a41{color: #f69a41;margin: auto 5px;}
+.dash-h2{display: inline-block;font-size: 14px;margin-bottom:15px }
+.dash-h3{ display: inline-block;margin-top: 15px;font-size: 14px;margin-bottom:15px}
+.marginB-10{margin-bottom: 10px}
+.dash-vie{margin-top: -120px;width: 125px;margin-left: 100px;}
+.view-data1{display: inline-block;background: url(../images/dashSprite.png) -0px -0px no-repeat;height: 43px; width: 39px;overflow: hidden;margin-top: 25px}
+.view-data2{display: inline-block;background: url(../images/dashSprite.png) -39px -0px no-repeat;height: 40px; width: 36px;overflow: hidden;margin-top: 25px}
+.view-data3{display: inline-block;background: url(../images/dashSprite.png) -75px -2px no-repeat;height: 40px; width: 47px;overflow: hidden;margin-top: 25px}
+.view-data4{display: inline-block;background: url(../images/dashSprite.png) -122px -0px no-repeat;height: 40px; width: 47px;overflow: hidden;margin-top: 25px}
+.text-center{width: 100%;text-align: center ;}
+.view-data-ul{text-align: left;width: 170px;margin-left: 75px}
+.marginT35{margin-top: 35px}
+.dash-con3-tip{height: 17px;line-height: 17px;width: 380px;vertical-align: middle;float: left;margin-top: -36px;margin-left: 650px}
+.dash-con3-1{display: inline-block;width: 17px;height: 11px;margin-right: 5px;margin-left:37px;background-color: #0000cc;vertical-align:-1px}
+
+/***查看信息***/
+.w100{display: inline-block;width: 90px;text-align: right}
+.vertical-top{vertical-align: top}
+.lookMemTable{width: 100%}
+.lookMemTable tr td{width: 50%;height:33px;}
+.readOnly-textarea{border: 1px solid #ddd;resize: none;border-style: none;font-family: "Microsoft Yahei",微软雅黑,arial;font-size: 12px;outline:none;width: 432px;color: #666;margin-left: -5px}
+
+/***新增配送方式 新增加的***/
+.logistics{display: none;width: 133px;margin-left: 10px}
+.w100{width: 100px}
+.payAdds{width: 768px;border: 1px solid #ddd;margin-left: 160px}
+.payAdds-tip{color: #999;margin-left: 25px}
+.marginL20{margin-left: 20px}
+.marginL40{margin-left: 40px}
+.marginL99{margin-left: 99px}
+.payAdds a,.logistics-equation a{color: #4587db}
+.payAdds a:hover,.logistics-equation a:hover{text-decoration:underline}
+.payAdds-ul3>li{height: 30px;margin-top: 5px}
+.payAdds-titlew{display: inline-block;margin-top: 10px}
+.marginR10{margin-right: 10px}
+.setAddPrice{margin-left: 20px;cursor: pointer}
+.logistics-equation{margin-left: 10px;}
+.readOnly-logistics-col{color: #999;}
+
+/***商城后台的系统设置***/
+.sys-cone{overflow: hidden;margin-top: 10px;margin-left: 20px;width: 1046px}
+.sys-cone>li{float: left;border: 1px solid #ddd;width: 330px;height: 230px;margin: 10px;background-color: #f9f9f9}
+.sys-cone>li.noMarginL{margin-left: 0}
+.sys-cone dl dt{height: 65px;line-height: 65px;border-bottom: 1px dashed #ddd}
+.sys-cone dl dd{width: 150px;margin-top: 28px;color: #4587db;float: left}
+.sys-titv{margin-left: 9px;font-size: 14px}
+.sys-titv-list{margin-left: 33px;color: #4587db;cursor: pointer}
+.sys-cone i{display:inline-block;background-image:url(../images/sys-set-sprite.png);background-repeat:no-repeat;cursor:pointer;margin-left: 30px;vertical-align: -4px;*vertical-align:0px!important; /*仅IE7*/}
+.sys-cone i.store{margin-top: 5px;background-position:-40px -0px ;width:20px;height:20px;}
+.sys-cone i.seting{margin-top: 5px;background-position:-80px -0px ;width:21px;height:18px;}
+.sys-cone i.wuliu{margin-top: 5px;background-position:-101px -0px ;width:20px;height:17px;}
+.sys-cone i.opare{margin-top: 5px;background-position:-0px -0px ;width:20px;height:20px;}
+.sys-cone i.xitong{margin-top: 5px;background-position:-20px -0px ;width:20px;height:20px;}
+.sys-cone i.tupian{margin-top: 5px;background-position:-60px -0px ;width:18px;height:20px;}
+
+
+

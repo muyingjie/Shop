@@ -1,0 +1,127 @@
+/*订单列表，订单处理*/
+@charset "UTF-8";
+.order-handle{position: relative}
+.handle-list{ display: inline-block;position: relative; color: #4d7cbc; text-decoration: underline;}
+.handle-list i{display:inline-block;width:12px;height:12px;background:url(../images/mainSprite.png) no-repeat 3px -24px; position: absolute; right: -22px; bottom:0px; padding: 2px; border: 1px solid #fff}
+.handle-list i.arrow{border-bottom:1px solid #fff; z-index: 992;}
+.order-handle .order-proce{position: absolute; width: 48px; right:2px;  top: 17px; padding: 10px 15px; line-height: 18px; border:1px solid #ccc; background: #fff; z-index: 999;  margin-left: -12px; text-align: right}
+.order-proce{display: none}
+/*添加订单*/
+.info .title1{font-size: 12px; color: #e5611f; text-align:left; padding-left: 10px; width: 100%}
+.info .title2{font-size:16px; text-align: left; padding-left: 10px; color: #444;}
+.text-oper .selectinfo{display:inline-block;width: 90px;  height: 26px; margin-right: 10px; border: 1px solid #ccc; background: #ededed; text-align: center; line-height: 25px}
+.txt{margin-right: 7px}
+.text-oper{width:840px}
+.text-oper .del{width:30px;}
+.sellNum{width: 57px; height: 21px; border: 1px solid #ccc; text-align: center;}
+.tableCont .del{display:inline-block;width:14px;height:16px;background:url(../images/icon.png) no-repeat -71px -11px;margin-left: 10px; vertical-align: middle}
+.account font{color:#e5611f}
+.info ul li.addOrderList{height: auto}
+.text-oper .addr-textarea{width: 300px; height: 80px; max-width: 300px; max-height: 80px;color: #666;font-size:12px;}
+.addOrder{overflow: hidden; padding-bottom: 20px}
+body{overflow: auto}
+.account .style{position:relative;display:inline-block; margin-left:20px;width:113px; height: 26px;  line-height:26px;border: 1px solid #ccc; text-align: center; box-sizing: border-box;cursor: pointer}
+/*.account .style:hover{border:2px solid #ad0000; line-height: 24px;}*/
+
+.account .hover{ padding-left: 50px;}
+.account .hover a{ color: #4587da; margin-right: 10px}
+.account .active{border:2px solid #ad0000; line-height: 24px; background:url(../images/select-sure.png) no-repeat 94px 7px}
+.account .active1{border:2px solid #ad0000; background:url(../images/tips1.png) no-repeat 90px 4px}
+.account .active1 .tips{ position: absolute; left: 73px; top:18px; width: 200px }
+.account .active1 .tipsL{width: 35px; height: 40px; background: url(../images/tips2.png) no-repeat; float: left; }
+.account .active1 .tipsR{height: 30px; border: 1px solid #e1d39a; box-sizing: border-box; background:#fffdee; float: left; border-left: none; margin-top:10px; padding: 0 10px; text-indent:-35px; }
+.orderInfo{width:98.2%; padding:10px; border:1px solid #cbd9ed; background: #eff0fc; line-height: 26px; overflow: hidden;}
+.orderInfo .name{color:#2f79b6; padding: 0 3px;}
+.orderPrice{  float: right; width: 250px}
+.orderPrice dl{overflow: hidden}
+.orderPrice dt{float: left; width: 110px; text-align: right}
+.orderPrice dd{float:right; padding-left: 10px; text-align: left}
+.orderPrice dd.price{color:#e5611f}
+.orderPrice dd.bold{font-size: 18px}
+.orderBtn{margin:36px auto; width:100%;text-align: center;}
+.addAddress{ float: right; margin-right: 20px; color:#4587da; cursor: pointer}
+.closeAddress{padding-left: 20px;cursor: pointer}
+/*选择商品*/
+.order-tit{height:30px; line-height: 30px; margin:15px 0 0 0;}
+.addOrder2{margin-top:20px}
+.addOrder2 p{padding-left: 60px; position: relative; min-height: 26px;}
+.addOrder2 p span{position: absolute; left: 0;  top: 0;}
+.empty{height: 20px;}
+/*编辑订单*/
+.info .order-list{float: left; width: 400px;}
+.info .order-list li{ height: 28px; line-height: 28px}
+.info .order-list .info-left{width: 100px; text-align: right; display: inline-block;}
+.info .order-list .info-right{width:300px; text-align: left; display: inline-block;}
+.info .span-w118{width: 118px}
+/*支付弹框*/
+.payCon{overflow: hidden}
+.payul{overflow: hidden;float: left;}
+.info .payul li{overflow: hidden; padding:8px 0; height: auto}
+.payul .info-left{display: inline-block; width: 70px; text-align: right; vertical-align: top;}
+.payul .info-right{display: inline-block; text-align:left; margin-left: 5px}
+.payul .info-right textarea{width: 736px; max-width: 736px}
+.payul .info-right textarea.address{width:200px; max-width: 219px}
+.payul .info-right .payfalse{color:#e5611f; padding:0 5px}
+.receiptCenter{text-align: center}
+.receiptCenter .see{width:12px; height: 12px; display: inline-block; background:url(../images/mainSprite.png) no-repeat 0px -76px }
+.payul2{float: left;margin-left: 75px}
+.payul3{float: none; width: 100%;}
+.input-w80{width: 80px}
+.sendOutLayerTableCon{height: 85px;overflow: auto}
+.deliveryTable{width: 100%}
+.deliveryTable tr td{
+    width: 50%;
+    height:33px;
+}
+.sendOutLayerTableCon{height: 85px;overflow: auto}
+.w-70{display: inline-block;width: 70px;text-align: right;margin-right: 5px}
+.w-90{display: inline-block;width: 90px;text-align: right;margin-right: 5px}
+.marginT30{margin-top: 30px}
+.vertical-top{vertical-align: top}
+.diliverBtn{margin-top: 30px}
+/*查看收货单*/
+.seeRec{padding:10px 0 20px 0}
+.seeRec .payul{width: 30%; float: left}
+.seeRec li{ line-height: 24px}
+.seeService{float: left;}
+.seeService dl{width:500px;}
+.seeService dd{width:350px; float: left}
+.seeServiceGoods{margin-right: 50px; width: 210px}
+.seeServiceGoods dd{width: 90px;}
+.seeServiceGoods img{border:1px solid #ccc;}
+.return{padding-top:20px; overflow: hidden;}
+.return .project{min-height: 24px;}
+.return .info-left{float: left;width:65px; text-align: right; padding-right: 5px}
+.return .info-right{float: left;width:calc(100% - 70px);}
+.return .project .info-right span{width: 12px; height: 12px; display: inline-block; background: url("../images/mark.png") no-repeat -3px -3px; margin-right: 15px}
+.return .project .info-right .span2{ background: url("../images/mark.png") no-repeat -18px -3px;}
+.return .project .info-right .span3{ background: url("../images/mark.png") no-repeat -33px -3px;}
+.return .project .info-right .span4{ background: url("../images/mark.png") no-repeat -48px -3px;}
+.return .project .info-right .span5{ background: url("../images/mark.png") no-repeat -63px -3px;}
+.return .info-right textarea{ width:100%; max-width:100%; }
+/*查看订单-顾客留言*/
+.order-tit span{float: right; color:#2f79b6; font-weight: normal; }
+.message{width: 100%; border:1px solid #ccd9ea;}
+.message .tit{padding:0 17px; height: 29px; border-bottom:1px solid #ccd9ea; background: #f0f0fc; line-height: 30px }
+.message .tit span{float:right;}
+.message .con{padding:5px 17px; line-height: 20px;}
+.admin{border:1px solid #ccc;}
+.admin .tit{background: #f1f1f1; border-bottom: 1px solid #ccc;}
+.gitMsg{margin-top:30px;}
+.gitMsg .project{margin-bottom: 10px;}
+.gitMsg .project span{width: 70px; text-align: right; line-height: 26px; display: inline-block;}
+.gitMsg .project .txt{ width: 240px; height: 24px; border: 1px solid #ddd; margin-left: 10px; padding-left: 10px;}
+.gitMsg .project .content{height: 80px;}
+.info .span-w110{display: inline-block;width: 110px}
+
+/*编辑订单-发货 add By li 2016.5.5*/
+.send-goods{padding: 15px;}
+.input-w140{width: 140px}
+.send-goods-title tr th{padding-left: 20px}
+.send-goods-list tr td{padding-left: 20px}
+
+.newAddress1Btn{margin: 10px auto auto 90px}
+.noBottom{border-bottom-style:none}
+.marginT170{margin-top: 170px}
+
+
