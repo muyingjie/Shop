@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>会员列表</title>
+    <link href="libs/bootstrap.css" rel="stylesheet"  type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css">
     <link href="css/frame.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
@@ -43,12 +44,15 @@
     </div>
     <div class="copyright">Company 2015-2020  1.0</div>
 
+    <script src="libs/jquery.js"></script>
     <script src="libs/angular.js"></script>
     <script src="libs/angular-animate.js"></script>
     <script src="libs/angular-route.js"></script>
     <script src="libs/angular-ui-router.js"></script>
+    <script src="libs/bootstrap.js"></script>
+    <script src="libs/ui-bootstrap-tpl.js"></script>
     <script>
-        var shop = angular.module("shop", ["ngAnimate", "ui.router"]);
+        var shop = angular.module("shop", ["ngAnimate", "ui.router", "ui.bootstrap"]);
         //shop.config(["$routeProvider", function ($routeProvider) {
         //    $routeProvider.when("/orderList", {
         //        templateUrl: "template/order/orderList.html"
@@ -94,5 +98,6 @@
         }]);
     </script>
     <script src="service/MainMenuService.js"></script>
+    <script src="controller/addNewGoodsCategoryController.js"></script>
 </body>
 </html>
