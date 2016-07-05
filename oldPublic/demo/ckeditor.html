@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="your tags"/>
+    <meta name="description" content="150 words"/>
+    <title>选择货品</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+
+</head>
+<body>
+<div class="lt-main">
+    <h2 class="lt-title add-goods-head">
+        <div class="mtitle add-goods-page">CKEditor编辑器<span></span></div>
+        <span class="refreshBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="container">
+        <div class="info">
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例操作</span>
+                </li>
+                <li class="goodsClassify">
+                    <div class="text-oper">
+                        <div class="f-l gen-cancelBtn" id="getVal">获取编辑器的值</div>
+                        <div class="f-l gen-cancelBtn" id="setVal">设置编辑器的值</div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 详细信息-->
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例演示</span>
+                </li>
+                <li class="goodsLabel">
+                    <textarea id="productDetilInfo" cols="80" row="10" class="title" style="width: 928px;height: 341px">
+                        测试文字
+                    </textarea>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例代码</span>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">创建编辑器:</span>
+                    <div class="text-oper">
+                        var editor=CKEDITOR.replace($('#productDetilInfo')[0]);
+                    </div>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">创建简版编辑器:</span>
+                    <div class="text-oper">
+                        <pre>
+                            <code>
+var editor=CKEDITOR.replace($('#productDetilInfo')[0],{
+    toolbar:[
+        { name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize','lineheight','letterspacing'] },
+        { name: 'basicstyles',items : [ 'Bold','Italic','Underline','Strike']},
+        { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+        { name: 'paragraph1',items:  [ 'NumberedList', 'BulletedList']},
+        { name: 'paragraph2',items:  [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
+        { name: 'Link',items:  [ 'Link']},
+        { name: 'Smiley',items:  [ 'Smiley']}
+    ]
+});
+                            </code>
+                         </pre>
+                    </div>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">获取值:</span>
+                    <div class="text-oper">
+                        editor.getData();
+                    </div>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">设置值:</span>
+                    <div class="text-oper">
+                        editor.setData('测试修改文字');
+                    </div>
+                </li>
+                <li class="goodsClassify" style="color:red">
+                    <span class="title">注意:</span>
+                    <div class="text-oper">
+                        由于CKEditor有独立的加载机制不能进行模块化，需要单独引入"../js/libs/ckeditor/ckeditor.js"
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="btn-sub btnCenter">
+            <div class="f-l gen-sureBtn">保存</div>
+            <div class="f-l gen-cancelBtn">取消</div>
+        </div> -->
+    </div>
+
+</div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/libs/ckeditor/ckeditor.js"></script>
+<script>
+  appManager.use('ckeditor');
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>商品管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">商品管理<span>-商品类型</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+
+<div class="mainCont">
+    <div class="mainCtrl">
+        <ul>
+            <li><span class="add">添加商品类型</span></li>
+            <li><span class="del">删除</span></li>
+        </ul>
+    </div>
+
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+        <tr>
+            <th width="100" class="t-center">
+                <input type="hidden" value=""/>
+                <i class="checkbox checkAll"></i>
+            </th>
+            <th>商品类型名称</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+        <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+            <tr id="1">
+                <td class="t-center">
+                    <input type="hidden" value=""/>
+                    <i class="checkbox"></i>
+                </td>
+                <td>膨化食品</td>
+                <td><a href="">编辑</a><a class="del-link ">删除</a></td>
+            </tr>
+            <tr id="2">
+                <td class="t-center">
+                    <input type="hidden" value=""/>
+                    <i class="checkbox"></i>
+                </td>
+                <td>女装</td>
+                <td><a href="">编辑</a><a class="del-link ">删除</a></td>
+            </tr>
+
+            <tr id="7">
+                <td class="t-center">
+                    <input type="hidden" value=""/>
+                    <i class="checkbox"></i>
+                </td>
+                <td>鸡蛋</td>
+                <td><a href="">编辑</a><a class="del-link ">删除</a></td>
+            </tr>
+        </table>
+        <!-- 分页 暂时不用了-->
+       <!-- <div class="pages">
+            <div class="pageLeft">每页
+                <div class="select pagePer">
+                    <input type="hidden" value="20">
+                    <span>20</span>
+                    <i></i>
+                    <ul>
+                        <li v="20" class="sel">20</li>
+                        <li v="40">40</li>
+                        <li v="60">60</li>
+                    </ul>
+                </div>
+                条，共<span class="pageCount">35</span>条
+            </div>
+            <a class="dis">首页</a><a class="dis">上一页</a>
+            <div class="select pageList">
+                <input type="hidden" class="currPage" value="1">
+                <span>第1页</span>
+                <i></i>
+                <ul>
+                    <li><a class="" >第1页</a></li>
+                    <li><a href="1.html">第2页</a></li>
+                    <li><a href="">第3页</a></li>
+                    <li><a href="">第4页</a></li>
+                </ul>
+            </div>
+            <a href="">下一页</a><a href="">尾页</a>
+        </div>-->
+    </div>
+</div>
+
+<!--删除商品类型开始-->
+<!--<div class="box w-450 type-box" style="display: block;position: absolute;top: 30%;left: 30%;">-->
+    <!--<div class="box-title  ft-12">-->
+        <!--<h2 class="box-h2 f-l">删除图片</h2>-->
+        <!--<span class="box-close f-r"></span>-->
+    <!--</div>-->
+    <!--<div class="box-con info brand-infor">-->
+        <!--<span>请确认是否删除选中此商品类型？删除后不再显示 !</span>-->
+    <!--</div>-->
+    <!--<div class="box-btn brand-btn">-->
+        <!--<span class="gen-sureBtn boxSave">删除</span>-->
+        <!--<span class="gen-cancelBtn brand-right">取消</span>-->
+    <!--</div>-->
+<!--</div>-->
+<!--删除商品类型结束-->
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('goodsType');
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/form.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+<link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+<link rel="stylesheet" href="../css/box.css" type="text/css">
+
+<link rel="stylesheet" href="../css/plugs/ztreeStyle/zTreeStyle.css" type="text/css">
+<style>
+.tree-box{position: static;}
+        .tree-conten{margin-top: 12px;border: 1px solid #ddd;overflow-y: auto}
+        .search-swith{background-color: #fff;margin-left: 10px;cursor: pointer}
+        .box-switch-head{height: 29px}
+
+</style>
+</head>
+
+<body>
+<div class="tree-box">
+     
+   <div>
+       <input type="text" class="txt" value="搜索分类展示的名称"/>
+       <input type="button" class="txt search-swith" value="搜索">
+   </div>
+    <div class="tree-conten">
+    	<ul id="treeDemo" class="ztree"></ul>
+    </div>
+    <div class="box-btn ">
+        <span class="gen-sureBtn">确定</span>
+        <span class="gen-cancelBtn">取消</span>
+    </div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<!-- <script src="../js/libs/plugs/calendar/jscal2.js"></script>
+<script src="../js/libs/plugs/calendar/cn.js"></script> -->
+
+<script>
+    appManager.use(['ztree']);
+    seajs.use("../js/widgets/dialogs",function(m){
+		m.initFrame(function(data){
+			//$("body").html(data.id)
+		})
+    	$(".gen-sureBtn").click(function(){
+
+            //ajax
+            
+    	       m.closeDialog("3")
+			
+    	})
+    	$(":button").click(function(){
+    		m.showIframe({title:"选项卡切换",url:"drag.html",width:400,callback:function(){}})
+    	})
+    }) 
+</script>
+</body>
+</html>

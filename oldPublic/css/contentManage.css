@@ -1,0 +1,136 @@
+
+/*弹出框结构*/
+.box-title{*padding-top:1px!important;height: 22px;font-size: 14px;color: #424242;border-bottom: 1px solid #ddd; margin-bottom: 10px; }
+.box-h2{ font-size: 14px; color: #333; width: 80%;font-family: "微软雅黑"; height: auto;overflow: hidden; font-weight: normal; float: left;}
+.box-close{background: url("../images/mainSprite.png") no-repeat -230px -152px; width: 12px; height: 12px; overflow: hidden;  cursor: pointer; float: right;}
+
+
+/** 操作 链接距右距离
+<a href="" class="a-mt10">编辑</a><a href="">删除</a>
+**/
+.a-mt15{ margin-right:15px;}
+
+
+
+/*input图片上传 file美化
+<span class="title">上传图片：</span>
+<div class="uploader">
+    <a href="javascript:;" class="file fl">选择图片<input type="file" name="" id=""></a>
+    <div class="default-tip fl">建议每次添加尺寸相同</div>
+    <span class="uploaderImg fl"><img src="../images/default_image.jpg" /></span>
+</div>
+*/
+/* 表单必填项 * 颜色 */
+.red{ color: #ff0000; margin-right: 3px;}
+.uploader { position:relative; display:inline-block; margin-left: 2px;}
+.uploader .file {position: relative;display: inline-block;border: 1px solid #ddd;border-radius: 1px;padding: 0px 26px; overflow: hidden; color: #666;text-decoration: none;text-indent: 0;line-height: 26px;cursor: pointer;}
+.uploader .file:hover{color: #1E88C7;border: 1px solid #1E88C7;}
+.uploader .file input { position: absolute; font-size: 100px; right: 0; top: 0; opacity: 0; cursor:pointer; filter:alpha(opacity=0);/* 兼容IE */ }
+.uploaderImg{ width:104px; height: 104px; border:1px #ccc dashed; clear: left; display: block; margin-top: 5px;}
+.uploaderImg img{ max-height: 104px; max-width: 104px; vertical-align: middle;}
+/*弹出框内的页签 去除边距*/
+.box-con .Tab-ul{ margin: 0px;}
+
+/* 文本框文字选中状态 */
+.account .style{display:inline-block;width:auto; height: 26px;*height:24px; line-height:26px;*line-height:24px; border: 1px solid #ddd; text-align: center; box-sizing: border-box; margin: 0px 5px; padding:0px 28px; cursor: pointer;}
+.account .style:hover{border:1px solid #ad0000;}
+.account .active,.account .active:hover{border:2px solid #ad0000; line-height: 24px; background:url(../images/select-sure.png) no-repeat right bottom;}
+
+/* 资讯分类 */
+.addImg{ background: url(../images/addImg.jpg) no-repeat 0 0; width: 12px; height: 12px; display: inline-block;vertical-align:-1px; margin-right: 5px;}
+.minusImg{ background: url(../images/minusImg.jpg) no-repeat 0 0; width: 12px; height: 12px; display: inline-block;vertical-align:-1px; margin-right: 5px;}
+.secondC{ margin-left: 15px;}
+.threeC{ margin-left: 34px;}
+.tableList td a.jinyong{color: #666;}
+.select-w166{width: 182px}
+.Consult-list .tableCont{max-height: 533px;overflow-y: auto}
+.noBottom{border-bottom-style: none}
+
+/* 站内消息 */
+.answer-textarea{ width: 290px;min-height: 80px;border: 1px solid #ddd;resize: none;color: #a9a9a9;outline: none;text-indent: 1em;}/*收件箱回复*/
+.mail-textarea{ width: 517px;min-height: 80px;border: 1px solid #ddd;resize: none;color: #a9a9a9;outline: none;text-indent: 1em;}/*发消息*/
+.inputM{ width: 500px; vertical-align: top; margin-right: 5px;}
+.message .mainCtrl{ padding-top: 0px;}
+.message ul li{ float: left; margin-left: 10px; margin-top: 0px;}
+
+/* 图片列表 */
+.upload-cen {height: 50px;line-height: 50px;width: 100%; text-align: center;}
+.uploadImgcon{border: 1px solid #ddd;overflow: hidden;margin-top: 10px;padding: 5px 15px 15px 35px;min-height: 112px}
+.uploadImgMiddle{height: 45px;line-height:45px;}
+.uploadImgMiddle a:hover{text-decoration:underline;color:#4587da;}
+.uploadImgUpbtn{margin-top: 9px;margin-left: 35px }
+.uploadImgPosition{position: absolute;margin-top: -36px;margin-left:200px}
+.fake-img { height: 25px;line-height: 25px; width: 117px;text-align: center;background: #ededed; }
+.true-img {position: absolute;margin-left: -90px; width: 117px;opacity: 0;filter: alpha(opacity=0);}
+.goodsImgList {margin: 5px 0;display: block;}
+.addGoodsImg { height: 100px;  width: 100px; border: 1px solid #ddd;float: left;margin-right: 10px;overflow: hidden;position: relative; margin-top: 10px;}
+.deleteIcon{height: 13px; width: 13px;position: absolute;top: 5px; right: 3px;background: url("../images/delect_img_icon.png") no-repeat;}
+
+.loadWebImgCon{width: 99.5%;height:200px;border: 1px solid #ddd;text-align: center}
+.loadWebImgCon .loadWebAdderss{ float: left;margin-left: 20px;margin-top: 16px}
+.loadWebImgCon .loadWebInput{width: 558px;margin:10px auto }
+
+.createImgList{;width:510px;height:210px;margin: 40px  auto}
+.createImgList li{float: left;width: 210px;height:180px;}
+.createImgL{display: inline-block;width:100px;height:100px;border: 1px solid #ddd}
+.createImgM{display: inline-block;width:85px;height:85px;border: 1px solid #ddd}
+.createImgS{display: inline-block;width:70px;height:70px;border: 1px solid #ddd}
+.createImgL,.createImgM,.createImgS{margin-top: 10px}
+.createImgList .createImgLastLi{width: 80px}
+
+.waterMarkContent{margin-left: 45px;margin-top: 40px}
+.waterMarkContent li{vertical-align: middle;margin-bottom: 12px;height: 75px}
+.waterMarkImgList{display: inline-block;margin-left: 60px}
+.waterMarkImg{;display:inline-block;width: 70px;height: 70px;margin-right: 28px;}
+.userWaterMarkBtn{margin-top: 153px}
+.waterMarkPositin{position: absolute;margin-top: 27px}
+
+.imgSetmargin {margin-left: 30px;padding-top: 20px;}
+.imgSetmargin span {padding: 30px auto;}
+.settingImgCon { margin: 10px auto}
+.settingImgCon > li {margin-bottom: 5px}
+.settingImgT1 {width: 100%;height: 160px;background: #E7F1FD}
+.setting-tab-head { width: 100%; height: 30px;line-height: 30px;background: #E8E7EC;margin-top: 20px;
+    /*padding-left: 15px*/
+}
+.setting-tab-head>span{display: inline-block;margin-left: 15px}
+ .uploadtxt {margin: 5px 15px}
+.settingSize{margin: 15px auto 20px 15px}
+.uploadTop { margin-left: 75px}
+.viewImg{margin-left: 20px;width:80px;height: 24px;line-height:24px;border: 1px solid #ddd;text-align: center;cursor: pointer }
+.sizeInput{margin: auto 5px}
+.setImgBtn1{margin-bottom: 40px}
+.cEditor{min-height: 131px;border: 1px solid #ddd;margin-left: 92px}
+
+.setPhotoCon{width:88%;height: 228px;margin: 20px auto}
+.setPhotoList{height: 30px;line-height: 30px;width: 100%;background: #f0f0f0;}
+.setPhotoSelctUl{border: 1px solid #e7e7eb;overflow: hidden;height: 185px}
+.setPhotoSelctUl li{width: 33%;float: left}
+.waterLocationTable{margin-top: 14px;border:1px solid #ddd; border-collapse:collapse;}
+.waterLocationTable tr td{width: 50px;height: 43px;border: 1px solid #ddd;;vertical-align: middle;text-align: center;cursor: pointer}
+.bg-4587da{background: #4587da}
+.marginL70{margin-left: 70px}
+/* 广告管理 */
+.inputW-205{width: 185px}
+.inputW-58{width: 38px}
+.margin-t10{margin: auto 10px}
+.margin-L15{margin-left: 15px}
+.adsTextarea{width: 325px;height: 97px;margin-top: 5px}
+.marginL-5{margin-left: 5px}
+.info .w100{width: 100px}
+.margin-Top5{margin-top: 5px}
+
+.adsMaintainListTable{width: 97%;margin: 35px auto 15px;font-size: 14px}
+.adsMaintainListTable tr td{width: 33%;height: 30px;}
+.adsMaintainSpan{display: inline-block;width: 120px;text-align: right;}
+
+.upLoadDefaultBtn{text-align: center;width: 100% ;margin: 135px auto 230px auto}
+.upLoadDefaultSize{width: 650px;height: 416px;}
+.checkBoxImg{vertical-align: -2px;display: inline-block;cursor: pointer;margin-top: 1px;margin-left: 5px;}
+.marginL100{margin-left: 100px}
+
+.info .w120{width: 120px}
+.article-del-icon {top:40px;right:130px}
+
+
+

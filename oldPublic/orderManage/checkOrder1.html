@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>订单列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/orderManage.css"/>
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">订单管理<span>-查看订单</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+<div class="mainCont">
+    <div id="box_main">
+        <ul class="Tab-ul">
+                <li class="Tab-li Tab-li-first Tab-li-select">基本信息</li>
+                <li class="Tab-li ">商品信息</li>
+                <li class="Tab-li">收款纪录</li>
+                <li class="Tab-li">退款纪录</li>
+                <li class="Tab-li">订单备注</li>
+                <li class="Tab-li">订单日志</li>
+                <li class="Tab-li">顾客留言</li>
+            </ul>
+        <div class="tabs-infor1" style="display: block">
+            <h3 class="order-tit">商品价格</h3>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>商品总额</th>
+                    <th>配送费用</th>
+                    <th>订单减免</th>
+                    <th>优惠抵扣金额</th>
+                    <th>订单总额</th>
+                    <th>已支付金额</th>
+                    <th>积分抵扣金额</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td width="20px"></td>
+                        <td>￥278.00</td>
+                        <td>￥1.00</td>
+                        <td>￥200.00</td>
+                        <td>￥22.29</td>
+                        <td>￥22.29</td>
+                        <td>￥278</td>
+                        <td>￥278</td>
+                </table>
+            </div>
+            <h3 class="order-tit">收货人信息</h3>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>发货日期</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>手机</th>
+                    <th>地区</th>
+                    <th>地址</th>
+                    <th>邮编</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td width="20px"></td>
+                        <td>发货日期</td>
+                        <td>姓名</td>
+                        <td>电话</td>
+                        <td>手机</td>
+                        <td>地区</td>
+                        <td>地址</td>
+                        <td>邮编</td>
+                </table>
+            </div>
+            <h3 class="order-tit">订单其他信息</h3>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>配送方式</th>
+                    <th>商品重量</th>
+                    <th>支付方式</th>
+                    <th>可得积分</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="2">
+                        <td width="20px"></td>
+                        <td>配送方式</td>
+                        <td>商品重量</td>
+                        <td>支付方式</td>
+                        <td>可得积分</td>
+                </table>
+            </div>
+            <h3 class="order-tit">购买人信息</h3>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>用户名</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>地区</th>
+                    <th>Emai</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="5">
+                        <td width="20px"></td>
+                        <td>用户名</td>
+                        <td>姓名</td>
+                        <td>电话</td>
+                        <td>地区</td>
+                        <td>Emai</td>
+                </table>
+            </div>
+            <div class="orderInfo addOrder2">
+                <p><span>订单备注：</span>订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注订单备注
+                </p>
+
+                <p><span>订单附言：</span></p>
+            </div>
+        </div>
+        <div class="tabs-infor1 c-hide">
+            <div class="empty"></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>货品编号</th>
+                    <th>货品名称</th>
+                    <th>已发货量</th>
+                    <th>单价</th>
+                    <th>购买数量</th>
+                    <th>合计金额</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <div class="tclist noBottom">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td width="20px"></td>
+                        <td>123456789</td>
+                        <td>货品名称货品名称</td>
+                        <td>0</td>
+                        <td>￥369</td>
+                        <td>1</td>
+                        <td>￥369</td>
+                        </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-infor1">
+            <div class="empty"></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>单据日期</th>
+                    <th>支付金额</th>
+                    <th>支付方式</th>
+                    <th>状态</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <div class="tclist noBottom">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td width="20px"></td>
+                        <td>2016-03-30 10：5:5</td>
+                        <td>￥22.29</td>
+                        <td>预付款</td>
+                        <td>支付成功</td>
+                    </tr>
+                </table>
+                    </div>
+            </div>
+        </div>
+        <div class="tabs-infor1 c-hide">
+            <div class="empty"></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>单据日期</th>
+                    <th>退款金额</th>
+                    <th>退款方式</th>
+                    <th>状态</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <div class="tclist noBottom">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td width="20px"></td>
+                        <td>2016-03-30 10：5:5</td>
+                        <td>￥22.29</td>
+                        <td>预付款</td>
+                        <td>支付成功</td>
+                    </tr>
+                </table>
+                    </div>
+            </div>
+        </div>
+        <div class="tabs-infor1 c-hide">
+            <div class="empty"></div>
+            <div class="orderInfo">
+                订单备注：用户<span class="name">李凯</span>于2016-04-18 09:49:31＆nbsp;＆nbsp;＆nbsp;备注：VIP客户，着急使用，优先发货
+            </div>
+            <div class="empty"></div>
+            <div class="return">
+                <div class="project">
+                    <div class="info-left">标记:</div>
+                    <div class="info-right"><input type="radio" name="mark"/><span class="span1"></span><input type="radio" name="mark"/><span class="span2"></span><input type="radio" name="mark"/><span class="span3"></span><input type="radio" name="mark"/><span class="span4"></span><input type="radio" name="mark"/><span class="span5"></span></div>
+                </div>
+                <div class="project">
+                    <div class="info-left">订单备注:</div>
+                    <div class="info-right"><textarea name="" id="" class="textarea" cols="30"rows="5"></textarea></div>
+                </div>
+
+            </div>
+            <div class="btn-sub orderBtn">
+                <span class="gen-sureBtn">保存</span>
+            </div>
+        </div>
+        <div class="tabs-infor1 c-hide">
+            <div class="empty"></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>序号</th>
+                    <th>时间</th>
+                    <th>操作人</th>
+                    <th>行为</th>
+                    <th>结果</th>
+                    <th>备注</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <div class="tclist noBottom">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <th width="20px"></th>
+                        <td>1</td>
+                        <td>2016-06-30</td>
+                        <td>李凯</td>
+                        <td>创建</td>
+                        <td>成功</td>
+                        <td>订单创建成功</td>
+                    </tr>
+                </table>
+                    </div>
+            </div>
+        </div>
+        <div class="tabs-infor1 c-hide" style="overflow: hidden">
+            <div class="empty"></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="20px"></th>
+                    <th>订单商品</th>
+                    <th>购买数量</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td width="20px"></td>
+                        <td>订单商品订单商品</td>
+                        <td>2</td>
+                    </tr>
+                </table>
+            <h3 class="order-tit">顾客留言 <span>给顾客留言</span></h3>
+            <div class="message">
+                <div class="tit">
+                    留言人：顾客
+                    <span>留言时间：2016-03-20</span>
+                </div>
+                <div class="con">
+                    <p>标题：标题标题标题标题标题标题标题标题</p>
+                    <p>内容：内容内容内容内容内容内容内容内容</p>
+                </div>
+            </div>
+            <div class="empty"></div>
+            <div class="message admin">
+                <div class="tit">
+                    留言人：管理员
+                    <span>留言时间：2016-03-20</span>
+                </div>
+                <div class="con">
+                    <p>标题：标题标题标题标题标题标题标题标题</p>
+                    <p>内容：内容内容内容内容内容内容内容内容</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="jquery-1.9.1.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/main.js"></script>
+
+ <!--   <script src="../js/libs/seajs/sea-debug.js"></script>
+    <script src="../js/base.js"></script>
+
+    <script>
+        appManager.use("main")
+    </script>-->
+<script>
+    /***选项卡的页签的切换***/
+    $(".Tab-li").on("click", function () {
+        $(this).siblings().removeClass("Tab-li-select");
+        $(this).addClass("Tab-li-select");
+        var _index = $(this).index();
+        $(".tabs-infor1").eq(_index).show().siblings(".tabs-infor1").hide();
+        listInit();
+    });
+</script>
+
+</body>
+<html>

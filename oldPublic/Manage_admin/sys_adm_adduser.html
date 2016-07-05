@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<title>管理员设置账号列表添加</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/form.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/box.css">
+	<link rel="stylesheet" type="text/css" href="../css/list.css">
+	<link rel="stylesheet" type="text/css" href="../css/system_adm.css">
+</head>
+<body>
+<div class="s_form info">
+	<form action="">
+		<div class="adduserW">
+			<label for="la1"><i class="red">*</i> 账号名称：</label>
+			<input id="la1" name="account" type="text" class="txt input-w172 username" regname="userName" required data-max="10" pattern="^[\u2E80-\u9FFF\w-]+$" />
+			<div class="err-tip"><i></i><span></span></div>
+		</div>
+
+		<div class="adduserW">
+			<label for="la2"><i class="red">*</i> 公司邮箱：</label>
+			<input name="mail"  id="la2" type="text" class="txt input-w172 mail" regname="email" required pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" />
+			<div class="err-tip"><i></i><span></span></div>
+		</div>
+
+		<div class="adduserW">
+			<label for="la3"><i class="red">*</i> 手机：</label>
+			<input name="mobile" id="la3" type="text" class="txt input-w172 mobile" regname="cellPhone" required pattern="^1[3|4|5|7|8][0-9]\d{4,8}$" />
+			<div class="err-tip"><i></i><span></span></div>
+		</div>
+
+		<div class="adduserW">
+			<label for="la4"><i class="red">*</i> 姓名：</label>
+			<input id="la4" name="person" type="text" class="txt input-w172" regname="referrName" required />
+			<div class="err-tip"><i></i><span></span></div>
+		</div>
+
+		<div class="adduserW">
+			<label for="la5"><i class="red">*</i> 密码：</label>
+			<input id="la5" name="password" type="password"  class="txt pwd input-w172" required  regname="pwd" data-min="6" data-max="20">
+			<div class="err-tip"><i></i><span></span></div>
+		</div>
+
+		<div class="adduserW">
+			<label for="la6"><i class="red">*</i> 确认密码：</label>
+			<input id="la6" name="password" type="password"  class="txt input-w172 pwdCheck" required  regname="pwdCheck" data-min="6" data-max="20">
+			<div class="err-tip"><i></i><span></span></div>
+		</div>
+
+		<div class="adduserW">
+			<label for="la7"><i class="red">*</i> 账号角色：</label>
+			<select class="adduserSel" name="" id="la7">
+				<option value="">内容编辑1</option>
+				<option value="">内容编辑2</option>
+			</select><span></span>
+		</div>
+	</form>
+	<p class="cmn btn-imp"><span class="gen-sureBtn">保存</span></p>
+</div>
+
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+	appManager.use('deliveryGenerate');
+</script>
+
+<script>
+$(function(){
+	$('.gen-sureBtn').click(function() {
+		var $pwd1=$(".pwd").val();
+		var $pwd2=$(".pwdCheck").val();
+		if($pwd1 !="" && $pwd2 != "" && $pwd1 != $pwd2){
+			$(".pwdCheck").parent("div").addClass("err");
+			$(".pwdCheck").next(".err-tip").show().find("span").text("前后密码不一致")
+		}
+})
+</script>
+</body>
+</html>

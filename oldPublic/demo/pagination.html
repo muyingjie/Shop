@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>内容管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+
+</head>
+<body>
+<div class="info"><div class="err-tip"><i></i></div></div>
+<h2 class="lt-title">
+    <div class="mtitle">翻页控件<span></span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+<div class="example">
+    示例操作
+</div>
+<div class="mainCont">
+    <!-- 数据列表-->
+    <div class="tableCont">
+        <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+            <tr id="1">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td>李凯</td>
+                <td>http://www.300.cn</td>
+                <td>是</td>
+                <td>1</td>
+                <td><a href="" class="a-mt15">编辑</a><a href="">删除</a></td>
+            </tr>
+            <tr id="2">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td>李凯</td>
+                <td>http://www.300.cn</td>
+                <td>是</td>
+                <td>1</td>
+                <td><a href="" class="a-mt15">编辑</a><a href="">删除</a></td>
+            </tr>
+            <tr id="3">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td>李凯</td>
+                <td>http://www.300.cn</td>
+                <td>是</td>
+                <td>1</td>
+                <td><a href="" class="a-mt15">编辑</a><a href="">删除</a></td>
+            </tr>
+            <tr id="4">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td>李凯</td>
+                <td>http://www.300.cn</td>
+                <td>是</td>
+                <td>1</td>
+                <td><a href="" class="a-mt15">编辑</a><a href="">删除</a></td>
+            </tr>
+            <tr id="5">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td>李凯</td>
+                <td>http://www.300.cn</td>
+                <td>是</td>
+                <td>1</td>
+                <td><a href="" class="a-mt15">编辑</a><a href="">删除</a></td>
+            </tr>
+            <tr id="6">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td>李凯</td>
+                <td>http://www.300.cn</td>
+                <td>是</td>
+                <td>1</td>
+                <td><a href="" class="a-mt15">编辑</a><a href="">删除</a></td>
+            </tr>
+            <tr id="7">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td>李凯</td>
+                <td>http://www.300.cn</td>
+                <td>是</td>
+                <td>1</td>
+                <td><a href="" class="a-mt15">编辑</a><a href="">删除</a></td>
+            </tr>
+        </table>
+
+        <!-- 分页 -->
+        <div class="pages" id="pagination1">         
+            <div class="pageLeft">每页
+                <div class="select pagePer">
+                    <input type="hidden" value="20">
+                    <span>20</span>
+                    <i></i>
+                    <ul>
+                        <li v="20" class="sel">20</li>
+                        <li v="40">40</li>
+                        <li v="60">60</li>
+                    </ul>
+                </div>
+                条，共<span class="pageCount">35</span>条
+            </div>
+            <a href="javascript:void(0)" class="dis" data-pagebtn="first">首页</a><a href="javascript:void(0)" class="dis" data-pagebtn="prev">上一页</a>
+            <div class="select pageList">
+                <input type="hidden" class="currPage" value="1">
+                <span>第1页</span>
+                <i></i>
+                <ul>      
+                    <li><a class="" >第1页</a></li>
+                    <li><a href="">第2页</a></li>
+                    <li><a href="">第3页</a></li>
+                    <li><a href="">第4页</a></li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" data-pagebtn="next">下一页</a><a href="javascript:void(0)" data-pagebtn="last">尾页</a>
+        </div>
+    </div>
+</div>
+
+<div class="example">
+    示例代码
+</div>
+<div>
+    <pre>
+        <code>
+            define(function(require, exports, module) {
+                var $=require('jquery');
+                var pageController=require('../widgets/pagination');
+                var page=pageController.init({
+                    domId:'pagination1',//dom元素的id
+                    urlTmpl:'testData.json?pageSize={pageSize}&page={pageNum}',
+                    pageSize:20,//默认每页显示数据条数
+                    total:108,//总的数据条数，可通过对外暴漏的接口获得总的数据条数
+                    onPageChange:function(data){
+                    //翻页时页面渲染
+
+                    }
+                });
+
+                page.setTotal(256);//对外暴漏的接口，可通过ajax向后台获取总的数据条数
+            });
+        </code>
+    </pre>
+</div>
+
+
+<!-- 新增友情链接 开始 -->
+
+<!-- 新增友情链接 结束 -->
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+  appManager.use('pagination');
+</script>
+</body>
+</html>

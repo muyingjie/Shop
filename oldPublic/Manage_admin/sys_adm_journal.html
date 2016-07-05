@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>会员列表</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/system_adm.css">
+</head>
+<body>
+<h2 class="lt-title" style="height:23px">
+    <div class="mtitle">系统设置<span>-回收站</span></div>
+</h2>
+<div class="mainCont">
+    <div class="mainCtrl">
+        <ul>
+            <li><span class="">导出</span></li>
+            
+        </ul>
+        <div>
+            <div class="select listSearch">
+                <input type="hidden" value="1">
+                <span></span>
+                <i></i>
+                <ul>
+                    <li v="1">会员ID</li>
+                    <li v="2">会员姓名</li>
+                </ul>
+            </div>
+            <div class="searchTxt"><input type="text" placeholder="输入后回车确认"></div>
+            <span class="searchBtn">高级筛选></span>
+
+        </div>
+    </div>
+   
+    
+</div>
+<div class="jor_main">
+        <p><span class="snc1"><label for="c1"></label><input id="c1" type="checkbox" name="jor"></span><span class="snc2"><b>内容日志</b></span><span class="snc3"><b>操作时间</b></span><span class="snc4"><b>操作账号</b></span></p>
+        <ul>
+            <li><span class="snc1"><label for="c2"></label><input id="c2" type="checkbox" name="jor"></span><span class="snc2">订单应用-订单 160330133051255</span><span class="snc3">2016-03-26&nbsp;06:26:21</span><span class="snc4">Tom</span></li>
+            <li><span class="snc1"><label for="c2"></label><input id="c2" type="checkbox" name="jor"></span><span class="snc2">账号应用-管理员帐号tom——登录</span><span class="snc3">2016-03-26&nbsp;06:26:21</span><span class="snc4">ason</span></li>
+            <li><span class="snc1"><label for="c2"></label><input id="c2" type="checkbox" name="jor"></span><span class="snc2">CMS应用——关于我们——被修改</span><span class="snc3">2016-03-26&nbsp;06:26:21</span><span class="snc4">gd</span></li>
+        </ul>
+    </div>
+</body>
+<script src="../js/libs/jquery/jquery-1.9.1.js"></script>
+<script src="../js/libs/jquery/selectivizr-development.js"></script>
+<script type="text/javascript">
+    $(".snc1").on("click",function(){
+        var inpchek=$(this).find("input").prop("checked");
+        if(inpchek){
+            $(this).find("label").addClass("cl");
+        }else{
+            $(this).find("label").removeClass("cl");
+        }
+    })
+</script>
+</html>

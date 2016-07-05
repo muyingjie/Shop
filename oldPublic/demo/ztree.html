@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/form.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+<link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+<link rel="stylesheet" href="../css/box.css" type="text/css">
+
+
+</head>
+
+<body>
+<div class="lt-main">
+    <h2 class="lt-title add-goods-head">
+        <div class="mtitle add-goods-page">树形菜单控件<span></span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="container">
+        <div class="info">
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例操作</span>
+                </li>
+                <li class="birthday">
+                    <span class="title"><a class="gen-guiBtn">分类转换</a></span>
+                    
+                </li>
+            </ul>
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例代码</span>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">控件调用:</span>
+                    <div class="text-oper">
+                        ztree.tree($("#treeDemo"),{zNodes:datas,hiddenID:"treeVal"})
+                    </div>
+                </li>
+                 <li class="goodsClassify">
+                    <span class="title">zNode:<br/></span>
+                    <div class="text-oper">
+                    <br />
+                    var datas=[{ id:1, pId:0, name:&quot;时尚包袋&quot;,open:true,nocheck:true},<br />
+{ id:11, pId:1, name:&quot;单肩包&quot;, open:true,nocheck:true},<br />
+{ id:111, pId:11, name:&quot;双肩包&quot;,v:&quot;id1&quot;,checked:true},<br />
+{ id:112, pId:11, name:&quot;手提包&quot;,v:&quot;id2&quot;},<br />
+{ id:113, pId:11, name:&quot;斜跨包&quot;,v:&quot;id3&quot;},<br />
+{ id:114, pId:11, name:&quot;单肩/斜跨&quot;,v:&quot;id4&quot;},<br />
+{ id:115, pId:11, name:&quot;手提/斜跨&quot;,v:&quot;id5&quot;},<br />
+<br />
+{ id:12, pId:1, name:&quot;手包&quot;,nocheck:true},<br />
+{ id:121, pId:12, name:&quot;真皮女包&quot;,v:&quot;id6&quot;},<br />
+<br />
+{ id:2, pId:0, name:&quot;精品男包&quot;,nocheck:true},<br />
+{ id:21, pId:2, name:&quot;精品男包&quot;,v:&quot;id7&quot;},<br />
+{ id:3, pId:0, name:&quot;潮流女包&quot;,nocheck:true},<br />
+{ id:31, pId:3, name:&quot;潮流女包&quot;,v:&quot;id8&quot;},<br />
+{ id:4, pId:0, name:&quot;商务出差&quot;,nocheck:true},<br />
+{ id:41, pId:4, name:&quot;商务出差&quot;,v:&quot;id9&quot;}<br />
+]<br /> 
+菜单数据，格式为json数组<br />
+open:true//设置菜单默认打开<br />
+nocheck:true//设置父节点不含radio<br />
+pId:父节点ID<br />
+v：自定义属性，用来获取最终的值（控件里自动添加了一个hidden域，用于提交数据）<br />
+checked:true//默认勾选
+</div>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">hiddenID:<br/></span>
+                    <div class="text-oper">
+                       自定义控件生成的隐藏域ID
+                    </div>
+                </li>
+                             
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<!-- <script src="../js/libs/plugs/calendar/jscal2.js"></script>
+<script src="../js/libs/plugs/calendar/cn.js"></script> -->
+
+<script>
+    appManager.use('ztreeBox');
+    
+//测试用方法
+
+
+</script>
+</body>
+</html>

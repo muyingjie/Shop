@@ -5,6 +5,13 @@
     <title>会员列表</title>
     <link href="css/common.css" rel="stylesheet" type="text/css">
     <link href="css/frame.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/box.css">
+    <link rel="stylesheet" type="text/css" href="css/list.css">
+    <link rel="stylesheet" type="text/css" href="css/orderManage.css"/>
+    <link rel="stylesheet" type="text/css" href="css/plugs/easyui.css">
+    <link href="css/goodsManage.css" rel="stylesheet" type="text/css">
     <style>
         .sideList dd { display: block; }
     </style>
@@ -15,7 +22,7 @@
         <div class="sideList">
             <dl ng-repeat="item in menu track by $index">
                 <dt ng-click="navShow($index)">{{item.name}}<i></i></dt>
-                <dd class="hide-animation" ng-repeat="childItem in item.items track by $index" ng-show="item.isShow"><a href="javascript:;">{{childItem.name}}</a></dd>
+                <dd ng-repeat="childItem in item.items track by $index" ng-show="item.isShow"><a ui-sref="{{childItem.hash}}">{{childItem.name}}</a></dd>
             </dl>
         </div>
     </div>
@@ -31,72 +38,43 @@
     </div>
 
     <div class="container">
-        <div class="frameCont">
-            <!--<iframe src="memberManage/index.html" scrolling="auto" frameborder="0" class="mainFrame" name="main" id="main"></iframe>-->
+        <div class="frameCont" ui-view>
         </div>
     </div>
     <div class="copyright">Company 2015-2020  1.0</div>
 
-    <script src="angular.js"></script>
-    <script src="angular-animate.js"></script>
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular-animate.js"></script>
+    <script src="libs/angular-route.js"></script>
+    <script src="libs/angular-ui-router.js"></script>
     <script>
-        var shop = angular.module("shop", ["ngAnimate"]);
-        shop.service("MainMenuService", [function () {
-            var menu = [{
-                name: "订单管理",
-                items: [
-                    {
-                        name: "订单列表"
-                    }, {
-                        name: "发货单"
-                    }, {
-                        name: "售后单"
-                    }, {
-                        name: "退货单"
-                    }
-                ]
-            }, {
-                name: "商品管理",
-                items: [
-                    {
-                        name: "商品列表"
-                    },
-                    {
-                        name: "商品分类"
-                    },
-                    {
-                        name: "商品类型"
-                    },
-                    {
-                        name: "商品标签"
-                    },
-                    {
-                        name: "商品品牌"
-                    },
-                    {
-                        name: "商品评价"
-                    },
-                    {
-                        name: "商品咨讯"
-                    }
-                ]
-            }, {
-                name: "会员管理",
-                items: [
-                    {
-                        name: "会员列表"
-                    },
-                    {
-                        name: "会员等级"
-                    },
-                    {
-                        name: "会员标签"
-                    }
-                ]
-            }];
-            return {
-                menu: menu
-            };
+        var shop = angular.module("shop", ["ngAnimate", "ui.router"]);
+        //shop.config(["$routeProvider", function ($routeProvider) {
+        //    $routeProvider.when("/orderList", {
+        //        templateUrl: "template/order/orderList.html"
+        //    }).when("/deleveryGoodsOrder", {
+        //        templateUrl: "template/order/deleveryGoodsOrder.html"
+        //    });
+        //}]);
+        shop.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+            $urlRouterProvider.otherwise("/orderList");
+            //订单
+            $stateProvider.state("orderList", {
+                url: "/orderList",
+                templateUrl: "template/order/orderList.html"
+            }).state("deliveryGoodsOrder", {
+                url: "/deliveryGoodsOrder",
+                templateUrl: "template/order/deliveryGoodsOrder.html"
+            });
+
+            //商品
+            $stateProvider.state("goodsList", {
+                url: "/goodsList",
+                templateUrl: "template/goods/goodsList.html"
+            }).state("goodsCategory", {
+                url: "/goodsCategory",
+                templateUrl: "template/goods/goodsCategory.html"
+            });
         }]);
         shop.controller("MainController", ["$scope", "MainMenuService", function ($scope, MainMenuService) {
             $scope.menu = MainMenuService.menu;
@@ -108,12 +86,13 @@
                     d.isShow = false;
                 });
             }
-            
+
             $scope.navShow = function (i) {
                 setAllMenuHide();
                 $scope.menu[i].isShow = true;
             };
-        }]);        
+        }]);
     </script>
+    <script src="service/MainMenuService.js"></script>
 </body>
 </html>

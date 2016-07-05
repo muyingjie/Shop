@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/systemSetting.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">系统设置<span>-商品咨询设置</span></div>
+    <span class="refreshBtn"></span>
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+<div class="mainCont">
+    <div class="tclist noBottom">
+        <div class="">
+            <!--默认设置-->
+                <div class="info webDescribe">
+                    <ul class="consulteUL">
+                        <span class="consulteSpan3">基本设置</span>
+                        <li>
+                            <div class="payMethodLeft w-150">是否开启咨询功能&nbsp;:</div>
+                            <span class="payMethodRight">
+                                <span class="switchTypeW49">
+                                <input class="radio" type="radio" checked="checked" name="consult3k">开启
+                                </span>
+                                <input class="radio marginL15" type="radio" name="consult3k">关闭
+                            </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150">发表咨询权限&nbsp;:</div>
+                            <span class="payMethodRight">
+                                <input class="radio" type="radio" checked="checked" name="consult3n">所有顾客都可咨询
+                                <input class="radio marginL15" type="radio" name="consult3n">只有注册会员才能咨询
+                            </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150">咨询初始显示数量&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input name="linkname" type="text" class="txt input-w38 margin-L5"/>
+                    <!-- <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>-->
+                  <span>条顾客点击"查看全部"时会展开显示所有咨询</span>
+                </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150">咨询显示会员等级&nbsp;:</div>
+                            <span class="payMethodRight">
+                                <span class="switchTypeW49">
+                                <input class="radio" type="radio" checked="checked" name="consult3e">是
+                                </span>
+                                <input class="radio marginL15" type="radio" name="consult3e">否
+                            </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150">咨询开启回复功能&nbsp;:</div>
+                            <span class="payMethodRight">
+                                <span class="switchTypeW49">
+                                <input class="radio" type="radio" checked="checked" name="consultrt">是
+                                </span>
+                                <input class="radio marginL15" type="radio" name="consultrt">否
+                            </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150">发表时需输入验证码&nbsp;:</div>
+                            <span class="payMethodRight">
+                                <span class="switchTypeW49">
+                                <input class="radio" type="radio" checked="checked" name="consult7x">是
+                                 </span>
+                                <input class="radio marginL15" type="radio" name="consult7x">否
+                            </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150">审核设置&nbsp;:</div>
+                            <span class="payMethodRight">
+                                <input class="radio" type="radio" checked="checked" name="consultgh">管理员审核后显示
+                                <input class="radio marginL15" type="radio" name="consultgh">用户发表后立即显示
+                            </span>
+                        </li>
+
+                    </ul>
+                    <ul class="consulteUL marginT20">
+                        <span class="consulteSpan3">提示文字设置</span>
+                        <li>
+                            <div class="payMethodLeft w-150 vertical-top">无咨询时缺省文字&nbsp;:</div>
+                <span class="payMethodRight">
+                    <textarea rows="10" cols="30" class="textarea consultTextarea"></textarea>
+                </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150 vertical-top">等待审核提示&nbsp;:</div>
+                <span class="payMethodRight">
+                    <textarea rows="10" cols="30" class="textarea consultTextarea"></textarea>
+                </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150 vertical-top">发表成功提示文字&nbsp;:</div>
+                <span class="payMethodRight">
+                     <textarea rows="10" cols="30" class="textarea consultTextarea"></textarea>
+                </span>
+                        </li>
+
+                        <li>
+                            <div class="payMethodLeft w-150 vertical-top">用户填写咨询时所见提示&nbsp;:</div>
+                                 <span class="payMethodRight">
+                                    <textarea rows="10" cols="30" class="textarea consultTextarea"></textarea>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="webDescribeBtn consulteBtn">
+                    <span class="gen-sureBtn">保存</span>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="jquery-1.9.1.min.js"></script>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+</body>
+</html>

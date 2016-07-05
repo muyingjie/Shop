@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/form.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/list.css">
+<link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+<link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+<link rel="stylesheet" href="../css/box.css" type="text/css">
+<link rel="stylesheet" href="../css/plugs/ztreeStyle/zTreeStyle.css" type="text/css">
+<style>
+.tree-box {
+	position: absolute;
+block;
+	margin-left: -303px;
+	display: block;
+	top: 20%;
+	display: none;
+}
+.tree-conten {
+	margin-top: 12px;
+	width: 606px;
+	height: 275px;
+	border: 1px solid #ddd;
+	overflow-y: auto
+}
+.search-swith {
+	background-color: #fff;
+	margin-left: 10px;
+	cursor: pointer
+}
+.box-switch-head {
+	height: 29px
+}
+</style>
+</head>
+
+<body>
+<div class="lt-main">
+  <h2 class="lt-title add-goods-head">
+    <div class="mtitle add-goods-page">树形表格控件<span></span></div>
+    <span class="refreshBtn"></span> <span class="configBtn"></span>
+    <div class="handleWarning handleSuccess"></div>
+  </h2>
+  <div class="container">
+    <div class="info">
+      <ul>
+        <li class="Goods-L1"> <span class="ft-t-14 Goods-title">示例操作</span> </li>
+        <li class="birthday">
+        <input type="button" class="editSortBtn" value="编辑保存">
+          <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+            <tbody>
+              <tr>
+                <th>预览</th>
+                <th>分类名称</th>
+                <th>类型</th>
+                <th>排序码</th>
+                <th>操作</th>
+              </tr>
+            </tbody>
+          </table>
+          <table border="0" cellpadding="0" cellspacing="0" id="treeTList" class="tableList goods-classify-table">
+            <tr  data-tt-id="1">
+              <td style="width: 221px;"><i class="viewBtn"></i></td>
+              <td style="width: 442px;">女装</td>
+              <td style="width: 221px;">女装</td>
+              <td style="width: 332px;"><span>9</span>
+                <input type="text" class="txt classify-input"></td>
+              <td style="width: 220px;"><a href="" class="a-mt15">编辑</a> <a href="" class="a-mt15">删除</a> <a href="" class="a-mt15">添加子类</a> <a href="">查看商品</a></td>
+            </tr>
+            <tr  data-tt-id="1-1" data-tt-parent-id="1">
+              <td><i class="viewBtn"></i></td>
+              <td>上衣</td>
+              <td>女装</td>
+              <td><span>1</span>
+                <input type="text" class="txt classify-input"/></td>
+              <td><a href="" class="a-mt15">编辑</a> <a href="" class="a-mt15">删除</a> <a href="" class="a-mt15">添加子类</a> <a href="">查看商品</a></td>
+            </tr>
+            <tr  data-tt-id="1-1-1" data-tt-parent-id="1-1">
+              <td><i class="viewBtn"></i></td>
+              <td><i class="threeC threeL"></i>衬衣</td>
+              <td>女装</td>
+              <td><span>5</span>
+                <input type="text" class="txt classify-input"/></td>
+              <td><a href="" class="a-mt15">编辑</a> <a href="" class="a-mt15">删除</a> <a href="" class="a-mt15">添加子类</a> <a href="">查看商品</a></td>
+            </tr>
+            <tr  data-tt-id="2">
+              <td><i class="viewBtn"></i></td>
+              <td>男装</td>
+              <td>男装</td>
+              <td><span>7</span>
+                <input type="text" class="txt classify-input"/></td>
+              <td><a href="" class="a-mt15">编辑</a> <a href="" class="a-mt15">删除</a> <a href="" class="a-mt15">添加子类</a> <a href="">查看商品</a></td>
+            </tr>
+            <tr  data-tt-id="2-1" data-tt-parent-id="2">
+              <td><i class="viewBtn"></i></td>
+              <td>上衣</td>
+              <td>男装</td>
+              <td><span>1</span>
+                <input type="text" class="txt classify-input"/></td>
+              <td><a href="" class="a-mt15">编辑</a> <a href="" class="a-mt15">删除</a> <a href="" class="a-mt15">添加子类</a> <a href="">查看商品</a></td>
+            </tr>
+            <tr  data-tt-id="2-1-1" data-tt-parent-id="2-1">
+              <td><i class="viewBtn"></i></td>
+              <td><i class="threeC threeL"></i>衬衣</td>
+              <td>男装</td>
+              <td><span>5</span>
+                <input type="text" class="txt classify-input"/></td>
+              <td><a href="" class="a-mt15">编辑</a> <a href="" class="a-mt15">删除</a> <a href="" class="a-mt15">添加子类</a> <a href="">查看商品</a></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+      <ul>
+        <li class="Goods-L1"> <span class="ft-t-14 Goods-title">示例代码</span> </li>
+        <li class="goodsClassify"> <span class="title">控件调用:</span>
+          <div class="text-oper"> treetable.treeT($("#treeTList"),{column: 1,expandable: true})</div>
+        </li>
+        <li class="goodsClassify"> <span class="title">column:<br/>
+          </span>
+          <div class="text-oper">能用鼠标控制的单元格索引 </div>
+        </li>
+        <li class="goodsClassify"> <span class="title">expandable:<br/>
+          </span>
+          <div class="text-oper"> 可以展开</div>
+        </li>
+        <li class="goodsClassify"> <span class="title">HTML:<br/>
+          </span>
+          <div class="text-oper"> HTML中的tr需要设置属性值<br />
+          &lt;tr  data-tt-id=&quot;1&quot;&gt;<br />
+          &lt;tr  data-tt-id=&quot;1-1&quot; data-tt-parent-id=&quot;1&quot;&gt;<br />
+          &lt;tr  data-tt-id=&quot;1-1-1&quot; data-tt-parent-id=&quot;1-1&quot;&gt;<br />
+          &lt;tr  data-tt-id=&quot;1-1-1-1&quot; data-tt-parent-id=&quot;1-1-1&quot;&gt;
+        </div></li>
+        <li class="goodsClassify"> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div class="box w-650 tree-box">
+  <div class="box-title ft-12 box-switch-head" style="height: 29px">
+    <h2 class="box-h2 f-l">分类转换</h2>
+    <span class="box-close f-r"></span> </div>
+  <div>
+    <input type="text" class="txt" value="搜索分类展示的名称"/>
+    <input type="button" class="txt search-swith" value="搜索">
+  </div>
+  <div class="tree-conten">
+    <ul id="treeDemo" class="ztree">
+    </ul>
+  </div>
+  <div class="box-btn "> <span class="gen-sureBtn">确定</span> <span class="gen-cancelBtn">取消</span> </div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script> 
+<script src="../js/base.js"></script> 
+<!-- <script src="../js/libs/plugs/calendar/jscal2.js"></script>
+<script src="../js/libs/plugs/calendar/cn.js"></script> --> 
+
+<script>
+    appManager.use('treetable');
+</script>
+</body>
+</html>

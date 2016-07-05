@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>商品列表</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link href="../css/goodsManage.css" rel="stylesheet" type="text/css">
+    <style>
+		.tclist { height: 100px; }
+    </style>
+    <style>
+        body { margin: 0; padding: 0; }
+        pre {
+            background-color: #303030;
+            font-size: 13px;
+            line-height: 19px;
+            overflow: auto;
+            padding: 6px 10px;
+          }
+        pre code {
+            color: #f2f2f2;
+            border: none;
+            padding: 0;
+            font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
+            margin-bottom: 30px;
+            font-size: 14px;
+          }
+          .info h2 { padding-left: 15px; font-size: 14px; font-weight: bold; color: #666; background: #e8e7ec; height: 30px; line-height: 30px; }
+          .info p { line-height: 22px; }
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
+</head>
+<body>
+<h2 class="lt-title add-goods-head">
+    <div class="mtitle add-goods-page">specialSelect<span></span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+<div class="info">
+    <ul>
+        <li class="Goods-L1">
+            <span class="ft-t-14 Goods-title">示例操作</span>
+        </li>
+    </ul>
+</div>
+<h2 class="lt-title">
+    <div class="mtitle">商品管理<span>-商品列表</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont">
+    <div class="mainCtrl">
+        <ul>
+            <li><span class="addBtn">添加商品</span></li>
+            <li>
+                <input type="hidden" />
+                <span class="ex">批量操作<i></i></span>
+                <dl class="levellist">
+                    <dd v="1">白金级</dd>
+                    <dd v="2">黄金级</dd>
+                    <dd v="3">钻石级</dd>
+                </dl>
+            </li>
+            <li>
+                <input type="hidden" />
+                <span class="ex ck">标签设置<i></i></span>
+                <div>
+                    <dl>
+                        <dd v="1"><i></i>第一组</dd>
+                        <dd v="2"><i></i>第二组</dd>
+                        <dd v="3"><i></i>第三组</dd>
+                        <dd v="4"><i></i>第四组</dd>
+                    </dl>
+                    <a>新增标签</a>
+                </div>
+            </li>
+            <li><span class="exportBtn">导入</span></li>
+            <li><span class="importBtn">导出</span></li>
+        </ul>
+        <div>
+            <div class="select listSearch">
+                <input type="hidden" value="1">
+                <span>会员姓名</span>
+                <i></i>
+                <ul>
+                    <li v="1">会员ID</li>
+                    <li v="2">会员姓名</li>
+                </ul>
+            </div>
+            <div class="searchTxt"><input type="text"><i class="searchIcon"></i></div>
+            <span class="searchBtn">高级筛选></span>
+
+        </div>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+        <tr>
+            <th width="30" class="t-center"><i class="checkbox checkAll"></i></th>
+            <th width="50" class="t-center">查看</th>
+            <th>缩略图</th>
+            <th>商品货号</th>
+            <th>商品名称</th>
+            <th>类型</th>
+            <th>品牌</th>
+            <th>标签</th>
+            <th>市场价格</th>
+            <th>更新时间</th>
+            <th  width="180">操作</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+        <div class="tclist">
+            <div class="checkTip">已勾选本页<span class="n"></span>条,<a class="selectAll">勾选会员列表中全部35条信息</a><input type="hidden" value=1 class="isAll"></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                <tr id="1">
+                    <td class="t-center"><i class="checkbox"></i></td>
+                    <td class="t-center"><i class="viewBtn"></i></td>
+                    <td><img src="../images/commonImg.png" alt=""/></td>
+                    <td>Gskjgkrjsojgoprj</td>
+                    <td >芳草集 绿茶小米草胶囊</td>
+                    <td>美容护肤</td>
+                    <td>芳草集</td>
+                    <td>爆款</td>
+                    <td>22000</td>
+                    <td>2016-4-22 7:09:05</td>
+                    <td><a href="">新增相似商品</a>          <a class="edit">编辑</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="pages">
+
+            <div class="pageLeft">每页
+                <div class="select pagePer">
+                    <input type="hidden" value="20">
+                    <span>20</span>
+                    <i></i>
+                    <ul>
+                        <li v="20" class="sel">20</li>
+                        <li v="40">40</li>
+                        <li v="60">60</li>
+                    </ul>
+                </div>
+                条，共<span class="pageCount">35</span>条
+            </div>
+            <a class="dis">首页</a><a class="dis">上一页</a>
+            <div class="select pageList">
+                <input type="hidden" class="currPage" value="1">
+                <span>第1页</span>
+                <i></i>
+                <ul>
+                    <li><a class="" >第1页</a></li>
+                    <li><a href="1.html">第2页</a></li>
+                    <li><a href="">第3页</a></li>
+                    <li><a href="">第4页</a></li>
+                </ul>
+            </div>
+            <a href="">下一页</a><a href="">尾页</a>
+        </div>
+    </div>
+</div>
+<div class="info">
+    <h2>结构</h2>
+    <pre>
+        <code>
+&lt;li&gt;
+    &lt;input type="hidden" value="2"&gt;
+    &lt;span class="ex" v="2"&gt;批量操作&lt;i&gt;&lt;/i&lt;&lt;/span&gt;
+    &lt;dl class="levellist" style="display: none;"&gt;&lt;dd v="1"&gt;&lt;i&gt;&lt;/i&gt;一&lt;/dd&gt;&lt;dd v="2"&gt;&lt;i&gt;&lt;/i&gt;二&lt;/dd&gt;&lt;/dl&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+    &lt;input type="hidden" value="2"&gt;
+    &lt;span class="ex ck" v="2"&gt;标签设置&lt;i&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;div style="display: none;"&gt;
+        &lt;dl style="display: none;"&gt;&lt;dd v="1"&gt;&lt;i&gt;&lt;/i&gt;一&lt;/dd&gt;&lt;dd v="2"&gt;&lt;i&gt;&lt;/i&gt;二&lt;/dd&gt;&lt;/dl&gt;
+        &lt;a&gt;新增标签&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/li&gt;
+        </code>
+    </pre>
+    <p>调用在li这一级调用。</p>
+</div>
+<div class="info">
+    <h2>用法说明</h2>
+    <p>调用方法如下：</p>
+    <pre>
+        <code>
+$('ul li').specialSelect({
+mouseoverShow: false,
+footerHandler: function() {
+
+},
+vals: [{text: '一', value: 1}, {text: '二', value: 2}]
+});
+
+$('ul li').specialSelect('setValue', '2');
+        </code>
+    </pre>
+</div>
+<div class="info">
+    <h2>参数说明</h2>
+    <p>vals：往列表填充的数据，默认值[]。</p>
+    <p>mouseoverShow：是否鼠标移上显示，默认值false，此时点击显示。</p>
+    <p>closeList：点击展开的列表项是否关闭列表，默认值false。</p>
+    <p>onlyShow：是否仅有显示功能，默认值true。</p>
+    <p>footerHandler：点击列表展开底部的新增标签执行的回调，回调函数this指向一个实例，实例有opt，dom，$dom属性，分别是此select参数，select的dom对象和jquery对象。还有原型方法close，pushData，setValue，getValue，分别是关闭select展示框，给select填充数据，设置值以及获取值。</p>
+    <p>clear：可执行一些清除动作，需要自己写，clear方法中this指向一个实例，同上。</p>
+    <p>hasCheckBox：列表展示部分是否有复选框，默认值true。</p>
+</div>
+<div class="info">
+    <h2>事件说明</h2>
+    <pre>
+        <code>
+$('ul li').on('sltChange', function(e, valObj, dom) {
+    
+});
+
+//e：事件对象
+//valObj：改变后的值，是一个对象，有个text和value属性
+//dom：列表的dom对象
+        </code>
+    </pre>
+    <p>事件即点击展开项执行的函数。</p>
+</div>
+
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+  appManager.use('specialSelect'); 
+</script>
+<!-- <script>
+	$.fn.specialSelect = function(options) {
+        var SpecialSelect;
+        var args = arguments;
+
+        SpecialSelect = SpecialSelect || function(dom, opt) {
+            this.opt = opt;
+            this.dom = dom;
+            this.$dom = $(dom);
+        };
+
+        SpecialSelect.prototype.close = SpecialSelect.prototype.close || function() {
+            this.$dom.find('>span').removeClass('sel');
+            this.$dom.find('div').add(this.$dom.find('dl')).hide();
+        };
+
+        SpecialSelect.prototype.pushData = SpecialSelect.prototype.pushData || function(vals) {
+            var html = '';
+            var opt = this.opt;
+
+            vals.forEach(function(val) {
+                if(opt.hasCheckBox) html += '<dd v="' + val.value + '"><i></i>' + val.text + '</dd>';
+                else html += '<dd v="' + val.value + '">' + val.text + '</dd>'; 
+            });
+
+            this.$dom.find('dl').html(html);
+        };
+
+        SpecialSelect.prototype.setValue = SpecialSelect.prototype.setValue || function(val) {
+            var val,
+                text;
+
+            if(val == '') {
+                text = this.$dom.data('opt') ? (this.$dom.data('opt').defaultText || '请选择') : '请选择';
+            } else {
+                this.$dom.find('dl dd').each(function(i, dom) {
+                    if($(this).attr('v') == val) text = $(this).text();
+                });
+            }
+
+            this.$dom.trigger('sltChange', {text: text, value: val});
+        };
+
+        SpecialSelect.prototype.getValue = SpecialSelect.prototype.getValue || function() {
+            return this.$dom.find('>span').attr('v');
+        };
+
+        if(options == 'setValue') {
+            this.each(function(i, dom) {
+                (new SpecialSelect($(this)[0])).setValue(args[1]);
+            });
+
+            return;
+        }
+
+        if(options == 'getValue') {
+            return (new SpecialSelect($(this)[0])).getValue();
+        }
+
+		this.each(function(i, dom) {
+            var opt,
+                _default,
+                showEvent,
+                hideEvent,
+                $this = $(this),
+                _instance,
+                _options;
+
+            _options = options || {};
+            _default = {
+                vals: [],
+                mouseoverShow: false,
+                closeList: false,
+                onlyShow: true,
+                footerHandler: $.noop,
+                clear: $.noop,
+                hasCheckBox: true
+            };
+            opt = $.extend(true, _default, _options);
+
+            showEvent = opt.mouseoverShow ? 'mouseover' : 'click';
+            hideEvent = opt.mouseoverShow ? 'mouseout' : 'click';
+
+            $this.addClass('js_specialSelect');
+            $this.data('opt', opt);
+            _instance = new SpecialSelect($this[0], opt);
+
+            if(opt.vals.length) _instance.pushData(opt.vals);
+
+			$this.off(showEvent+'.specialSelect').on(showEvent+'.specialSelect', function(e) {
+                $('.js_specialSelect').find('>span').removeClass('sel');
+                $('.js_specialSelect').find('div').add($('.js_specialSelect').find('dl')).hide();
+                $this.find('>span').addClass('sel');
+                $this.find('div').add($this.find('dl')).show();
+
+                e.stopPropagation();
+			});
+
+            if(opt.mouseoverShow) {
+                $this.off(hideEvent+'.specialSelect').on(hideEvent+'.specialSelect', function() {
+                    $this.find('>span').removeClass('sel');
+                    $this.find('div').add($this.find('dl')).hide();
+                });
+            }
+
+            $this.off('sltChange').on('sltChange', function(e, val) {
+                if(opt.closeList) $this.find('div').add($this.find('dl')).hide();
+
+                if(!opt.onlyShow) $this.find('>span').text(val.text);
+                $this.find('>span').attr('v', val.value);
+                $this.find('input:hidden').val(val.value);
+            });
+
+            $this.off('click.change.specialSelect').on('click.change.specialSelect', 'dl dd', function(e) {
+                var _text,
+                    _val;
+
+                _text = $(this).text();
+                _val = $(this).attr('v');
+
+                $this.trigger('sltChange', [{text: _text, value: _val}, $this[0]]);
+
+                e.stopPropagation();
+            });
+
+            $this.find('dl').next('a').off('click.footer.specialSelect').on('click.footer.specialSelect', function(e) {
+                var instance = new SpecialSelect($this[0]);
+
+                instance.close();
+                e.preventDefault();
+                e.stopPropagation();
+                opt.footerHandler.call(instance);
+            });
+
+            opt.clear.call(new SpecialSelect($this[0]));
+		});
+
+        $(document).off('click.closeSpecialSelect').on('click.closeSpecialSelect', function() {
+            $('.js_specialSelect').find('>span').removeClass('sel');
+            $('.js_specialSelect').find('div').add($('.js_specialSelect').find('dl')).hide();
+        });
+	};
+
+	$('ul li').specialSelect({
+        mouseoverShow: false,
+        footerHandler: function() {
+            
+        },
+        vals: [{text: '一', value: 1}, {text: '二', value: 2}]
+    });
+
+    $('ul li').specialSelect('setValue', '2');
+</script>-->
+<script>
+    $('p').each(function(i, dom) {
+        var html = $(this).html();
+
+        html = html.replace(/(^\w+[:：])/, '<span style="color: red; font-weight: bold;">$1</span>');
+        html = html.replace(/(true|false|\[|\])/g, '<span style="color: #f59e0a; font-weight: bold;">$1</span>');
+        html = html.replace(/([\u4e00-\u9fa5])([a-zA-Z-_$]+)/g, '$1<span style="color: green; font-weight: bold;">$2</span>');
+        html = html.replace(/(，)([a-zA-Z-_$]+)/g, '$1<span style="color: green; font-weight: bold;">$2</span>');
+        $(this).html(html);
+    });
+</script>
+</body>
+</html>

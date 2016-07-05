@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="your tags"/>
+    <meta name="description" content="150 words"/>
+    <title>地址三级联动</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+   
+
+</head>
+<body>
+<div class="lt-main">
+    <h2 class="lt-title add-goods-head">
+        <div class="mtitle add-goods-page">地址三级联动<span></span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="container">
+        <div class="info">
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例操作</span>
+                </li>
+                <li class="address">
+                    <span class="title">所在地区：</span>
+                    <div class="text-oper">
+                        <div class="select belong-address" id="province">
+                            <span>请选择</span>
+                            <input type="hidden" name="">
+                            <i></i>
+                            <ul></ul>
+                        </div>
+
+                        <div class="select belong-address" id="city">
+                            <span>请选择</span>
+                            <input type="hidden" name="">
+                            <i></i>
+                            <ul></ul>
+                          
+                        </div>
+
+                        <div class="select belong-address" id="country">
+                            <span>请选择</span>
+                            <input type="hidden" name="">
+                            <i></i>
+                            <ul></ul>
+                           
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例代码</span>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">初始化:</span>
+                    <div class="text-oper">
+                    <pre><code>                    
+                        var $province =$("#province");  //一级菜单jquery对象
+                        var $city =$("#city");  //二级菜单jquery对象
+                        var $country =$("#country");    //三级菜单jquery对象
+
+                        area.getDropdownList($province,$city,$country);//初始化菜单
+                </code>
+                    </pre> 
+                    </div>
+                </li>
+                          
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+
+<script>
+    appManager.use('area');
+    
+    
+    
+</script>
+</body>
+</html>

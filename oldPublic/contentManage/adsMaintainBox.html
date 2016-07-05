@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>内容管理-广告维护</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+</head>
+<body>
+<!--<h2 class="lt-title">
+    <div class="mtitle">内容管理<span>-广告维护</span></div>
+</h2>-->
+<div >
+    <div>
+        <table cellpadding="0" cellspacing="0" class="adsMaintainListTable">
+            <tr>
+                <td>
+                    <span class="adsMaintainSpan">广告位名称：</span>
+                    <span>首页主轮播广告</span>
+                </td>
+                <td>
+                    <span class="adsMaintainSpan">位置尺寸：</span>
+                    <span>800*600px</span>
+                </td>
+                <td>
+                    <span class="adsMaintainSpan">广告位是否显示：</span>
+                    <span>是</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="adsMaintainSpan">媒介类型：</span>
+                    <span>图片</span>
+                </td>
+                <td>
+                    <span class="adsMaintainSpan">切换效果：</span>
+                    <span>横向轮播</span>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div class="mainCtrl">
+        <ul>
+            <li><span class="add">新增广告</span></li>
+            <li><span class="del">编辑排序</span></li>
+        </ul>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+        <tr>
+            <th width="50" class="t-center"><i class="checkbox checkAll"></i></th>
+            <th>广告名称</th>
+            <th>媒介内容</th>
+            <th>排序码</th>
+            <th>链接值</th>
+            <th>开始时间</th>
+            <th>结束时间</th>
+            <th>是否显示</th>
+            <th>修改时间</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+
+        <div class="tclist">
+            <div class="checkTip">已勾选本页<span class="n"></span>条,<a class="selectAll">勾选会员列表中全部35条信息</a><input type="hidden" value=1 class="isAll"></div>
+
+            <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                <tr id="1">
+                    <td class="t-center"><i class="checkbox"></i></td>
+                    <td>商品促销</td>
+                    <td><img src="../images/commonImg.png" alt=""/></td>
+                    <td>11</td>
+                    <td>http://www.300.cn</td>
+                    <td>2016-03-26 06:26:26</td>
+                    <td>2016-03-26 06:26:26</td>
+                    <td class="use"><i class="yes"></i></td>
+                    <td>2017-03-28 06:26:26</td>
+                    <td><a href="" class="a-mt15">编辑</a><a href="" class="a-mt15">删除</a></td>
+                </tr>
+                <tr id="2">
+                    <td class="t-center"><i class="checkbox"></i></td>
+                    <td>商品促销</td>
+                    <td><img src="../images/commonImg.png" alt=""/></td>
+                    <td>11</td>
+                    <td>http://www.300.cn</td>
+                    <td>2016-03-26 06:26:26</td>
+                    <td>2016-03-26 06:26:26</td>
+                    <td class="use"><i class="no"></i></td>
+                    <td>2017-03-28 06:26:26</td>
+                    <td><a href="" class="a-mt15">编辑</a><a href="" class="a-mt15">删除</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+
+<script>
+    appManager.use("main")
+</script>
+</body>
+</html>

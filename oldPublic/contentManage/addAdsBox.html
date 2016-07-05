@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>新增广告位</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+</head>
+<body>
+<!-- 新增广告位 开始 -->
+<div class="box"  style="display: block" >
+    <form action="">
+        <!-- 内容区 -->
+        <div class="box-con info">
+            <ul>
+                <li>
+                    <span class="title w100"><i class="red">*</i>广告位名称：</span>
+                    <div class="text-oper">
+                        <input id="guanggao" name="linkname" type="text" class="txt inputW-205" data-min="4" data-max="20" pattern="^[\u2E80-\u9FFF\w-]+$"/>
+                        <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>
+                        <div class="err-tip"><i></i><span></span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="title w100"><i class="red">*</i>位置尺寸：</span>
+                    <div class="text-oper">
+                        <label>宽<input type="text" class="txt inputW-58 margin-t10" data-min="1" data-max="20" pattern="^[0-9]+$"/>px<div class="err-tip"><i></i><span></span></div></label>
+                        <label class="margin-L15">高<input type="text" class="txt inputW-58 margin-t10" data-min="1" data-max="20" pattern="^[0-9]+$"/>px<div class="err-tip"><i></i><span></span></div></label>
+
+                    </div>
+                </li>
+
+                <li>
+                    <span class="title w100"><i class="red">*</i>媒介类型：</span>
+                    <div id="media" class="text-oper select select-w166" mediumSelect="true">
+                        <span></span>
+                        <input type="hidden" data-target="media" value="0" required/>
+                        <i></i>
+                        <ul>
+                            <li v="0">图片</li>
+                            <li v="1">文字</li>
+                            <li v="2">代码</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="switchover">
+                    <span class="title w100"><i class="red">*</i>切换效果：</span>
+                    <div class="text-oper select select-w166">
+                        <span>横向轮播</span>
+                        <input type="hidden" value="1" required/>
+                        <i></i>
+                        <ul>
+                            <li v="0">无</li>
+                            <li v="1">横向轮播</li>
+                            <li v="2">纵向轮播</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="switchover">
+                    <span class="title w100">自动轮播：</span>
+                    <div class="text-oper">
+                        <input class="radio" type="radio" checked="checked" name="yauto">是&nbsp;&nbsp;
+                        <input class="radio" type="radio" name="yauto">否
+                    </div>
+                </li>
+
+                <li>
+                    <span class="title w100">广告位是否显示：</span>
+                    <div class="text-oper">
+                        <input class="radio" type="radio" checked="checked" name="adshow">是&nbsp;&nbsp;
+                        <input class="radio" type="radio" name="adshow">否
+                    </div>
+                </li>
+
+                <li class="or-display">
+                    <span class="title w100">广告位描述：</span>
+                    <div class="text-oper">
+                        <textarea rows="10" cols="30" class="textarea adsTextarea" required></textarea>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 按钮区 -->
+        <div class="box-btn">
+            <span class="gen-sureBtn boxSave">保存</span>
+        </div>
+    </form>
+</div>
+<!-- 新增广告位 结束 -->
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('addAdsBox');
+</script>
+</body>
+</html>

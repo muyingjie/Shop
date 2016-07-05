@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="your tags"/>
+    <meta name="description" content="150 words"/>
+    <title>选择货品</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+</head>
+<body>
+<div class="lt-main">
+    <h2 class="lt-title add-goods-head">
+        <div class="mtitle add-goods-page">商品管理<span>-添加商品</span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="container">
+        <div class="info">
+            <!--基本信息-->
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">基本信息</span>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">商品分类：</span>
+                    <div class="text-oper select sel-W134">
+                        <span>请选择</span>
+
+                        <i></i>
+                        <ul>
+                            <li v="选中之后真实值">长裙</li>
+                            <li v="选中之后真实值">短裙</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="goodsType">
+                    <span class="title">商品类型：</span>
+
+                    <div class="text-oper select sel-W134">
+                        <span>请选择</span>
+                        <input type="hidden" value=""/>
+                        <i></i>
+                        <ul>
+                            <li v="0">长款</li>
+                            <li v="1">中长款</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="goodsName">
+                    <span class="title">商品名称：</span>
+                    <div class="text-oper">
+                        <input name="goodsName" type="text" class="txt input-118"/>
+                    </div>
+                </li>
+                <li class="goodsCode">
+                    <span class="title">商品编号：</span>
+                    <div class="text-oper">
+                        <input name="goodsName" type="text" class="txt input-118"/>
+                    </div>
+                </li>
+                <li class="goodsKey">
+                    <span class="title">商品关键词：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsKey" type="text" class="txt input-348 "/>
+                    </div>
+                </li>
+                <li class="goodsBrand">
+                    <span class="title">商品品牌：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsBrand" type="text" class="txt input-118"/>
+                    </div>
+                </li>
+                <li class="goodsDigest">
+                    <span class="title">商品摘要：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsDigest" type="text" class="txt input-348"/>
+                    </div>
+                </li>
+                <li class="goodsShelves">
+                    <span class="title">立即上架：</span>
+
+                    <div class="text-oper">
+                        <input class="radio" type="radio" checked="checked" name="sex">是&nbsp;&nbsp;
+                        <input class="radio" type="radio" name="sex">否
+                    </div>
+                </li>
+                <li class="goodsLabel">
+                    <span class="title">商品标签：</span>
+
+                    <div class="text-oper select sel-W134">
+                        <span>请选择</span>
+                        <input type="hidden" value=""/>
+                        <i></i>
+                        <ul>
+                            <li v="选中之后真实值">长款</li>
+                            <li v="选中之后真实值">中长款</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="goodsImg">
+                    <span class="title">添加图片：</span>
+
+                    <div class="text-oper">
+                        <div class="txt fake-img">添加图片
+                            <input name="goodsBrand" type="file" class="txt true-img"/>
+                        </div>
+                        <div class="goodsImgList">
+                            <div class="addGoodsImg"><img src="" /><i class="deleteIcon"></i></div>
+                            <div class="addGoodsImg"><img src="" /><i class="deleteIcon"></i></div>
+                            <div class="addGoodsImg"><img src="" /><i class="deleteIcon"></i></div>
+                            <div class="addGoodsImg"><img src="" /><i class="deleteIcon"></i></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="goodsImg">
+                    <span class="title">列表页图片：</span>
+
+                    <div class="text-oper">
+                        <label for="#default"><input type="radio" name="default-img" id="#default"/>用商品相册默认图</label>
+                        <label for="#difine"><input type="radio" name="default-img" id="#difine"/>自定义商品图片</label>
+
+                        <div class="list-images">
+                            <div>商品在列表中显示的图片</div>
+                            <div class="txt fake-div">选择图片
+                                <input name="goodsBrand " type="file" class="txt true-file "/>
+                            </div>
+                            <div class="goodsImgList1">
+                                <div class="addGoodsImg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="goodsLabel">
+                    <span class="title">商品标签：</span>
+
+                    <div class="text-oper select sel-W134">
+                        <span>请选择</span>
+                        <input type="hidden" value=""/>
+                        <i></i>
+                        <ul>
+                            <li v="选中之后真实值">长款</li>
+                            <li v="选中之后真实值">中长款</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="goodsSale">
+                    <span class="title">销售价：</span>
+
+                    <div class="text-oper select sel-W134">
+                        <span>请选择</span>
+                        <input type="hidden" value=""/>
+                        <i></i>
+                        <ul>
+                            <li v="选中之后真实值">800</li>
+                            <li v="选中之后真实值">1000</li>
+                        </ul>
+                    </div>
+                    <input name="goodsEdit" type="button" class="txt editPrice" value="编辑会员价格"/>
+                </li>
+                <li class="goodsCost">
+                    <span class="title">成本价：</span>
+
+                    <div class="text-oper select sel-W134">
+                        <span>请选择</span>
+                        <input type="hidden" value=""/>
+                        <i></i>
+                        <ul>
+                            <li v="选中之后真实值">300</li>
+                            <li v="选中之后真实值">500</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="goodsMarket">
+                    <span class="title">市场价：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsMarket" type="text" class="txt input-118"/>
+                    </div>
+                </li>
+                <li class="goodsNumber">
+                    <span class="title">货号：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsNumber" type="text" class="txt input-118"/>
+                    </div>
+                </li>
+                <li class="goodsWeight ">
+                    <span class="title">重量：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsWeight" type="text" class="txt input-118"/>
+
+                    </div>
+                    <div class="text-tip">克</div>
+                </li>
+                <li class="goodsInventory">
+                    <span class="title">库存：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsInventory" type="text" class="txt input-118"/>
+                    </div>
+                    <div class="text-tip">库存为0，提示到货通知</div>
+                </li>
+            </ul>
+            <!--商品规格-->
+            <ul>
+                <li class="addRow" style="display: none">
+                    <table>
+
+                    </table>
+                </li>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">商品规格</span>
+                </li>
+                <li class="goodsClassify">
+
+                    <span class="title">颜色分类：</span>
+
+                    <div class="separate-color">
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checked" v="选定的值"></i><span>军绿色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checked" v="选定的值"></i><span>红色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>卡其色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>咖啡色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>红棕色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>草绿色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>蓝色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>白色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>黑色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>墨绿色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>天蓝色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>军绿色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>军绿色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>军绿色</span></span>
+                        <span class="colorCheck"><input type="hidden" value=""/><i class="checkbox" v="选定的值"></i><span>军绿色</span></span>
+                        <div style="margin-top: 10px">
+                            <table class="goods-norms" cellpadding="0" cellspacing="0">
+                                <tr class="goods-tr1">
+                                    <th>系统规格</th>
+                                    <th>自定义规格值</th>
+                                    <th>选择商品大图片</th>
+                                </tr>
+
+                                <!--<tr>-->
+                                    <!--<td><span>翠绿色</span></td>-->
+                                    <!--<td><input type="text" class="txt Goods-input1" value="军绿色"></td>-->
+                                    <!--<td><a href="#" class="edit">选择</a></td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td><span>翠绿色</span></td>-->
+                                    <!--<td><input type="text" class="txt Goods-input1" value="军绿色"></td>-->
+                                    <!--<td><a href="#" class="edit">选择</a></td>-->
+                                <!--</tr>-->
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">鞋码：</span>
+
+                    <div class="separate-color">
+                        <span class="sizeCheck"><input type="hidden" value="1"/><i size="0" class="checked" v="选定的值"></i><span>11岁以下</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="1" class="checked" v="选定的值"></i><span>12码/11cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="2" class="checkbox" v="选定的值"></i><span>13码/11.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="3" class="checkbox" v="选定的值"></i><span>14码/12cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="4" class="checkbox" v="选定的值"></i><span>15码/12.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="5" class="checkbox" v="选定的值"></i><span>11岁以下</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="6" class="checkbox" v="选定的值"></i><span>12码/11cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="7" class="checkbox" v="选定的值"></i><span>13码/11.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="8" class="checkbox" v="选定的值"></i><span>14码/12cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="9" class="checkbox" v="选定的值"></i><span>15码/12.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="10" class="checkbox" v="选定的值"></i><span>12码/11cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="11" class="checkbox" v="选定的值"></i><span>13码/11.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="12" class="checkbox" v="选定的值"></i><span>14码/12cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i size="13" class="checkbox" v="选定的值"></i><span>15码/12.5cm</span></span>
+
+                        <div style="margin-top: 10px">
+                            <table class="goods-norms" cellpadding="0" cellspacing="0">
+                                <tr class="goods-tr1">
+                                    <th>系统规格</th>
+                                    <th>自定义规格值</th>
+                                    <th>选择商品大图片</th>
+                                </tr>
+                                <!--<tr>-->
+                                    <!--<td><span>翠绿色</span></td>-->
+                                    <!--<td><input type="text" class="txt Goods-input1" value="军绿色"></td>-->
+                                    <!--<td><a href="#" class="edit">选择</a></td>-->
+                                <!--</tr>-->
+
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="goodsClassify">
+                    <span class="title">鞋码：</span>
+
+                    <div class="separate-color">
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="0" class="checkbox" v="选定的值"></i><span>11岁以下</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="1" class="checkbox" v="选定的值"></i><span>12码/11cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="2" class="checkbox" v="选定的值"></i><span>13码/11.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="3" class="checkbox" v="选定的值"></i><span>14码/12cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="4" class="checkbox" v="选定的值"></i><span>15码/12.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="5" class="checkbox" v="选定的值"></i><span>11岁以下</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="6" class="checkbox" v="选定的值"></i><span>12码/11cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="7" class="checkbox" v="选定的值"></i><span>13码/11.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="8" class="checkbox" v="选定的值"></i><span>14码/12cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="9" class="checkbox" v="选定的值"></i><span>15码/12.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="10" class="checkbox" v="选定的值"></i><span>12码/11cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="11" class="checkbox" v="选定的值"></i><span>13码/11.5cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="12" class="checkbox" v="选定的值"></i><span>14码/12cm</span></span>
+                        <span class="sizeCheck"><input type="hidden" value=""/><i name="13" class="checkbox" v="选定的值"></i><span>15码/12.5cm</span></span>
+                        <div style="margin-top: 10px">
+                            <table class="goods-norms" cellpadding="0" cellspacing="0">
+                                <tr class="goods-tr1">
+                                    <th>系统规格</th>
+                                    <th>自定义规格值</th>
+                                    <th>选择商品大图片</th>
+                                </tr>
+                                <!--<tr>-->
+                                    <!--<td><span>翠绿色</span></td>-->
+                                    <!--<td><input type="text" class="txt Goods-input1" value="军绿色"></td>-->
+                                    <!--<td><a href="#" class="edit">选择</a></td>-->
+                                <!--</tr>-->
+
+                            </table>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="goodsClassify">
+                    <span class="title">货品：</span>
+
+                    <div class="separate-color">
+                        <div class="store-detail">请务必填写货品快递重量，次数用于计算快递运费，货品重量用于前台的展示</div>
+                        <div style="margin-top: 10px">
+                            <table class="goods-norms goods-all" cellpadding="0" cellspacing="0">
+                                <tr class="goods-tr2">
+                                    <th>货品编号</th>
+                                    <th>积分</th>
+                                    <th>颜色分类</th>
+                                    <th>鞋码</th>
+                                    <th>库存数量</th>
+                                    <th>市场价</th>
+                                    <th>零售价</th>
+                                    <th>会员价</th>
+                                    <th>货品重量</th>
+                                    <th>启用</th>
+                                </tr>
+                                <tr>
+                                    <td><span>100115650</span></td>
+                                    <td><span>10</span></td>
+                                    <td><span>天蓝色</span></td>
+                                    <td><span>11岁以下</span></td>
+                                    <td><input type="text" class="txt Goods-input2" value=""></td>
+                                    <td><input type="text" class="txt Goods-input2" value=""></td>
+                                    <td><input type="text" class="txt Goods-input2" value=""></td>
+                                    <td><a href="#" class="edit">设置</a></td>
+                                    <td><input type="text" class="txt Goods-input2" value=""></td>
+                                    <td><i></i></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+            <!--商品属性-->
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">商品属性</span>
+                </li>
+
+                <li class="goodsClassify">
+                    <span class="title">适用肤质：</span>
+
+                    <div class="text-oper select sel-W134">
+                        <span>请选择</span>
+                        <input type="hidden" value=""/>
+                        <i></i>
+                        <ul>
+                            <li v="选中之后真实值">干燥</li>
+                            <li v="选中之后真实值">湿润</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="goodsType">
+                    <span class="title">适用时间：</span>
+                    <div class="text-oper select sel-W134">
+                        <span>请选择</span>
+                        <input type="hidden" value=""/>
+                        <i></i>
+                        <ul>
+                            <li v="选中之后真实值">早上</li>
+                            <li v="选中之后真实值">中午</li>
+                            <li v="选中之后真实值">晚上</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- 详细信息-->
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">详细信息</span>
+                </li>
+                <li class="goodsLabel">
+                    <div class="title" style="width: 928px;height: 341px"></div>
+                </li>
+            </ul>
+            <!--相关产品-->
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">相关产品</span>
+                </li>
+                <!--货品-->
+                <li class="goodsClassify">
+                    <span class="title">相关产品：</span>
+
+                    <div class="separate-color">
+                        <div class="store-detail fake-div">选择商品
+                            <input type="file" class="true-file"/>
+                        </div>
+                        <div style="margin-top: 10px">
+                            <table class="goods-norms" cellpadding="0" cellspacing="0">
+                                <tr class="goods-tr2">
+                                    <th>商品名称</th>
+                                    <th>商品相关</th>
+                                </tr>
+                                <tr>
+                                    <td><span><i class="del"></i>芳草集 甘草排毒保湿面膜120g</span></td>
+                                    <td>
+                                        <input class="radio" type="radio" checked="checked" name="relation1">单向相关&nbsp;&nbsp;
+                                        <input class="radio" type="radio" name="relation1">双向相关
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span><i class="del"></i>芳草集 甘草排毒保湿面膜120g</span></td>
+                                    <td>
+                                        <input class="radio" type="radio" checked="checked" name="relation2">单向相关&nbsp;&nbsp;
+                                        <input class="radio" type="radio" name="relation2">双向相关
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+            <!--SEO设置-->
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">SEO设置</span>
+                </li>
+
+                <li class="goodsKey">
+                    <span class="title">标题：</span>
+
+                    <div class="text-oper">
+                        <input name="SEO-title" type="text" class="txt SEO-input"/>
+                    </div>
+                </li>
+
+                <li class="goodsKeyword">
+                    <span class="title">搜索关键字：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsKeyword" type="text" class="txt SEO-input"/>
+                    </div>
+                </li>
+
+
+                <li class="goodsDescribe">
+                    <span class="title">搜索描述：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsDescribe" type="text" class="txt SEO-input"/>
+                    </div>
+                </li>
+
+
+                <li class="goodsUrl">
+                    <span class="title">自定义url：</span>
+
+                    <div class="text-oper">
+                        <input name="goodsUrl" type="text" class="txt SEO-input"/>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="btn-sub btnCenter">
+            <span class="f-l gen-sureBtn">保存</span>
+            <span class="f-l gen-cancelBtn">取消</span>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('addGoods');
+</script>
+</body>
+</html>

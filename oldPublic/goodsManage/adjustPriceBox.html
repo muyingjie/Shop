@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>统一调价</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/goodsManage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--统一调价 宽度650px-->
+<div class="box" >
+   <!-- <div class="box-title  ft-12">
+        <h2 class="box-h2 f-l">统一调价</h2>
+        <span class="box-close f-r"></span>
+    </div>-->
+    <div class="update-price-content" >
+        <div class="update-price-h">您正在对（<span></span>）条数据进行统一调价</div>
+        <ul class="updata-price-list1">
+            <li class="DirectModify" style="margin-bottom: 12px">
+                <span class="">直接修改：</span>
+                <span>对所选的商品的某个价格进行统一修改。</span>
+            </li>
+            <li class="formulaUpdate">
+                <span class="">公式调价：</span>
+                <span>将对所选商品的某个价格进行修改为在另一个价格基础上加减乘一个数字</span>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul class="updata-price-list2">
+            <li>
+                <input type="radio" name="change" class="radio"/>
+                <span>直接修改：</span>
+                <div class="select input-w98">
+                    <span>市场价</span>
+                    <i></i>
+                    <ul>
+                        <li v="选中之后真实值">商场价</li>
+                        <li v="选中之后真实值">会员价</li>
+                        <li v="选中之后真实值">成本价</li>
+                    </ul>
+                </div>
+                <span> = </span>
+                <input type="text" class="txt input-w98"/>
+            </li>
+            <li>
+                <input type="radio" name="change" class="radio"/>
+                <span>公式修改：</span>
+                <div class="select input-w98">
+                    <span>市场价</span>
+                    <i></i>
+                    <ul>
+                        <li v="选中之后真实值">商场价</li>
+                        <li v="选中之后真实值">会员价</li>
+                        <li v="选中之后真实值">成本价</li>
+                    </ul>
+                </div>
+                <span> = </span>
+                <div class="select input-w98">
+                    <span>市场价</span>
+                    <i></i>
+                    <ul>
+                        <li v="选中之后真实值">商场价</li>
+                        <li v="选中之后真实值">会员价</li>
+                        <li v="选中之后真实值">成本价</li>
+                    </ul>
+                </div>
+                <div class="select input-w38">
+                    <span>+</span>
+                    <i></i>
+                    <ul>
+                        <li v="选中之后真实值">-</li>
+                        <li v="选中之后真实值">+</li>
+                        <li v="选中之后真实值">*</li>
+                        <li v="选中之后真实值">/</li>
+                    </ul>
+                </div>
+                <input type="text" class="txt input-w98"/>
+            </li>
+        </ul>
+    </div>
+    <div class="adjust-price-btn" >
+        <span class="gen-sureBtn ">保存</span>
+    </div>
+</div>
+</body>
+</html>

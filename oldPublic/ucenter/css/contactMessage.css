@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.c-contact{ display: none;margin-left: 20px;margin-top: 80px}
+.c-head{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 34px;
+    font-weight: bold;
+    background: url("../images/contactsIcon.png") no-repeat left center;
+}
+.c-message{
+    margin-left: 18px;
+}
+.c-message dl{
+    height: 50px;
+    line-height: 50px;
+    width: 696px;
+    border-bottom: 1px solid #ddd;
+}
+.c-commonPadding{
+    padding-left: 13px;
+
+}
+
+.c-mustWrite{
+    background: url("../images/mustIcon.png") no-repeat left center;
+}
+
+.c-message dl dt{
+    width: 181px;
+    float: left;
+}
+
+.c-message dl dt{
+    width: 220px;
+    height: 50px;
+    float: left;
+}
+
+.c-importStyle{
+    width: 208px;
+    height: 30px;
+    line-height: 30px;
+    color: #bfbfbf;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    margin-top: 9px;
+    float: left;
+}
+
+.c-noBorder{
+    width: 220px;
+    color: #666;
+    padding: 0;
+    border: 1px solid transparent;
+    background-color: #fff;
+}
+.c-sureBtn{
+    display: none;
+    width: 64px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background-color: #7ab55c;
+    margin: 12px 0 0 31px;
+    float: left;
+    cursor: pointer;
+}
+
+.c-cancelBtn{
+    display: none;
+    width: 62px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 12px 0 0 20px;
+    float: left;
+    cursor: pointer;
+}
+
+.c-change{
+    display: inline-block;
+    width: 22px;
+    height: 26px;
+    text-align: center;
+    margin: 12px 0 0 31px;
+    float: left;
+    cursor: pointer;
+    background: url("../images/edit.png") no-repeat left center;
+}
+
+.c-noChange{
+    display: none;
+}

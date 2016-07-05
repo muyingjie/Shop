@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>新增菜单</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+</head>
+<body>
+<!-- 新增菜单 开始  宽度650-->
+<div class="box" >
+    <!-- 标题区 -->
+   <!-- <div class="box-title  ft-12">
+        <h2 class="box-h2 f-l">新增菜单</h2>
+        <span class="box-close f-r"></span>
+    </div>-->
+    <!-- 内容区 -->
+    <div class="box-con">
+        <div class="info-container">
+            <ul class="Tab-ul">
+                <li class="Tab-li Tab-li-select Tab-li-first" >系统页面</li>
+                <li class="Tab-li">自定义链接</li>
+            </ul>
+            <div class="info system-page">
+                <!-- 第一步添加 开始 -->
+                <ul>
+                    <li class="account">
+                        <span class="title title2">首页：</span>
+                        <div class="account">
+                            <span class="style active">首页</span>
+                        </div>
+                    </li>
+                    <li class="account">
+                        <span class="title title2">文章：</span>
+                        <div class="account">
+                            <span class="style">列表页</span><span class="style">文章页</span><span class="style">节点首页</span>
+                        </div>
+                    </li>
+                    <li class="account">
+                        <span class="title title2">会员中心：</span>
+                        <div class="account">
+                            <span class="style">会员中心</span>
+                        </div>
+                    </li>
+                    <li class="account">
+                        <span class="title title2">品牌区：</span>
+                        <div class="account">
+                            <span class="style">品牌区</span>
+                        </div>
+                    </li>
+                    <li class="account">
+                        <span class="title title2">组合促销：</span>
+                        <div class="account">
+                            <span class="style">组合促销列表</span>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 第一步添加 结束 -->
+
+                <!-- 下一步 开始 -->
+                <ul>
+                    <li>
+                        <span class="title"><i class="red">*</i>菜单标题：</span>
+                        <div class="text-oper">
+                            <input name="linkname" type="text" class="txt input1" />
+                            <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>
+                            <div class="err-tip"><i></i><span></span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">排序码：</span>
+                        <div class="text-oper">
+                            <input name="linknum" type="text" class="txt input1" />
+                        </div>
+                    </li>
+                    <li class="or-display">
+                        <span class="title">打开新窗口：</span>
+                        <div class="text-oper">
+                            <input class="radio" type="radio" checked="checked" name="newwindow">是&nbsp;&nbsp;
+                            <input class="radio" type="radio" name="newwindow">否
+                        </div>
+                    </li>
+                    <li class="or-display">
+                        <span class="title">在菜单上显示：</span>
+                        <div class="text-oper">
+                            <input class="radio" type="radio" checked="checked" name="blockmenu">是&nbsp;&nbsp;
+                            <input class="radio" type="radio" name="blockmenu">否
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">文章ID：</span>
+                        <div class="text-oper">
+                            <input name="linknum" type="text" class="txt input1" />
+                        </div>
+                    </li>
+                </ul><!-- 点击下一步后  按钮 变成“保存” “返回”-->
+                <!-- 下一步 结束 -->
+            </div>
+            <div class="info custom-page" style="display:none;">
+                <ul>
+                    <li>
+                        <span class="title"><i class="red">*</i>菜单标题：</span>
+                        <div class="text-oper">
+                            <input name="linkname" type="text" class="txt input1" />
+                            <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>
+                            <div class="err-tip"><i></i><span></span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title"><i class="red">*</i>URL链接：</span>
+                        <div class="text-oper">
+                            <input name="linkdress" type="text" class="txt input1" />
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">排序码：</span>
+                        <div class="text-oper">
+                            <input name="linknum" type="text" class="txt input1" />
+                        </div>
+                    </li>
+                    <li class="or-display">
+                        <span class="title">打开新窗口：</span>
+                        <div class="text-oper">
+                            <input class="radio" type="radio" checked="checked" name="newwindow">是&nbsp;&nbsp;
+                            <input class="radio" type="radio" name="newwindow">否
+                        </div>
+                    </li>
+                    <li class="or-display">
+                        <span class="title">在菜单上显示：</span>
+                        <div class="text-oper">
+                            <input class="radio" type="radio" checked="checked" name="blockmenu">是&nbsp;&nbsp;
+                            <input class="radio" type="radio" name="blockmenu">否
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 按钮区 -->
+    <div class="box-btn">
+        <span class="gen-sureBtn boxSave">下一步</span>
+    </div>
+</div>
+<!-- 新增菜单 结束 -->
+</body>
+</html>

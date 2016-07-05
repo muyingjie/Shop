@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="your tags"/>
+    <meta name="description" content="150 words"/>
+    <title>订单列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/orderManage.css"/>
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">订单管理<span>-查看订单</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+<div class="mainCont">
+    <div id="box_main">
+        <div  id="box_user" class="orderList">
+            <ul class="Tab-ul">
+                <li class="Tab-li Tab-li-first"></li>
+                <li class="Tab-li ">基本信息</li>
+                <li class="Tab-li">商品信息</li>
+                <li class="Tab-li">收款纪录</li>
+                <li class="Tab-li Tab-li-select">退款纪录</li>
+                <li class="Tab-li">优惠方案</li>
+                <li class="Tab-li">订单备注</li>
+                <li class="Tab-li">订单日志</li>
+                <li class="Tab-li">顾客留言</li>
+                <!--<li class="Tab-li Tab-li-last"></li>-->
+            </ul>
+        </div>
+        <div class="empty"></div>
+        <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+            <tr>
+                <th width="20px"></th>
+                <th>单据日期</th>
+                <th>退款金额</th>
+                <th>退款方式</th>
+                <th>状态</th>
+            </tr>
+        </table>
+        <div class="tableCont">
+            <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                <tr id="1">
+                    <td width="20px"></td>
+                    <td>2016-03-30 10：5:5</td>
+                    <td>￥22.29</td>
+                    <td>预付款</td>
+                    <td>支付成功</td>
+            </table>
+        </div>
+    </div>
+    </div>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery.select.js"></script>
+</body>
+<html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>商品管理</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+</head>
+<body>
+<h2 class="lt-title brand-title">
+    <div class="mtitle">商品管理<span>-商品品牌</span></div>
+</h2>
+
+<div class="mainCont">
+    <div class="mainCtrl">
+        <ul>
+            <li><span class="addBtn">新增</span></li>
+            <li><span class="delBtn">删除</span></li>
+        </ul>
+        <div>
+            <div class="select listSearch">
+                <input type="hidden" value="1">
+                <span>品牌名称</span>
+                <i></i>
+                <ul>
+                    <li v="1">会员ID</li>
+                    <li v="2">会员姓名</li>
+                </ul>
+            </div>
+            <div class="searchTxt border-rightB"><input type="text"><i class="searchIcon"></i></div>
+        </div>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle brand-list-head">
+        <tr>
+            <th width="20" class="t-center"></th>
+            <th>商品名称</th>
+            <th>英文名陈</th>
+            <th>官方网站</th>
+            <th>图片</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+        <div class="tclist">
+            <table cellpadding="0" cellspacing="0" border="0" class="tableList brand-list">
+                <tr >
+                    <td class="t-center"><i class="checkbox"></i></td>
+                    <td>阿迪达斯</td>
+                    <td>adias</td>
+                    <td>www.asda.com</td>
+                    <td><img src="../images/brand-icon1.png" alt="" class="brand-img" /></td>
+                    <td><a href="">编辑</a><a class="del-link ">删除</a></td>
+                </tr>
+                <tr >
+                    <td class="t-center"><i class="checkbox"></i></td>
+                    <td>阿迪达斯</td>
+                    <td>adias</td>
+                    <td>www.asda.com</td>
+                    <td><img src="../images/brand-icon1.png" alt="" class="brand-img" /></td>
+                    <td><a href="">编辑</a><a class="del-link ">删除</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="pages">
+            <div class="pageLeft">每页
+                <div class="select pagePer">
+                    <input type="hidden" value="20">
+                    <span>20</span>
+                    <i></i>
+                    <ul>
+                        <li v="20" class="sel">20</li>
+                        <li v="40">40</li>
+                        <li v="60">60</li>
+                    </ul>
+                </div>
+                条，共<span class="pageCount">35</span>条
+            </div>
+            <a class="dis">首页</a><a class="dis">上一页</a>
+            <div class="select pageList">
+                <input type="hidden" class="currPage" value="1">
+                <span>第1页</span>
+                <i></i>
+                <ul>
+                    <li><a class="" >第1页</a></li>
+                    <li><a href="">第2页</a></li>
+                    <li><a href="">第3页</a></li>
+                    <li><a href="">第4页</a></li>
+                </ul>
+            </div>
+            <a href="">下一页</a><a href="">尾页</a>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/box.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/main.js"></script>
+<!--<script src="../js/jquery.select.js"></script>-->
+<!--<script>
+    $(".select").tselect()
+    var arr=$(".boxR .Checkbox:checked").map(function(){
+        return $(this).val()
+    }).get()
+    $(".configBtn").click(function(){
+        showBox($(".configBox"),"aaa.php",{d:arr})
+    })
+</script>-->
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>新增配送方式</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/systemSetting.css"/>
+</head>
+<body>
+<!-- 新增配送方式开始 -->
+<div class="box" >
+    <div class="info">
+        <ul>
+            <li>
+                <div class="payMethodLeft"><i class="red">*</i>排序码&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input name="linkname" type="text" class="txt width128" />
+                    <div class="default-tip">数字小展示靠前</div>
+                    <div class="err-tip"><i></i><span></span></div>
+                </span>
+            </li>
+            <li>
+                <div class="payMethodLeft">是否启用&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input class="radio" type="radio" checked="checked" name="deliveropen1">启用&nbsp;&nbsp;
+                    <input class="radio" type="radio" name="deliveropen1">关闭
+                </span>
+            </li>
+            <li>
+                <div class="payMethodLeft"><i class="red">*</i>配送方式名称&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input name="linkname" type="text" class="txt width128" />
+                    <div class="err-tip"><i></i><span></span></div>
+                </span>
+            </li>
+            <li>
+                <div class="payMethodLeft"><i class="red">*</i>选择默认的物流公司&nbsp;:</div>
+                <span class="payMethodRight">
+                    <div  class="select width-148">
+                        <span>请选择物流公司</span>
+                        <input type="hidden" name="" value="请选择物流公司">
+                        <i></i>
+                        <ul style="display: none;">
+                            <li v="1">长裙</li>
+                            <li v="2">短裙</li>
+                        </ul>
+                    </div>
+                </span>
+            </li>
+
+            <li>
+                <div class="payMethodLeft">类型&nbsp;:</div>
+                <span class="payMethodRight">
+                    <span class="colorCheck"><i class="checkbox checkType" v="选定的值"></i>是否支持货到付款</span>
+                </span>
+            </li>
+            <li>
+                <div class="payMethodLeft">重量设置&nbsp;:</div>
+                <span class="payMethodRight">
+                    <span class="setweightSpan1">首重重量
+                    <div  class="select width60 ">
+                        <span>500g</span>
+                        <input type="hidden" name="" value="600g">
+                        <i></i>
+                        <ul style="display: none;">
+                            <li v="选中之后真实值">600g</li>
+                            <li v="选中之后真实值">800g</li>
+                        </ul>
+                    </div>
+                    </span>
+
+                    <span class="setweightSpan1">续重单位
+                    <div  class="select width60">
+                        <span>50g</span>
+                        <input type="hidden" name="" value="60g">
+                        <i></i>
+                        <ul style="display: none;">
+                            <li v="选中之后真实值">60g</li>
+                            <li v="选中之后真实值">80g</li>
+                        </ul>
+                    </div>
+                    </span>
+                </span>
+            </li>
+
+            <li>
+                <div class="payMethodLeft">默认配送费用&nbsp;:</div>
+                <span class="payMethodRight disable">
+                    <span class="setweightSpan1 ">首重费用&nbsp;<input name="linkname" type="text" class="txt setweightSpan1_txt input-w38" /></span>
+                    <span class="setweightSpan1">续重费用&nbsp;<input name="linkname" type="text" class="txt setweightSpan1_txt input-w38" /></span>
+                   <!-- <div class="err-tip"><i></i><span></span></div>-->
+                </span>
+            </li>
+            <li>
+                <div class="payMethodLeft">物流保价&nbsp;:</div>
+                <span class="payMethodRight">
+                    <span class="colorCheck"><i class="checkbox checkType"  name="supportValue"></i>支持物流保价</span>
+                    <span class="logistics w100">费率：<input type="text" class="txt input-w38"/></span>
+                    <span class="logistics">最低保价费：<input type="text" class="txt input-w38"/></span>
+                </span>
+            </li>
+
+            <li>
+                <div class="payMethodLeft">默认配送费用适用地区&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input class="radio" type="radio" checked="checked" name="deliverAdd1">所有地区适用&nbsp;&nbsp;
+                    <input class="radio marginL15" type="radio" name="deliverAdd1">指定部分地区城市设置运费
+                </span>
+
+                <span class="payMethodRight deliveryWay" style="display: none">
+                    <div class="payAdds">
+                        <span class="payAdds-titlew">
+                            <input type="hidden" value=""/>
+                            <i class="checkbox checkType marginL20" v="选定的值" name="mark"></i>除指定地区外，其余地区的运费采用“默认配送运费”
+                        <span class="payAdds-tip">注意：未勾选时，不在指定配送地区的顾客不能使用本配送方式下订单</span>
+                        </span>
+
+                        <ul class="payAdds-ul3">
+                            <li>
+                                <span class="marginL20">
+                                    配送地区：<span>北京（全省）</span><span><a class="select_area" href="javascript:">地区选择</a></span>
+                                </span>
+                                <span class="marginL40">
+                                    首重费用：<input type="text" class="txt input-w38 marginR10"/>
+                                    续重费用：<input type="text" class="txt input-w38 marginR10"/>
+                                <span><a class="useEquation" href="javascript:">使用公式</a></span>
+                                </span>
+                                <span class="marginL99" ><a class="delete_btn" href="javascript:">删除</a></span>
+                            </li>
+                            <li>
+                                <span class="marginL20">
+                                    配送地区：<span>北京（全省）</span><span><a class="select_area" href="javascript:">地区选择</a></span>
+                                </span>
+                                <span class="marginL40">
+                                    首重费用：<input type="text" class="txt input-w38 marginR10"/>
+                                    续重费用：<input type="text" class="txt input-w38 marginR10"/>
+                                <span><a class="useEquation" href="javascript:">使用公式</a></span>
+                                </span>
+                                <span class="marginL99" ><a class="delete_btn" href="javascript:">删除</a></span>
+                            </li>
+                        </ul>
+                        <div class="setAddPrice" style="color:#4587db">
+                            <span>[+]为指定的地区设置运费</span>
+                            <div class="addHiddenBox" style="display: none">
+                                <ul>
+                                    <li>
+                                <span class="marginL20">
+                                    配送地区：<span>北京（全省）</span><span><a class="select_area" href="javascript:">地区选择</a></span>
+                                </span>
+                                <span class="marginL40">
+                                    首重费用：<input type="text" class="txt input-w38 marginR10"/>
+                                    续重费用：<input type="text" class="txt input-w38 marginR10"/>
+                                <span><a class="useEquation" href="javascript:">使用公式</a></span>
+                                </span>
+                                        <span class="marginL99" ><a class="delete_btn" href="javascript:">删除</a></span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </span>
+
+
+            </li>
+
+            <li>
+                <div class="payMethodLeft vertical-top">配送方式介绍&nbsp;:</div>
+                <span class="payMethodRight">
+                    <textarea rows="10" cols="30" class="textarea payMethodTextarea"></textarea>
+                </span>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 按钮区 -->
+    <div class="h-30 f-l"></div>
+    <div class="box-btn payMethodBtn">
+        <span class="gen-sureBtn ">保存</span>
+    </div>
+</div>
+<!-- 新增配送方式结束 结束 -->
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('NewDeliveryMethodBox');
+</script>
+</body>
+</html>

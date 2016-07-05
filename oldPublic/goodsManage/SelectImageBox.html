@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>选择图片</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/goodsManage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="box" >
+   <!-- 宽度870px-->
+    <!-- 标题区 -->
+  <!--  <div class="box-title  ft-12">
+        <h2 class="box-h2 f-l">图片选择</h2>
+        <span class="box-close f-r"></span>
+    </div>-->
+    <!-- 内容区 -->
+    <div class="box-con">
+        <ul class="Tab-ul goods-sel-images">
+            <li class="Tab-li Tab-li-first Tab-li-select">从本地选择照片</li>
+            <li class="Tab-li ">从图库选择照片</li>
+            <li class="Tab-li ">互联网上的照片</li>
+        </ul>
+        <div>
+            <!-- 选项卡内容一-->
+            <div class="info image-sel-content1" >
+                <div class="add-span-margin">
+                    <span>从本地计算机浏览图片</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="uploader add-span-margin">
+                            <div class="f-l">
+                                <div id="upload"></div>
+                            </div>
+                            <div class="default-tip f-l"></div>
+                            <span class="uploaderImg fl">
+                                <input type="hidden" value=""/>
+                                <img class="upload" src="../images/default_image.jpg" />
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 选项卡内容二-->
+            <div class="info image-sel-content3" style="display: none">
+                <div class="add-span-margin local-img">
+                    <span class="f-l">标签 ：</span>
+
+                    <div class="local-img-nav">
+                        <span>全部</span>
+                        <span>链接</span>
+                        <span>友情</span>
+                        <span>JD</span>
+                    </div>
+                    <div class="img-search-box">
+                        <div class="select listSearch">
+                            <input type="hidden" value="1">
+                            <span>图片名称</span>
+                        </div>
+                        <div class="searchTxt search-goods"><input type="text"><i class="searchIcon"></i></div>
+                    </div>
+                    <input type="hidden" value=""/>
+                    <ul class="local-img-list" style="height: 210px;overflow-y: auto">
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                        <li>
+                            <img src="" alt=""/>
+                            <i class="imgSelect"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pages add-goods-layer-page">
+                    <div class="pageLeft">每页
+                        <div class="select pagePer">
+                            <input type="hidden" value="20">
+                            <span>20</span>
+                            <i></i>
+                            <ul>
+                                <li v="20" class="sel">20</li>
+                                <li v="40">40</li>
+                                <li v="60">60</li>
+                            </ul>
+                        </div>
+                        条，共<span class="pageCount">35</span>条
+                    </div>
+                    <a class="dis">首页</a><a class="dis">上一页</a>
+
+                    <div class="select pageList">
+                        <input type="hidden" class="currPage" value="1">
+                        <span>第1页</span>
+                        <i></i>
+                        <ul>
+                            <li><a class="">第1页</a></li>
+                            <li><a href="1.html">第2页</a></li>
+                            <li><a href="">第3页</a></li>
+                            <li><a href="">第4页</a></li>
+                        </ul>
+                    </div>
+                    <a href="">下一页</a><a href="">尾页</a>
+                </div>
+            </div>
+            <!--选项卡内容三-->
+
+                <div class="info image-sel-content2" style="display: none" >
+                    <div class="add-span-margin">
+                        <div>网络图片链接</div>
+                        <form action="">
+                            <input type="text" class="txt web-image" placeholder="输入链接" required pattern="^(http://|https://).{3,}$"/>
+                            <div class="err-tip"><i></i><span></span></div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+
+
+    </div>
+    <!-- 按钮区 -->
+    <div class="box-btn btn-margin60">
+        <span class="gen-sureBtn boxSave">保存</span>
+    </div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('SelectImageBox');
+</script>
+</body>
+</html>

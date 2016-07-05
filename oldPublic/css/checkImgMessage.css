@@ -1,0 +1,18 @@
+.lt-title .mtitle{
+    float: none;
+}
+.mainCont{
+    border-top:1px solid #ddd;
+    margin-left: 20px;
+    padding-left: 5px;
+}
+.imgMessage>h3{
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+.imgMessage>ul>li{
+    height: 30px;
+}

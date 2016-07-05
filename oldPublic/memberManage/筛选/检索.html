@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+</head>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="检索.css">
+<body>
+<div class="searchSet" style="z-index: 999">
+    <div class="searchHead">
+        <span class="searchIcon"></span>
+        <span class="ft-col-4587da ft-14">高级检索</span>
+        <span class="searchClose"></span>
+    </div>
+    <!-- 筛选项设置-->
+    <div class="searchSetTop ft-col-6d6d6d">筛选项设置</div>
+    <ul class="searchCon bg-col-fff"  style="display: none">
+        <li class="searchMar10">
+            <span class="searchMar7">筛选项</span>
+            <ul>
+                <li class="searchLI bb-col-4587db">会员等级</li>
+                <li class="searchLI">会员标签</li>
+                <li class="searchLI">会员来源</li>
+                <li class="searchLI">注册日期</li>
+                <li class="searchLI">消费金额</li>
+                <li class="searchLI">积分</li>
+                <li class="searchLI">性别</li>
+                <li class="searchLI">出生日期</li>
+                <li class="searchLI">身份证号</li>
+                <li class="searchLI">所在地区</li>
+                <li class="searchLI">联系地址</li>
+                <li class="searchLI">邮政编码</li>
+                <li class="searchLI">固定电话</li>
+                <li class="searchLI">推荐人</li>
+                <li class="searchLI">QQ</li>
+            </ul>
+        </li>
+        <li class="searchMar10">
+            <span class="searchMar7">全部</span>
+            <ul>
+                <li class="searchLI">取消</li>
+                <li class="searchLI">使用</li>
+            </ul>
+        </li>
+    </ul>
+    <!--填写筛选条件-->
+    <ul style="display: block">
+        <li class="search-top">
+            <div class="text-oper">
+                <select class="search-f">
+                    <option selected="selected">筛选项配置</option>
+                    <option value="">筛选项配置</option>
+                    <option value="">筛选项配置</option>
+                </select>
+            </div>
+        </li>
+        <li class="search-list">
+            <div class="searchTitle">会员标签：</div>
+                    <span class="text-oper">
+                        <select class="search-s">
+                            <option selected="selected">请选择</option>
+                            <option value="">普通</option>
+                            <option value="">高级</option>
+                        </select>
+                    </span>
+        </li>
+        <li class="search-list">
+            <span class="searchTitle">会员等级：</span>
+            <div class="text-oper">
+                <select class="search-s">
+                    <option selected="selected">请选择</option>
+                    <option value="">普通</option>
+                    <option value="">高级</option>
+                </select>
+            </div>
+        </li>
+        <li class="search-list">
+            <span class="searchTitle">会员来源：</span>
+            <div class="text-oper">
+                <select class="search-s">
+                    <option selected="selected">请选择</option>
+                    <option value="">普通</option>
+                    <option value="">高级</option>
+                </select>
+            </div>
+        </li>
+
+        <li class="search-list">
+            <span class="searchTitle">注册时间：</span>
+            <div class="text-oper">
+                <select class="search-s">
+                    <option selected="selected">介于</option>
+                    <option value="">大于</option>
+                    <option value="">小于</option>
+                    <option value="">晚于</option>
+                </select>
+            </div>
+        </li>
+        <li class="search-list">
+            <span class="searchTitle"></span>
+            <div class="text-oper">
+                <input type="text" class="search-s"/>
+            </div>
+            <span class="searchTitle"></span>
+            <div class="text-oper">
+                <select class="select-t" ><option selected="selected">10</option></select>
+                <select class="select-t"><option selected="selected">00</option></select>
+            </div>
+        </li>
+
+        <li class="search-list">
+            <span class="searchTitle"></span>
+            <div class="text-oper">
+                <select class="select-t"><option selected="selected">10</option></select>
+                <select class="select-t"><option selected="selected">00</option></select>
+            </div>
+        </li>
+
+        <li class="search-list">
+            <span class="searchTitle">积分：</span>
+            <div class="text-oper">
+                <select class="search-s">
+                    <option value="" >等于</option>
+                    <option  selected="selected" value="">大于</option>
+                    <option value="">小于</option>
+                    <option value="">晚于</option>
+                </select>
+                <span class="searchTitle"></span>
+                <input type="text" class="search-s margin-top-3"/>
+            </div>
+        </li>
+        <li class="search-list">
+            <span class="searchTitle"></span>
+            <div class="text-oper">
+                <input type="text" class="search-s"/>
+            </div>
+        </li>
+
+        <li class="search-list">
+            <span class="searchTitle">消费金额：</span>
+            <div class="text-oper">
+                <select class="search-s">
+                    <option selected="selected">等于</option>
+                    <option value="">大于</option>
+                    <option value="">小于</option>
+                    <option value="">晚于</option>
+                </select>
+                <span class="searchTitle "></span>
+                <input type="text" class="search-s margin-top-3"/>
+            </div>
+        </li>
+        <li class="search-list">
+            <span class="searchTitle"></span>
+            <div class="text-oper">
+                <input type="text" class="search-s"/>
+            </div>
+        </li>
+
+        <li class="search-list">
+            <span class="searchTitle">出生日期：</span>
+            <div class="text-oper">
+                <select class="search-s">
+                    <option selected="selected">晚于</option>
+                    <option value="">大于</option>
+                    <option value="">小于</option>
+                    <option value="">等于</option>
+                </select>
+                <span class="searchTitle"></span>
+                <input type="text" class="search-s margin-top-3"/>
+
+            </div>
+        </li>
+        <li class="search-list">
+            <span class="searchTitle"></span>
+            <div class="text-oper">
+                <input type="text" class="search-s"/>
+            </div>
+        </li>
+
+        <li class="search-list">
+            <span class="searchTitle">身份证号：</span>
+            <div class="text-oper">
+                <input type="text" class="search-s"/>
+            </div>
+        </li>
+
+        <li class="search-list">
+            <span class="searchTitle">所在地区：</span>
+            <div class="text-oper">
+                <select class="select-t"><option selected="selected">北京</option></select>
+                <select class="select-t"><option selected="selected">北京市</option></select>
+                <span class="searchTitle"></span>
+                <select class="select-f"><option selected="selected">石景山区</option></select>
+            </div>
+        </li>
+    </ul>
+    <div></div>
+</div>
+</body>
+</html>

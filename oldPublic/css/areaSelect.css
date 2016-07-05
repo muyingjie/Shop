@@ -1,0 +1,27 @@
+.tree{
+    margin-bottom: 20px;
+}
+.one,.two{
+    margin-left: 20px;
+    height: 17px;
+    overflow: hidden;
+}
+.three{
+    margin-left: 20px;
+}
+.tree i{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background: url("../images/treeIcon.png") no-repeat 0 -22px;
+    cursor: pointer;
+}
+.tree i.tree_close{
+    background:  url("../images/treeIcon.png") no-repeat 0 0;
+}
+.saveBtn{
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -29px;
+}

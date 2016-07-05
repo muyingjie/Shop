@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>新增品牌</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+</head>
+<body>
+<!-- 新增品牌开始 -->
+<div class="box" >
+    <!-- 标题区 -->
+    <!-- <div class="box-title  ft-12">
+         <h2 class="box-h2 f-l">新增品牌</h2>
+         <span class="box-close f-r"></span>
+     </div>-->
+    <!-- 内容区 -->
+    <form action="">
+        <div class="box-con info">
+            <ul>
+                <li>
+                    <span class="title"><i class="red">*</i>品牌名称：</span>
+                    <div class="text-oper">
+                        <input name="linkname" type="text" class="txt input1" data-max="128" required />
+                        <div class="err-tip"><i></i><span></span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="title">英文名称：</span>
+                    <div class="text-oper">
+                        <input name="linkdress" type="text" class="txt input1" />
+                    </div>
+                </li>
+                <li>
+                    <span class="title">官方网站：</span>
+                    <div class="text-oper">
+                        <input name="linkdress" type="text" class="txt input1 webstation" />
+                    </div>
+                </li>
+                <li>
+                    <span class="title">图片：</span>
+                    <div class="uploader">
+                        <a href="javascript:;" class="file fl">选择图片<input type="file" name="" id=""></a>
+                        <div class="default-tip fl" style="vertical-align: top">支持图片类型：gif、jpg、jpeg、bmp、png</div>
+                        <span class="uploaderImg fl"><img src="../images/default_image.jpg" /></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 按钮区 -->
+        <div class="box-btn newBrandBtn">
+            <span class="gen-sureBtn">保存</span>
+        </div>
+    </form>
+</div>
+<!-- 新增品牌结束 -->
+</body>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('newBrandBox');
+</script>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/jscal2.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/border-radius.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/steel/steel.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+    <style>
+		.select ul { z-index: 10000; }
+		.err-tip { display: none; }
+		.err .err-tip { display: inline-block; }
+    </style>
+    <style>
+        body { margin: 0; padding: 0; }
+        pre {
+            background-color: #303030;
+            font-size: 13px;
+            line-height: 19px;
+            overflow: auto;
+            padding: 6px 10px;
+          }
+        pre code {
+            color: #f2f2f2;
+            border: none;
+            padding: 0;
+            font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
+            margin-bottom: 30px;
+            font-size: 14px;
+          }
+    </style>
+</head>
+<body>
+	<h2 class="lt-title add-goods-head">
+        <div class="mtitle add-goods-page">validate<span></span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="info">
+        <ul>
+            <li class="Goods-L1">
+                <span class="ft-t-14 Goods-title">示例操作</span>
+            </li>
+        </ul>
+    </div>
+	<form action="">
+		<div class="info addmember">
+	        <ul>
+	            <li class="account">
+	                <span class="title">用户名：</span>
+	                <div class="text-oper">
+	                    <input name="account" type="text" class="txt input1 username" regname="userName" data-max="20" pattern="^([\u4E00-\u9FA5]|[a-z0-9_\-]{2}){2,10}$" />
+	                    <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+
+	            </li>
+
+	            <li class="password">
+	                <span class="title">密码：</span>
+	                <div class="text-oper">
+	                    <input name="password" type="text" class="txt input1 pwd" regname="pwd" data-min="6" data-max="20" />
+	                    <div class="default-tip"><i></i>建议使用字母、数字和符号两种及以上的组合，6-20个字符</div>
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="name">
+	                <span class="title">姓名：</span>
+	                <div class="text-oper ">
+	                    <input name="name" type="text" class="txt input1 name" regname="realName" required />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="sex">
+	                <span class="title">性别：</span>
+	                <div class="text-oper">
+	                    <input class="radio" type="radio" checked="checked" name="sex">男&nbsp;&nbsp;
+	                    <input class="radio" type="radio" name="sex">女
+	                </div>
+	            </li>
+
+	            <li class="birthday">
+	                <span class="title">出生日期：</span>
+	                <div class="text-oper">
+	                    <input name="birthday" id="birthday" class="txt input1 date-ico" readonly="readonly" type="text" />
+	                </div>
+	            </li>
+
+	            <li class="id-card">
+	                <span class="title">身份证号：</span>
+	                <div class="text-oper">
+	                    <input name="id-card" type="text" class="txt input1" regname="idNumber" required pattern="(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)" />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="mobile">
+	                <span class="title">手机号码：</span>
+	                <div class="text-oper">
+	                    <input name="mobile" type="text" class="txt input1 mobile" regname="cellPhone" required pattern="^1[3|4|5|7|8][0-9]\d{8}$" />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	                <div class="text-tip check-right">
+	                    <i class="checkbox" v=""></i>&nbsp;接收企业短信</div>
+	            </li>
+
+	            <li class="mail">
+	                <span class="title">邮箱：</span>
+	                <div class="text-oper">
+	                    <input name="mail" type="text" class="txt input1 mail" regname="email" required pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	                <div class="text-tip check-right">
+	                    <i class="checkbox" v=""></i>&nbsp;接收企业邮箱</div>
+	            </li>
+
+	            <li class="tel">
+	                <span class="title">固定电话：</span>
+	                <div class="text-oper">
+	                    <input name="tel" type="text" class="txt input1" regname="telePhone" required pattern="(\d{2,5}-\d{7,8}(-\d{1,})?)|(13\d{9})|(159\d{8})" />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="code">
+	                <span class="title">邮政编码：</span>
+	                <div class="text-oper">
+	                    <input name="code" type="text" class="txt input1" regname="mailCode" required pattern="^[1-9][0-9]{5}$" />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="address">
+	                <span class="title">所在地区：</span>
+	                <div class="text-oper">
+	                    <div class="select belong-address addmember-select" id="province">
+	                        <span>请选择</span>
+	                        <i></i>
+	                        <ul>
+	                        </ul>
+	                    </div>
+	                    <div class="select belong-address addmember-select" id="city">
+	                        <span>请选择</span>
+	                        <i></i>
+	                        <ul>
+	                        </ul>
+	                    </div>
+	                    <div class="select belong-address addmember-select" id="country">
+	                        <span>请选择</span>
+	                        <i></i>
+	                        <ul>
+	                        </ul>
+	                    </div>
+	                    <input name="address" type="text" class="txt input1 addr-location" regname="address" required>
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="level">
+	                <span class="title">会员级别：</span>
+	                <div class="text-oper" id="hiddenhuiyuan">
+	                    <div class="select belong-level addmember-select">
+	                    	<input type="hidden" required data-target="hiddenhuiyuan" />
+	                        <span>请选择</span>
+	                        <i></i>
+	                        <ul>
+	                            <li v="选中之后真实值">普通</li>
+	                            <li v="选中之后真实值">高级</li>
+	                        </ul>
+	                    </div>
+	                    <div class="err-tip" style="display: inline-block;"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="customer">
+	                <span class="title">客户分组：</span>
+	                <div class="text-oper">
+	                    <div class="select belong-group addmember-select">
+	                        <span>请选择</span>
+	                        <i></i>
+	                        <ul>
+	                            <li v="选中之后真实值">普通</li>
+	                            <li v="选中之后真实值">VIP</li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </li>
+
+	            <li class="source">
+	                <span class="title">会员来源：</span>
+	                <div class="text-oper">PC商城注册</div>
+	            </li>
+
+	            <li class="integral">
+	                <span class="title">积分：</span>
+	                <div class="text-oper">
+	                    <input name="integral" type="text" class="txt input1" regname="score" required />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="qq">
+	                <span class="title">QQ：</span>
+	                <div class="text-oper">
+	                    <input name="qq" type="text" class="txt input1" regname="qq" required />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+
+	            <li class="refer-person">
+	                <span class="title">推荐人用户名：</span>
+	                <div class="text-oper">
+	                    <input name="person" type="text" class="txt input1" regname="referrName" required />
+	                    <div class="err-tip"><i></i><span></span></div>
+	                </div>
+	            </li>
+	            <li class="custom">
+	                <span class="title">自定义项：</span>
+	                <div class="text-oper">
+	                    <input name="custom" type="text" class="txt input1" required />
+	                </div>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="btn-sub">
+	        <span class="f-l gen-sureBtn add-member-save">保存</span>
+	        <span class="f-l gen-cancelBtn add-member-delect">取消</span>
+	    </div>
+	</form>
+	<div class="info">
+        <ul>
+            <li class="Goods-L1">
+                <span class="ft-t-14 Goods-title">用法说明</span>
+                <p>html5Validate支持我所知的HTML5验证相关的东西，如type="email", type="number", type="tel", type="url", step, min, max, required, pattern, multiple等，并有一些本地化扩展，如增加了type="zipcode"邮编等，支持type="hidden"的完整验证（HTML5中是忽略的），支持多type共存，例如type="email|tel", 可以让文本框输入邮箱或者手机号码。</p>
+                <p>data-min, data-max为长度验证。</p>
+                <pre>
+                	<code>
+&lt;input name="account" type="text" class="txt input1 username error" regname="userName" data-min="4" data-max="20" pattern="^[\u2E80-\u9FFF\w-]+$"&gt;
+                	</code>
+                </pre>
+                <p>调用方法如下：</p>
+                <p>$().html5Validate(callback, options);</p>
+                <p>callback为验证成功回调。</p>
+                <p>参数options为一个对象，里面属性说明如下：</p>
+                <pre>
+                	<code>
+参数名称		默认值				简单释义
+novalidate	true	布尔型。			是否取消现代浏览器的内置验证
+submitEnabled	true	布尔型。			表单中禁用的提交按钮是否使之可用
+labelDrive	true	布尔型。			是否优先使用label标签中的文字作为提示关键词
+validate	function() { return true; }	包含返回值的函数，插件自带验证以外的其他验证
+                	</code>
+                </pre>
+                <p>data-key,data-target说明</p>
+                <p> data-key作用</p>
+                <p>模拟表单往往都是纯鼠标操作的，此时，类似“请填写此字段”或者“您输入的……”就显得不准确，不准确的关键就是这里的操作动词“填写”与“输入”。"data-key"的值就表示这个关键动词。</p>
+                <p>data-target作用</p>
+                <p>从可用性上讲，模拟表单都有一个对应的隐藏不可见的真实表单元素，或visibility:hidden的select下拉框，或hidden类型的input框，或者display:none的radio。</p>
+                <p>要知道，这些隐藏表单的位置是捕获不到(display:none;)或者位置不准确的。因此，浮动提示框的位置无法确定；就算浮动框位置确定了，指向了一个看不见的东西，用户也会很奇怪的。面对这种情况，"data-target"应运而生。</p>
+                <p>"data-target"可将黄色提示框的目标元素从真实表单元素转移到模拟表单元素（其值正是模拟表单元素的id(或className)）。</p>
+                <p>方法$.html5Validate.isAllpass(elements, options);说明如下：</p>
+                <p>elements参数必需，可以是：form节点，或者jQuery包装form，或者是需要验证的元素。</p>
+                <p>options可选参数目前就一个，就是labelDrive。</p>
+            </li>
+        </ul>
+    </div>
+	<script src="../js/libs/seajs/sea-debug.js"></script>
+	<script src="../js/base.js"></script>
+	<script>
+	  appManager.use('validate');
+	</script>
+</body>
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<!-- 
+["draggable","droppable","resizable","pagination","tooltip","linkbutton","menu","menubutton","splitbutton","switchbutton","progressbar","tree","textbox","filebox","combo","combobox","combotree","combogrid","numberbox","validatebox","searchbox","spinner","numberspinner","timespinner","datetimespinner","calendar","datebox","datetimebox","slider","layout","panel","datagrid","propertygrid","treegrid","datalist","tabs","accordion","window","dialog","form"]
+
+	 -->
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/orderManage.css">
+	<link rel="stylesheet" type="text/css" href="../css/plugs/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="../css/plugs/icon.css" />
+	<link rel="stylesheet" type="text/css" href="../css/plugs/dialog/ui-dialog.css" />
+    <link rel="stylesheet" type="text/css" href="../css/calendar/jscal2.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/border-radius.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/steel/steel.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/plugs/colpick.css"/>
+
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">会员管理<span>-会员列表</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn" id="openColumnManage"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont">
+	<div class="mainCtrl">
+    	<ul>
+        	<li><span class="addBtn">新增</span></li>
+            <li><span class="delBtn">删除</span></li>
+            <li><span class="useBtn">启用</span></li>
+            <li><span  class="unuseBtn">停用</span></li>
+            <li>
+            	<span class="ex oex">指定会员等级<i></i></span>
+                <dl class="levellist">
+                	<dd v="1">白金级</dd>
+                    <dd v="2">黄金级</dd>
+                    <dd v="3">钻石级</dd>
+                </dl>
+            </li>
+            <li>
+                <span class="ex ck">指定标签<i></i></span>
+                <div class="labellist">
+                    <dl>
+                        <dd v="1"><i></i>第一组</dd>
+                        <dd v="2"><i></i>第二组</dd>
+                        <dd v="3"><i></i>第三组</dd>
+                        <dd v="4"><i></i>第四组</dd>
+                    </dl>
+                    <a>新增标签</a>
+                </div>
+            </li>
+            <li><span class="exportBtn">导出会员</span></li>
+        </ul>
+        <div>
+        	<div class="select listSearch">
+            	<input type="hidden" value="1">
+                <span>会员ID</span>
+                <i></i>
+                <ul>
+                	<li v="1">会员ID</li>
+                    <li v="2">会员姓名</li>
+                </ul>
+            </div>
+            <div class="searchTxt"><input type="text"><i class="searchIcon"></i></div>
+            <span class="searchBtn" id="openAdvanceFilterPanel">高级筛选></span>
+            
+        </div>
+    </div>
+    
+	<table id="dg"></table>
+
+</div>
+
+<!-- 列管理面板显示内容 -->
+<div id="columnManagePanelContent" style="display: none;">
+    <div class="box-con">
+        <span class="boxDown ft-col-666">拖动改变顺序</span>
+        <ul class="boxCont boxCol">
+            <li class=" boxR">
+                <span class="boxList-move f-l"></span>
+                <input class="Checkbox box-check"  type="checkbox" name="caozuo" value="checkbox" />
+                <span>操作</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- 高级筛选面板 begin -->
+<div class="searchSet" style="z-index: 999; display: none;" id="advanceFilterPanel">
+    <div class="searchHead">
+        <span class="searchIcon"></span>
+        <span class="ft-col-4587da ft-14">高级检索</span>
+        <span class="searchClose"></span>
+    </div>
+
+    <!-- 筛选项设置（column列表） -->
+	<ul class="searchCon1 bg-col-fff" >
+		<div class="searchSetTop ft-col-6d6d6d filter-toggle">
+			<span class="marginL7">筛选项设置</span>
+			<img class="searchDownIcon" src="../images/icon-down_03.png" alt="" />
+		</div>
+        <li class="searchMar10">
+            <span class="searchMar7">筛选项</span>
+            <ul class="filter-columns">
+                <li class="searchLI">
+                	<span>会员等级</span>
+                	<i class="trueSel"></i>
+                </li>
+                <li class="searchLI">
+                	<span>会员标签</span>
+                	<i class="trueSel"></i>
+                </li>
+            </ul>
+        </li>
+        <li class="searchMar10">
+            <span class="searchMar7">全部</span>
+            <ul>
+                <li class="searchLI disableAll">取消</li>
+                <li class="searchLI enableAll">使用</li>
+            </ul>
+        </li>
+    </ul>
+<form>
+    <!-- 隐藏的筛选项组放在这个div中 -->
+    <div class="hideFilterGroups" style="display: none;"></div>
+</form>
+<form class="filterForm" onsubmit="return false;">
+    <!--填写筛选条件-->
+	<ul class="searchCon2">
+        <li class="search-top">
+			<div class="select txt input-w158">
+				<span class="filter-toggle">筛选项配置</span>
+				<i></i>
+			</div>
+        </li>
+
+        <div style="display: block">
+        	<!-- 商品名称 -->
+			<li class="search-list" data-field="name">
+	            <span class="searchTitle">商品名称：</span>
+	            <input type="text" class="txt input-w98" name="name" />
+			</li>
+			<!-- 类型 -->
+			<li class="search-list" data-field="typeId">
+				<span class="searchTitle">类型：</span>
+				<div class="select txt input-w98">
+					<span>请选择</span>
+					<input type="hidden" name="typeId" />
+					<i></i>
+					<ul>
+						<li v="type_0">类型0</li>
+						<li v="type_1">类型1</li>
+						<li v="type_2">类型2</li>
+						<li v="type_3">类型3</li>
+					</ul>
+				</div>
+			</li>
+        	<!-- 市场价格 -->
+			<li class="search-list" data-field="price">
+				<span class="searchTitle">市场价格：</span>
+				<div class="select txt input-w98 margin-B5">
+					<input type="hidden" name="priceOperator" />
+					<span>请选择</span>
+					<i></i>
+					<ul>
+						<li v="=">等于</li>
+						<li v=">">大于</li>
+						<li v=">=">大于等于</li>
+						<li v="<">小于</li>
+						<li v="<=">小于等于</li>
+						<li v="<>">介于</li>
+					</ul>
+				</div>
+
+				<div class="search-normal">
+	            <span class="searchTitle"></span>
+	            <input type="text" class="txt input-w98 margin-B5" name="price" />
+				</div>
+
+				<div class="search-between">
+					<span class="searchTitle"></span>
+					<div class="ft-col-a9a9a9">小于等于</div>
+					<input type="text" class="txt input-w98 margin-B5" name="price" />
+
+					<span class="searchTitle"></span>
+					<div class="ft-col-a9a9a9">大于等于</div>
+					<input type="text" class="txt input-w98 margin-B5" name="price" />
+				</div>
+
+			</li>
+        	<!-- 更新日期 -->
+			<li class="search-list" data-field="date">
+				<span class="searchTitle">更新日期：</span>
+				<div class="select txt input-w98 margin-B5">
+					<span>请选择</span>
+					<input type="hidden" name="dateOperator" />
+					<i></i>
+					<ul>
+						<li v="=" selected>等于</li>
+						<li v=">">大于</li>
+						<li v=">=">大于等于</li>
+						<li v="<">小于</li>
+						<li v="<=">小于等于</li>
+						<li v="<>">介于</li>
+					</ul>
+				</div>
+				<!--控制左侧的margin边距情况-->
+				<div class="search-normal">
+					<span class="searchTitle"></span>
+					<input type="text" class="txt input-w98 margin-B5 datebox date-ico" name="date" value="" />
+				</div>
+				<div class="search-between">
+					<span class="searchTitle"></span>
+					<div class="ft-col-a9a9a9">晚于等于</div>
+					<input type="text" class="txt input-w98 margin-B5 datebox date-ico" name="date" value="" />
+					<span class="searchTitle"></span>
+					<div class="ft-col-a9a9a9">早于等于</div>
+					<input type="text" class="txt input-w98 margin-B5 datebox date-ico" name="date" value="" />
+				</div>
+			</li>
+
+			<!-- 底部操作按钮 -->
+			<li>
+				<div class="btn-sub filter-btn">
+					<span class=" gen-sureBtn">立即筛选</span>
+					<span class=" gen-cancelBtn">重置条件</span>
+				</div>
+			</li>
+        </div>
+    </ul>
+</form>
+</div>
+<!-- 高级筛选 end -->
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+
+    appManager.use('datagrid', {
+        url: "../data/data.json",
+        method: "get",	// 数据请求类型
+        queryParams: {
+        	table: "memberInfo"
+        },	// 请求附带参数列表
+        idField: "id",
+        columns: [[
+            {
+                field: "_checkbox",	// 列与数据关联的字段（此字段是不存在的字段，用于显示复选框）
+                title: "复选框",	// 列头名称
+                width: 50,	// 列宽度
+                checkbox: true,
+                dataType: "id"	// 数据类型，id为标识字段
+            },
+            {
+                field: "id",	// 列与数据关联的字段
+                title: "查看",	// 列头名称
+                width: 50,	// 列宽度
+                dataType: "id",	// 数据类型，id为标识字段
+                openDetail: true	// 点击此列数据是否弹出详细窗口
+            },{
+                field: "thumbnail",
+                title: "缩略图",
+                width: 100,
+                resizable: false,
+                dataType: "image",	// 图片类型列，显示缩略图
+                editable: {
+                	options: {
+                		required: true
+                	}
+                }
+            },{
+                field: "name",
+                title: "商品名称",
+                width: 150,
+                sortable: true,	// 此列是否允许排序
+                dataType: "text",	// 文本类型列
+                editable: {	// 是否允许编辑
+                	options: {
+                		required: true	// 是否为必填项
+                	}
+                },
+                advanceFilter: {	// 是否允许高级筛选
+                	hidden: false	// 默认是否隐藏
+                }
+            },{
+                field: "typeId",
+                title: "类型",
+                width: 100,
+                dataType: "select",	// 下拉列表选项列
+                textField: "typeName",	// 显示的字段
+                editable: {	// 是否允许编辑
+                	dropDownUrl: "../data/type.json",	// 下拉列表数据源
+                	method: "get",	// 数据请求类型
+                	options: {
+                		required: true	// 是否为必填项
+                	}
+                },
+                advanceFilter: {	// 是否允许高级筛选
+                	hidden: false	// 默认是否隐藏
+                }
+            },{
+                field: "tag",
+                title: "标签",
+                width: 100,
+                hidden: true,
+                dataType: "text",
+                editable: {	// 是否允许编辑
+                    options: {
+                        required: true	// 是否为必填项
+                    }
+                }
+            },{
+                field: "price",
+                title: "市场价格",
+                width: 100,
+                dataType: "number",	// 数字类型列
+                editable: {	// 是否允许编辑
+                    options: {
+                        required: true	// 是否为必填项
+                    }
+                },
+                advanceFilter: {	// 是否允许高级筛选
+                	hidden: true	// 默认是否隐藏
+                }
+            },{
+                field: "date",
+                title: "更新日期",
+                width: 150,
+                dataType: "date",	// 日期类型列
+                editable: {	// 是否允许编辑
+                    options: {
+                        required: true	// 是否为必填项
+                    }
+                },
+                advanceFilter: {	// 是否允许高级筛选
+                	hidden: true	// 默认是否隐藏
+                }
+            },{
+                field: "_operate",
+                title: "操作",
+                dataType: "operate",	// 操作类型列
+                width: 280,
+                // layoutType: "vertical",	// 布局类型，不设置此参数显示为水平布局，或者设置为vertical为垂直布局
+                operateTitle: "处理订单",	// vertical布局，显示的名称
+                operateOptions: [
+                	{
+                		type: "edit",
+                		title: "订单编辑",
+                		callback: function(index, rowData){
+                			// ajax更新数据
+                			alert("ajax更新数据");
+                			alert(JSON.stringify(rowData));
+                		}
+                	}, {
+                		type: "pay",
+                		title: "支付"
+                	}, {
+                		type: "send",
+                		title: "发货"
+                	}, {
+                		type: "completed",
+                		title: "完成"
+                	}, {
+                		type: "delete",
+                		title: "删除行",
+                		callback: function(index, rowData){
+                			alert("ajax删除索引为：" + index + "，id：" + rowData.id + "的行。");
+                		}
+                	}, {
+                		type: "remark",
+                		title: "备注"
+                	}
+                ]
+            }
+        ]]
+    });
+	appManager.use("ctrl")
+</script>
+
+<br />
+<br />
+<br />
+<br />
+<div class="info">
+        <ul>
+            <li class="Goods-L1">
+                <span class="ft-t-14 Goods-title">结构代码</span>
+            </li>
+        </ul>
+        <div style="clear: both;"></div>
+
+		<xmp style="display: block;">
+	依赖的模块：
+
+		var $=require('jquery');
+		var easyui = require("easyui");
+		require("../widgets/select");
+		require("../libs/plugs/jquery-ui.js");
+		var dialog = require('../widgets/dialog-plus');
+		var pageParam = require("PageParam");
+
+		// 数据网格引用
+		var datagrid = require("../widgets/datagrid");
+		// 高级筛选功能引用（如果需要）
+		var advanceFilter = require("../widgets/advancefilter");
+
+
+	1.在html页面中编写一个表格占位元素
+
+		<table id="dg"></table>
+
+	2.在html页面中添加列管理面板dom结构
+
+		<!-- 列管理面板显示内容 -->
+		<div id="columnManagePanelContent" style="display: none;">
+		    <div class="box-con">
+		        <span class="boxDown ft-col-666">拖动改变顺序</span>
+		        <ul class="boxCont boxCol">
+		            <li class=" boxR">
+		                <span class="boxList-move f-l"></span>
+		                <input class="Checkbox box-check"  type="checkbox" name="caozuo" value="checkbox" />
+		                <span>操作</span>
+		            </li>
+		        </ul>
+		    </div>
+		</div>
+
+
+
+	3.在html页面中添加高级筛选dom结构（如果需要高级筛选）
+	  筛选项内容需要自己手动编写，其中select下拉框和date日期程序给自动绑定功能。
+	  a) 需要在<li>标签中添加 “data-field” 属性，值为此筛选项对应的字段名，用于显示隐藏筛选项。
+	  b) <li>标签中自己填写筛选项内容。
+	  c) 如果要显示select下拉框控件，使用select下拉框控件结构，如下：
+	  	<li class="search-list" data-field="typeId">
+			<span class="searchTitle">类型：</span>
+			<!-- 下面是模拟的下拉列表框控件结构 -->
+			<!-- 程序会给$(".search-list .select")的元素注册为select控件 -->
+			<div class="select txt input-w98">
+				<span>请选择</span>
+            			<!-- input隐藏域的name属性等于要查询条件中的字段名称 -->
+				<input type="hidden" name="typeId" />
+				<i></i>
+				<ul>
+					<li v="type_0">类型0</li>
+					<li v="type_1">类型1</li>
+					<li v="type_2">类型2</li>
+					<li v="type_3">类型3</li>
+				</ul>
+			</div>
+		</li>
+	  d) 如果要显示date日期选择空间，需要在<li>标签中使用带有.datebox类标识的元素，如
+	  	<li class="search-list" data-field="date">
+			<span class="searchTitle">更新日期：</span>
+	  		<input type="text" class="txt input-w98 margin-B5 datebox" name="date" value="" />
+	  	</li>
+	  e) 进行筛选按钮功能需要自己编写，获取表单内容、进行数据校验和查询数据操作，下面给出一个大概示例
+		// 筛选按钮绑定click事件
+		$("#advanceFilterPanel").find(".gen-sureBtn").on("click", function(e){
+			var params = {};
+			// 获取form表单数据并转换成json对象
+			$.each($("#advanceFilterPanel form.filterForm").serializeArray(), function(i, param){
+				params[param.name] = param.value;
+			});
+
+			// 设置要查询的表名称
+			$.extend(params, {table: "memberInfo"});
+
+			// 重新加载数据，传递查询查询参数（theDatagrid是创建datagrid表格控件返回的实例对象）
+			theDatagrid.loadData(params);
+		});
+
+	  	下面列出一个面板结构，包含了部分筛选项：
+
+----------------------- 高级筛选面板所需 DOM 结构展示 begin ---------------------------------------------------------------------------------------------------------------------------------------
+
+		<!-- 高级筛选面板 begin -->
+		<div class="searchSet" style="z-index: 999; display: none;" id="advanceFilterPanel">
+		    <div class="searchHead">
+		        <span class="searchIcon"></span>
+		        <span class="ft-col-4587da ft-14">高级检索</span>
+		        <span class="searchClose"></span>
+		    </div>
+
+		    <!-- 筛选项设置（column列表） -->
+			<ul class="searchCon1 bg-col-fff" >
+				<div class="searchSetTop ft-col-6d6d6d filter-toggle">
+					<span>筛选项设置</span>
+					<img class="searchDownIcon" src="../images/icon-down_03.png" alt="" />
+				</div>
+		        <li class="searchMar10">
+		            <span class="searchMar7">筛选项</span>
+		            <ul class="filter-columns">
+		            	<!-- 此处显示columns中有advanceFilter属性的列信息 -->
+		            </ul>
+		        </li>
+		        <li class="searchMar10">
+		            <span class="searchMar7">全部</span>
+		            <ul>
+		                <li class="searchLI disableAll">取消</li>
+		                <li class="searchLI enableAll">使用</li>
+		            </ul>
+		        </li>
+		    </ul>
+		<form>
+		    <!-- 隐藏的筛选项组放在这个div中 -->
+		    <div class="hideFilterGroups" style="display: none;"></div>
+		</form>
+		<form class="filterForm" onsubmit="return false;">
+		    <!--填写筛选条件-->
+			<ul class="searchCon2" style="display: block;height: 800px">
+		        <li class="search-top">
+					<div class="select txt input-w158">
+						<span class="filter-toggle">筛选项配置</span>
+						<i></i>
+					</div>
+		        </li>
+
+		        <div style="display: block">
+		        	<!-- 此处编写筛选项内容 -->
+		        	<!-- li标签必须添加 “data-field” 属性，值等于筛选项对应的字段名，用于切换显示隐藏筛选项 -->
+
+		        	<!-- 商品名称 -->
+					<li class="search-list" data-field="name">
+			            <span class="searchTitle">商品名称：</span>
+			            <!-- input文本框的name属性等于要查询条件中的字段名称 -->
+			            <input type="text" class="txt input-w98" name="name" />
+					</li>
+					<!-- 类型 -->
+					<li class="search-list" data-field="typeId">
+						<span class="searchTitle">类型：</span>
+						<!-- 下面是模拟的下拉列表框控件结构 -->
+						<!-- 程序会给$(".search-list .select")的元素注册为select控件 -->
+						<div class="select txt input-w98">
+							<span>请选择</span>
+			            	<!-- input隐藏域的name属性等于要查询条件中的字段名称 -->
+							<input type="hidden" name="typeId" />
+							<i></i>
+							<ul>
+								<li v="type_0">类型0</li>
+								<li v="type_1">类型1</li>
+								<li v="type_2">类型2</li>
+								<li v="type_3">类型3</li>
+							</ul>
+						</div>
+					</li>
+		        	<!-- 市场价格 -->
+					<li class="search-list" data-field="price">
+						<span class="searchTitle">市场价格：</span>
+						<div class="select txt input-w98">
+			            	<!-- input隐藏域的name属性等于要查询条件中的字段名称 -->
+							<input type="hidden" name="priceOperator" />
+							<span>请选择</span>
+							<i></i>
+							<ul>
+								<li v="=">等于</li>
+								<li v=">">大于</li>
+								<li v=">=">大于等于</li>
+								<li v="<">小于</li>
+								<li v="<=">小于等于</li>
+							</ul>
+						</div>
+			            <span class="searchTitle"></span>
+			            <!-- input文本框的name属性等于要查询条件中的字段名称 -->
+			            <input type="text" class="txt input-w98 margin-B5" name="price" />
+					</li>
+		        	<!-- 更新日期 -->
+					<li class="search-list" data-field="date">
+						<span class="searchTitle">更新日期：</span>
+						<div class="select txt input-w98">
+							<span>请选择</span>
+			            	<!-- input隐藏域的name属性等于要查询条件中的字段名称 -->
+							<input type="hidden" name="dateOperator" />
+							<i></i>
+							<ul>
+								<li v="=" selected>等于</li>
+								<li v=">">大于</li>
+								<li v=">=">大于等于</li>
+								<li v="<">小于</li>
+								<li v="<=">小于等于</li>
+								<li v="<>">介于</li>
+							</ul>
+						</div>
+			            <span class="searchTitle"></span>
+						<!-- 程序会给$(".search-list .datebox")的元素注册为Calendar日期控件 -->
+			            <input type="text" class="txt input-w98 margin-B5 datebox" name="date" value="" />
+					</li>
+
+					<!-- 底部操作按钮 -->
+					<li>
+						<div class="btn-sub filter-btn">
+							<span class=" gen-sureBtn">立即筛选</span>
+							<span class=" gen-cancelBtn">重置条件</span>
+						</div>
+					</li>
+		        </div>
+		    </ul>
+		</form>
+		</div>
+		<!-- 高级筛选 end -->
+
+----------------------- 高级筛选面板所需 DOM 结构展示 end ---------------------------------------------------------------------------------------------------------------------------------------
+
+
+	4. 配置初始化 datagrid 所需的参数
+
+		下面举例说明：
+
+		var options = {
+		        url: "../data/data.json",	// 表格显示的数据接口（*必须设置）
+		        method: "post",	// 数据请求类型
+		        queryParams: {	// 请求附带参数列表
+		        	table: "memberInfo"
+		        },
+		        idField: "id",	// columns中的id标识列（*必须设置）
+		        singleSelect: false,	// datagrid是否只允许单选行，默认true，为单选行
+		        columnManage: {	// 列管理面板配置
+		        	target: "openColumnManage",	// 打开列管理面板的触发按钮id
+		        	callback: function(columnOrder, columnData){	// 面板点击确定后的处理函数（columnOrder：列顺序信息，columnData：列数据信息）
+		                alert("操作后的columns数据：" + JSON.stringify(columnOrder));
+
+		                alert("ajax更新列头数据！然后调用renderDatagrid()函数重新生成datagrid");
+
+		                $.ajax({
+		                	url: "/updateColumns.do",
+		                	type: "post",
+		                	data: columnOrder,
+		                	success: function(data){
+		                		console.log("保存列属性信息成功！");
+		                	}
+		                });
+
+		                // 重新渲染datagrid（字段顺序发生变化时，调用此函数）
+		                theDatagrid.renderDatagrid();
+		        	}
+		        },
+		        onSelect: function(index, row){	// 页面中有选中行时触发
+		        	console.log("选中行索引：", index);
+		        	console.log("选中行数据：", row);
+		        	console.log("本页所有选中行数量：", theDatagrid.getSelectionsData().length);
+		        	console.log("当前页所有行数量：", theDatagrid.getDataOfCurrentPage().length);
+		        },
+		        onUnselect: function(index, row){	// 页面中取消选中行时触发
+		        	console.log("取消选中行索引：", index);
+		        	console.log("取消选中行数据：", row);
+		        	console.log("本页所有选中行数量：", theDatagrid.getSelectionsData().length);
+		        	console.log("当前页所有行数量：", theDatagrid.getDataOfCurrentPage().length);
+		        },
+		        onCheck: function(index, row){	// 页面中有勾选行时触发
+		        	console.log("选中行索引：", index);
+		        	console.log("选中行数据：", row);
+		        	console.log("本页所有选中行数量：", theDatagrid.getSelectionsData().length);
+		        	console.log("当前页所有行数量：", theDatagrid.getDataOfCurrentPage().length);
+		        },
+		        onUncheck: function(index, row){	// 页面中取消勾选行时触发
+		        	console.log("取消选中行索引：", index);
+		        	console.log("取消选中行数据：", row);
+		        	console.log("本页所有选中行数量：", theDatagrid.getSelectionsData().length);
+		        	console.log("当前页所有行数量：", theDatagrid.getDataOfCurrentPage().length);
+		        },
+		        onResizeColumn: function(field, width){	// 表头列宽度调整时触发
+		        	console.log("调整的列字段名：", field);
+		        	console.log("调整后的列宽度：", width);
+		        	console.log("所有列的数据信息：", theDatagrid.getColumnsConfig());
+		        },
+		        columns: [[	// 表头信息配置项，此值格式为二位数组，但数组中只放一个数据就可以，列信息写在二维数组中。[[/*这里写字段信息*/]]（*必须设置）
+		            {	// 如果datagrid表格中需要显示一列checkbox复选框列，使用下面对象格式即可。
+		                field: "_checkbox",	// 列与数据关联的字段（此字段是不存在的字段，用于显示复选框）
+		                title: "复选框",	// 列头名称
+		                width: 50,	// 列宽度
+		                checkbox: true,
+		                dataType: "id"	// 数据类型，id为标识字段
+		            },
+		            {
+		                field: "id",	// 列与数据关联的字段（*必须设置）
+		                title: "查看",	// 列头名称（*必须设置）
+		                width: 50,	// 列宽度（*必须设置）
+		                dataType: "id",	// 数据类型，id为标识字段，此属性关联显示类型和编辑行时的显示形态（*必须设置）
+		                openDetail: false	// 点击此列数据是否弹出详细窗口（*必须设置）
+		            },{
+		                field: "thumbnail",
+		                title: "缩略图",
+		                width: 100,
+		                resizable: false,	// 标识此列是否可拖拽表头进行调整尺寸，默认值true
+		                dataType: "image",	// 图片类型列，显示缩略图
+		                editable: {	// 此列数据需要启用行内编辑功能，添加此属性。
+		                	options: {
+		                		required: true // 是否为必填项
+		                	}
+		                }
+		            },{
+		                field: "name",
+		                title: "商品名称",
+		                width: 150,
+		                sortable: true,	// 此列是否允许排序，默认为false。
+		                dataType: "text",	// 文本类型列
+		                editable: {	// 是否允许编辑
+		                	options: {
+		                		required: true	// 是否为必填项
+		                	}
+		                },
+		                advanceFilter: {	// 是否允许高级筛选
+		                	hidden: false	// 默认是否隐藏
+		                }
+		            },{
+		                field: "typeId",
+		                title: "类型",
+		                width: 100,
+		                dataType: "select",	// 下拉列表选项列
+		                textField: "typeName",	// 显示的字段（*下拉框显示的中文字段）
+		                editable: {	// 是否允许编辑
+		                	dropDownUrl: "../data/type.json",	// 下拉列表数据源
+		                	method: "get",	// 数据请求类型
+		                	options: {
+		                		required: true	// 是否为必填项
+		                	}
+		                },
+		                advanceFilter: {	// 是否允许高级筛选
+		                	hidden: false	// 默认是否隐藏
+		                }
+		            },{
+		                field: "tag",
+		                title: "标签",
+		                width: 100,
+		                hidden: true,	// 此列默认是否隐藏，默认值false
+		                dataType: "text",
+		                editable: {	// 是否允许编辑
+		                    options: {
+		                        required: true	// 是否为必填项
+		                    }
+		                }
+		            },{
+		                field: "price",
+		                title: "市场价格",
+		                width: 100,
+		                dataType: "number",	// 数字类型列
+		                editable: {	// 是否允许编辑
+		                    options: {
+		                        required: true	// 是否为必填项
+		                    }
+		                },
+		                advanceFilter: {	// 是否允许高级筛选
+		                	hidden: true	// 默认是否隐藏
+		                }
+		            },{
+		                field: "date",
+		                title: "更新日期",
+		                width: 150,
+		                dataType: "date",	// 日期类型列
+		                editable: {	// 是否允许编辑
+		                    options: {
+		                        required: true	// 是否为必填项
+		                    }
+		                },
+		                advanceFilter: {	// 是否允许高级筛选
+		                	hidden: true	// 默认是否隐藏
+		                }
+		            },{
+		                field: "_operate",	// 随便设置一个不存在的字段就行
+		                title: "操作",
+		                dataType: "operate",	// 操作类型列（*名称固定，不可改）
+		                width: 280,
+		                // layoutType: "vertical",	// 布局类型，不设置此参数显示为水平布局，或者设置为vertical为垂直布局
+		                operateTitle: "处理订单",	// vertical布局，显示的名称
+		                operateOptions: [
+		                	{
+		                		type: "edit",	// 如果是编辑行的菜单项，名称固定不可改：edit
+		                		title: "订单编辑",	// 菜单显示中文名
+		                		callback: function(index, rowData){	// 点击按钮后要执行的操作
+		                			// 参数说明：
+		                			// index: 行索引
+		                			// rowData: 编辑后的行数据
+
+		                			// ajax更新数据
+		                			alert("ajax更新数据");
+		                			alert(JSON.stringify(rowData));
+		                		}
+		                	}, {
+		                		type: "pay",	// 除了edit和delete，其他都随便定义
+		                		title: "支付",
+		                		callback: function(index, rowData){}
+		                	}, {
+		                		type: "send",
+		                		title: "发货"
+		                	}, {
+		                		type: "completed",
+		                		title: "完成"
+		                	}, {
+		                		type: "delete",	// 删除行的操作菜单，delete固定不可改
+		                		title: "删除行",
+		                		callback: function(index, rowData){
+		                			alert("ajax删除索引为：" + index + "，id：" + rowData.id + "的行。");
+		                		}
+		                	}, {
+		                		type: "remark",
+		                		title: "备注"
+		                	}
+		                ]
+		            }
+		        ]]
+		    };
+
+
+	5. 初始化表格控件
+
+		// 初始化数据网格（用变量接受返回值，之后可以调用其中接口）
+		// 两个参数：
+		// 		第一个datagrid占位元素的jQuery DOM元素
+		// 		第二个datagrid设置项
+		var theDatagrid = datagrid.datagrid($('#dg'), options);
+
+
+	6. 提供的接口说明
+
+		theDatagrid全局属性包含：
+
+		1)	_$tableDOM : $(“#dg”)jQuery DOM对象
+		2)	_$dgPanelDOM : 生成的datagrid外层容器jQuery DOM对象
+		3)	_$dgPanelDOM: $(“#dg”)jQuery DOM对象
+		4)	_$tableDOM: 生成的datagrid外层容器jQuery DOM对象
+		5)	_editRowIndex:正在编辑的行索引（不需要操作调用）
+		6)	getAllData:()	获取所有数据
+		7)	getColumnsConfig:() 获取列配置信息（options.columns[0]的内容-副本）
+		8)	getDataOfCurrentPage:() 获取当前页显示的数据
+		9)	getSelectionsData:() 获取选中行的数据
+		10)	getUnselectData:() 获取未选中行的数据
+		11)	jumpTo:(pageNum) 跳转页面，传入页码或者first、last
+		12)	loadData:(queryParams) 重新加载数据，传入查询参数会替代options.queryParams值
+		13)	refreshDatagrid:() 重新加载数据，相当于不传参的loadData()函数
+		14)	renderDatagrid:() 重新渲染datagrid，datagrid全部重新生成（例如需要刷新列头顺序时）
+		--15)	toggleSelections:() 反选选中行【删除】
+		16)	unselectAll:() 取消选中所有行
+		17)	appendRow:(rowData) datagrid中新增行
+		18)	_checkedRule: datagrid勾选状态：all=跨页全选状态，checked=获取勾选项，unchecked=获取未勾选项
+		19)	_checkedRowIds: datagrid勾选与未勾选的项目（部分）一般不用也不操作
+		20)	getCheckedRowIds(): 获取datagrid勾选的项目，_checkedRule=checked时调用
+		21)	getUncheckedRowIds(): 获取datagrid未勾选的项目，_checkedRule=unchecked时调用
+		21)	deleteRow(index): ajax删除数据行后，调用此函数后再刷新datagrid，此函数会将删除的行记录从_checkedRowIds中移除
+
+		调用方式：
+
+			// 获取选中行数据
+			theDatagrid.getSelectionsData();
+
+			// 页面跳转到第五页
+			theDatagrid.jumpTo(5);
+
+
+
+
+
+
+------------------------ 下面介绍高级筛选面板使用方法 begin -----------------------------------------------------------------------------------------------------------------
+
+
+	// 初始化高级筛选
+	// 三个参数：
+	// 第一个参数面板jQuery DOM对象
+	// 第二个参数关联的数据网格列信息，直接调用datagrid接口就可以。
+	// 第三个参数设置项
+	advanceFilter.initAdvanceFilter($("#advanceFilterPanel"), theDatagrid.getColumnsConfig(), {
+		openTarget: "openAdvanceFilterPanel"	// 调用打开高级筛选面板的元素id
+	});
+
+
+------------------------ 下面介绍高级筛选面板使用方法 end -----------------------------------------------------------------------------------------------------------------
+
+		</xmp>
+    </div>
+
+</body>
+<style type="text/css">
+	#dgPreviewImage{
+		position: absolute;
+		background: black;
+	}
+</style>
+</html>

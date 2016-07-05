@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/temp.css">
+    <title>模版管理-可视化编辑</title>
+</head>
+<body>
+<div>
+    <div class="visual-h">
+        <ul class=" visual-tabs pos-absolute" >
+            <li class="visual-li  visual-sel visual-edit "><i class="visual-right-arrow"></i>可视化编辑</li>
+            <li class="visual-li  fade-li ">页面管理</li>
+            <li class="visual-li  fade-li">源文件管理</li>
+        </ul>
+
+        <div class="visual-btn close-btn">退出</div>
+        <div class="drop-down1" >
+            <table class="drop-down1-table">
+                <tr>
+                    <td class="drop-table-left" >
+                        <div class="marginLR30">
+                            首页
+                        </div>
+                    </td>
+                    <td class="drop-table-right">
+                        <table>
+                            <tr>
+                                <td ><a href="">index-1.html</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">demo.html</a></td>
+                            </tr>
+                            <tr>
+                                <td ><a href="">index-3.html</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="drop-table-left" ><div class="marginLR30">商品列表页</div></td>
+                    <td class="drop-table-right">
+                        <table>
+                            <tr>
+                                <td ><a href="">index-4w.html</a></td>
+                            </tr>
+                            <tr>
+                                <td ><a href="">index-f.html</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="drop-table-left" ><div class="marginLR30">文章列表页</div></td>
+                    <td class="drop-table-right">
+                        <table>
+                            <tr>
+                                <td ><a href="">index-f.html</a></td>
+                            </tr>
+                            <tr>
+                                <td ><a href="">index-f.html</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="drop-table-left" ><div class="marginLR30">默认页</div></td>
+                    <td class="drop-table-right">
+                        <table>
+                            <tr>
+                                <td ><a href="">http://www.baidu.com</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="drop-table-left" ><div class="marginLR30">赠品页</div></td>
+                    <td class="drop-table-right">
+                        <table>
+                            <tr>
+                                <td ><a href="">demo.html</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div class="visual-set-btn" >
+        <span class="visual-btn view-btn">预览</span>
+        <span class="visual-btn save-btn">保存</span>
+    </div>
+</div>
+
+
+
+<div id="">
+
+</div>
+
+</body>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script>
+    /***选项卡的页签的切换***/
+  /*  $(".fade-li").hover( function () {
+        $(this).siblings(".fade-li").removeClass("visual-sel");
+        $(this).addClass("visual-sel");
+        var _index = $(this).index();
+        $(".tabs-infor1").eq(_index).show().siblings(".tabs-infor1").hide();
+    });
+*/
+    /***控制导航的三角方向***/
+    $(function(){
+        $(".visual-edit").hover(function(){
+          $(this).find("i").removeClass("visual-right-arrow").addClass("visual-down-arrow");
+            $(".drop-down1").show();
+        },function(){
+            $(this).find("i").removeClass("visual-down-arrow").addClass("visual-right-arrow");
+            $(".drop-down1").hide();
+        });
+        $(".drop-down1").hover(function(){
+            $(".visual-edit").find("i").removeClass("visual-right-arrow").addClass("visual-down-arrow");
+            $(".drop-down1").show();
+        },function(){
+            $(".visual-edit").find("i").removeClass("visual-down-arrow").addClass("visual-right-arrow");
+            $(".drop-down1").hide();
+        });
+    })
+
+</script>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>dialog</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/form.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+<style>
+  pre {
+    background-color: #303030;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+  }
+  pre code {
+    color: #f2f2f2;
+    border: none;
+    padding: 0;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="lt-main">
+    <h2 class="lt-title add-goods-head">
+        <div class="mtitle add-goods-page">dialog<span></span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="container">
+    <button class="alertBtn">显示alert</button><button class="confirmBtn">显示confirm</button><button class="iframeBtn">显示iframe</button><button class="closeBtn">关闭窗口</button>
+        <div class="info">
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例操作</span>
+                </li>
+                <li class="goodsClassify">
+                    <div>
+                        <h3><span id="quickref-basic">父页面设置</span></h3>
+                        <pre>
+                            <code>
+seajs.use('../js/libs/plugs/dialog/dialog-plus',function(dialog){
+	window.dialog=dialog;
+})
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+                <li class="goodsClassify">
+                    <div>
+                        <h3><span id="quickref-basic">alert,confirm,iframe页,close窗口</span></h3>
+                        <pre>
+                            <code>
+return{
+    showAlert:function(obj){
+        var defaults={title:"标题",width:400,content:"信息内容",okValue:"确定"}
+        var opt=$.extend({},defaults,obj)
+        top.dialog(opt).showModal();
+        return false;
+    },
+    showConfirm:function(obj){
+        var defaults={title:"标题",width:400,content:"信息内容",okValue:"确定",cancelValue:"取消"}
+        var opt=$.extend({},defaults,obj)
+        top.dialog(opt).showModal();
+        return false;
+    },
+    showIframe:function(obj){
+        top.dialog({
+            title:obj.title,
+            width:obj.width,
+            url:obj.url,
+            data:obj.data,
+            onclose:function(){
+                if(this.returnValue){
+                    //console.log(this.returnValue)
+                    obj.callback(this.returnValue)
+                }
+                this.focus()
+            }
+        }).showModal();
+        return false;
+    },
+    initFrame:function(callback){
+        var dialog=top.dialog.get(window)
+        var data=dialog.data
+        callback(data)
+        dialog.reset();	
+    },
+    closeDialog:function(data){
+        var dialog=top.dialog.get(window)
+        dialog.close(data).remove()
+    }
+}
+
+//调用
+define(function(require){
+
+	var dlog=require("../widgets/dialogs"),$=require("jquery");
+    
+	$(".alertBtn").click(function(){
+		dlog.showAlert({title:"提示",width:500,content:"这是alert内容"ok:function(){//提交}})
+	})
+    
+	$(".confirmBtn").click(function(){
+		dlog.showConfirm({title:"提示",width:500,content:"这是confirm内容",ok:function(){}})
+	})
+    
+	$(".iframeBtn").click(function(){
+		dlog.showIframe({title:"提示",width:500,url:"ztree-content.html",data:data,callback:function(){}})
+	})
+    
+    $(".closeBtn").click(function(){
+   		dlog.closeDialog(); 
+   })
+    
+})
+                            </code>
+                        </pre>
+                    </div>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+  appManager.use('dialog');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/login.css"/>
+    <link rel="stylesheet" href="../css/form.css"/>
+</head>
+<body class="bg-f0f0f0">
+<form action="" class="validationForm">
+    <div class="loginCon">
+        <span class="logo"></span>
+        <input class="loginTxt loginName" id="username" type="text" />
+        <div class="default-tip top-95">用户名或手机号</div>
+        <span><img src="../images/login_user.png" class="login_user"/></span>
+           <span class="errorTip errorTipUser">
+           <img src="../images/login_tip.png" class="login_tip"/><span></span>
+        </span>
+
+        <input class="loginTxt loginPassword" id="password" type="password"/>
+        <div class="default-tip top-164">密码</div>
+        <span><img src="../images/login_resetPaw.png" class="login_resetPaw"/></span>
+          <span class="errorTip errorTipPassWord">
+          <img src="../images/login_tip.png" class="login_tip"/><span></span>
+        </span>
+
+        <span class="floatLeft"><i class="checkbox checkBox RememPwd" v="选定的值"></i> 记住账号</span>
+        <!--<label class="floatRight">忘记密码 ?</label>-->
+        <input class="loginSubmit" type="button" value="登录"/>
+    </div>
+</form>
+</body>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(function(){
+            $(".loginTxt").each(function(){
+                if($(this).val() != ""){
+                    $(this).next(".default-tip").hide();
+                }
+            })
+        });
+        //模拟复选框
+        $(".checkbox").click(function () {
+            var _this=$(this);
+            if (_this.hasClass("checked")) {
+                _this.removeClass("checked");
+            } else {
+                _this.addClass("checked");
+            }
+        });
+        $("input.loginName")
+                .focus(function () {
+                    $(this).next(".default-tip").hide();
+                    if($(this).val() == this.defaultValue){
+                        $(this).val("");
+                        $(this).removeClass("errorMes");
+                        $(".errorTipUser").hide();
+                    }
+
+                })
+                .blur(function () {
+                    if ($(this).val() == "") {
+                        $(this).next(".default-tip").show();
+                        $(this).val(this.defaultValue).css("color","#999").removeClass("errorMes");
+                        $(".loginName").addClass("errorMes");
+                        $(".errorTipUser").show();
+                        $(".errorTipUser span").html("请输入用户名");
+                    }else if ($(this).val() !=this.defaultValue &&  this.value.length < 6 || this.value.length >20) {
+                        $(".errorTipUser").show();
+                        $(this).addClass("errorMes");
+                        $(".errorTipUser span").html("用户名非法")
+                    } else {
+                        $(this).removeClass("errorMes");
+                        $(".errorTipUser").hide();
+                    }
+                });
+
+        $("input.loginPassword")
+                .focus(function () {
+                    $(this).next(".default-tip").hide();
+                    if($(this).val() ==this.defaultValue){
+                        $(this).val("");
+                        $(this).removeClass("errorMes");
+                        $(".errorTipPassWord").hide();
+                    }
+                })
+                .blur(function () {
+                    if ($(this).val() == "") {
+                        $(this).next(".default-tip").show();
+                        $(this).val(this.defaultValue);
+                        $(".loginPassword").addClass("errorMes");
+                        $(".errorTipPassWord").show();
+                        $(".errorTipPassWord span").html("请输入密码");
+                    } else if ($(this).val() !=this.defaultValue && this.value.length < 6 || this.value.length >20) {
+                        $(".errorTipPassWord").show();
+                        $(this).addClass("errorMes");
+                        $(".errorTipPassWord span").html("密码不正确")
+                    } else {
+                        $(this).removeClass("errorMes");
+                        $(".errorTipPassWord").hide();
+                    }
+                });
+
+       //向cookie中存数据
+        var userName = cookie.get("username");
+        if (userName) {
+            $("#username").val(userName);//向cookie中存储用户名
+        }
+        var rememberUser = function (name) {
+            cookie.set("username", name);
+        };
+
+
+        //提交，最终验证。
+        $('.loginSubmit').click(function(){
+            $("form :input.loginTxt").each(function(){
+                $(this).trigger('focus').trigger("blur");
+            });
+            var numError = $('form .errorTip:visible').length;
+            if(numError){
+                return false;
+            }
+            var $username = $("#username").val();
+            var $password = $("#password").val();
+            $.ajax({
+                type:"post",
+                url:"data.txt",
+                data:{username:$("#username").val(), password:$("#password").val()},
+                dataType:"json",
+               success: function (data) {
+                    var flagName = false;
+                    for (var i = 0; i < data.length; i++) {
+                        var cur = data[i];
+                        if (cur.name === $username) {
+                            if (cur.pass === $password) {
+                                //选中记住账号的时候，向cookie存数据
+                               if($(".RememPwd").hasClass("checked")){
+                                   rememberUser($username);
+                               }
+                                alert("成功登录~~");
+                                //成功之后跳转的页面
+                            } else {
+                                alert("密码错误~~");
+                            }
+                            flagName = true;
+                            break;
+                        }
+                    }
+                    if (!flagName) {
+                        alert("用户不存在请注册~~~");
+                    }
+                }
+              /*  success: function(data){
+                    //选中记住账号的时候，向cookie存数据
+                    if($(".RememPwd").hasClass("checked")){
+                        rememberUser($username);
+                    }
+                    if(data.status==1){
+                        window.location.href=data.msg;
+                    }else{
+                        alert(data.msg);
+                    }
+                }*/
+            })
+        });
+
+    });
+    //定义cookie
+    var cookie = {
+        set: function (name, value, expires, path, domain) {
+            if (typeof expires == "undefined") {
+                expires = new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 30));//30天
+            }
+            document.cookie = name + "=" + escape(value) + ((expires) ? ";expires=" + expires.toGMTString() : "") + ((path) ? ";path=" + path : ";path=/") + ((domain) ? ";domain=" + domain : "");
+        },
+        get: function (name) {
+            var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+            if (arr != null) {
+                return unescape(arr[2]);
+            }
+            return null;
+        },
+        clear: function (name, path, domain) {
+            if (this.get(name)) {
+                document.cookie = name + "=" + ((path) ? "; path=" + path : "; path=/") + ((domain) ? "; domain=" + domain : "") + ";expires=Fri, 02-Jan-1970 00:00:00 GMT";
+            }
+        }
+    };
+</script>
+</html>

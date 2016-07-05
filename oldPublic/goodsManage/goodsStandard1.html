@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>商品管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+</head>
+<body>
+<h2 class="lt-title goods-standard-head">
+    <div class="mtitle">规格属性管理</div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+<div class="mainCont noBorder">
+    <div id="box_main">
+            <ul class="Tab-ul tabs">
+                <li class="Tab-li Tab-li-first" data-tab="first">拓展属性</li>
+                <li class="Tab-li Tab-li-select" data-tab="second">规格项</li>
+            </ul>
+        <div id="tabsContent">
+            <div data-tab="first" style="display: block">
+                <div class="mainCtrl">
+                    <ul>
+                        <li><span class="add-standard">添加拓展属性</span></li>
+                    </ul>
+                </div>
+                <table cellpadding="0" cellspacing="0" border="0" class="tableTitle goods-standard-title">
+                    <tr>
+                        <th>属性名称</th>
+                        <th>表现样式</th>
+                        <th>属性值</th>
+                        <th>启用</th>
+                        <th>必填</th>
+                        <th>可筛选</th>
+                        <th>排序</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+                <div class="tableCont">
+                    <table cellpadding="0" cellspacing="0" border="0" class="tableList goods-standard-list">
+                        <tr id="1">
+                            <td>
+                                <input type="text" class="txt input-w80" value="裤长" />
+                            </td>
+                            <td>
+                                <div class="select input-w80">
+                                    <span>下拉</span>
+                                    <input type="hidden" name=""/>
+                                    <i></i>
+                                    <ul>
+                                        <li v="">列表</li>
+                                        <li v="">下拉</li>
+                                        <li v="">输入</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <!--<span>22,23,24,25,26,27</span>-->
+                                <input type="text" class="txt input-w80" value="点击编辑" readonly="readonly" style="border: none;outline: none;cursor: pointer"/>
+                            </td>
+                            <td>
+                                <input type="hidden" value=""/>
+                                <i class="checkbox"></i>
+                            </td>
+                            <td>
+                                <input type="hidden" value=""/>
+                                <i class="checkbox"></i>
+                            </td>
+                            <td>
+                                <input type="hidden" value=""/>
+                                <i class="checkbox"></i>
+                            </td>
+                            <td>
+                                <span><img src="../images/sortUp.jpg" /></span>
+                                <span><img src="../images/sortDown.jpg"/></span>
+                            </td>
+                            <td><a class="goods-standard-del">删除</a></td>
+                        </tr>
+                        <tr id="2">
+                            <td>材料</td>
+                            <td>输入</td>
+                            <td>超薄</td>
+                            <td>
+                                <input type="hidden" value=""/>
+                                <i class="checkbox"></i>
+                            </td>
+                            <td>
+                                <input type="hidden" value=""/>
+                                <i class="checkbox"></i>
+                            </td>
+                            <td>
+                                <input type="hidden" value=""/>
+                                <i class="checkbox"></i>
+                            </td>
+                            <td>
+                                <span><img src="../images/sortUp.jpg" /></span>
+                                <span><img src="../images/sortDown.jpg"/></span>
+                            </td>
+                            <td><a class="goods-standard-del">删除</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div data-tab="second" style="display: none" >
+                <div style="margin-top: 25px"></div>
+                <table cellpadding="0" cellspacing="0" border="0" class="tableTitle goods-standard-title2">
+                    <tr>
+                        <th>属性名称</th>
+                        <th>表现样式</th>
+                        <th>规格值</th>
+                        <th>启用</th>
+                        <th>可筛选</th>
+                    </tr>
+                </table>
+                <div class="tableCont">
+                    <table cellpadding="0" cellspacing="0" border="0" class="tableList goods-standard-list2">
+                        <tr id="3">
+                            <td>
+                                <input type="text" class="txt input-w80" value="颜色"/>
+                            </td>
+                            <td>图片</td>
+                            <td>檬黄，橘色</td>
+                            <td><input type="hidden" value=""/><i class="checkbox"></i></td>
+                            <td><input type="hidden" value=""/><i class="checkbox"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="goods-standard-btn">
+                    <span class="gen-sureBtn ">保存</span>
+                    <span class="gen-cancelBtn">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--编辑规格值开始-->
+<div class="box w-650 edit-h420" style="display: none;position: absolute;top: 300px;left: 300px;">
+    <div class="box-title  ft-12">
+        <h2 class="box-h2 f-l">编辑规格值</h2>
+        <span class="box-close f-r"></span>
+    </div>
+    <div class="mainCtrl">
+        <ul>
+            <li><span class="delBtn">新增</span></li>
+        </ul>
+        <div><i class="checkbox"></i><span style="margin-left: 10px;vertical-align: 1px">开启属性图片</span></div>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle edit-rule-title">
+        <tr>
+            <th>属性名称</th>
+            <th>图片</th>
+            <th>排序</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+        <div class="">
+            <table cellpadding="0" cellspacing="0" border="0" class="tableList edit-rule-list">
+                <tr >
+                    <td><input type="text" class="input-w80 txt" value="卡其色"/></td>
+                    <td>
+                        <div class="store-detail fake-div">上传图片
+                            <input type="file" class="true-file"/>
+                        </div>
+                       <img src="../images/commonImg.png" alt=""/>
+                    </td>
+                    <td>
+                        <span><img src="../images/sortUp.jpg" /></span>
+                        <span><img src="../images/sortDown.jpg"/></span>
+                    </td>
+                    <td><a class="goods-standard-del">删除</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="box-btn edit-btn-h220 ">
+        <span class="gen-sureBtn ">保存</span>
+        <span class="gen-cancelBtn">取消</span>
+    </div>
+</div>
+<!--编辑规格值结束-->
+
+<!--<script src="../js/jquery-1.9.1.min.js"></script>-->
+<!--<script src="../js/box.js"></script>-->
+<!--<script src="../js/common.js"></script>-->
+<!--<script src="../js/main.js"></script>-->
+<!--<script src="../js/jquery.select.js"></script>-->
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('goodsStandard');
+</script>
+</body>
+<html>

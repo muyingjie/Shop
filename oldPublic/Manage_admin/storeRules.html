@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/systemSetting.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">系统设置<span>-商城规则</span></div>
+    <span class="refreshBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont">
+    <div class="tclist noBottom">
+        <div class="info webDescribe">
+            <ul>
+                <li>
+                    <div class="payMethodLeft w170">时间格式&nbsp;:</div>
+                                 <span class="payMethodRight">
+                                     <input name="linkname" type="text" class="txt input-w158"/>
+                                      <!-- <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>-->
+                                      <div class="err-tip"><i></i><span></span></div>
+                                 </span>
+                </li>
+                <li>
+                    <div class="payMethodLeft w170">货币格式&nbsp;:</div>
+                                 <span class="payMethodRight">
+                                     <input name="linkname" type="text" class="txt input-w158"/>
+                                      <!-- <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>-->
+                                      <div class="err-tip"><i></i><span></span></div>
+                                 </span>
+                </li>
+
+                <li>
+                    <div class="payMethodLeft w170">是否启用发票&nbsp; :</div>
+                    <span class="payMethodRight">
+                       <span class="switchTypeW80">
+                          <input class="radio" type="radio" checked="checked" name="sendInfox">是
+                        </span>
+                         <input class="radio" type="radio" name="sendInfox">否
+                          </span>
+                </li>
+                <li>
+                    <div class="payMethodLeft w170">未支付订单自动作废时间&nbsp; :</div>
+                    <span class="payMethodRight">
+                        <span class="switchTypeW80">
+                            <input class="radio" type="radio" checked="checked" name="sendInfov">从不
+                        </span>
+                        <input class="radio" type="radio" name="sendInfov">待付款订单在
+                        <input type="text" class="txt inputW-20 margin-LR5"/>
+                            <div id="" class="select input-w60 selectH-26">
+                                <span>小时</span>
+                                <input type="hidden" name="">
+                                <i></i>
+                                <ul style="display: none;">
+                                    <li v="">分钟</li>
+                                    <li v="">天</li>
+                                </ul>
+                            </div>
+                        <span>后自动生效</span>
+                    </span>
+                </li>
+                <li>
+                    <div class="payMethodLeft w170 ">减库存时机&nbsp; :</div>
+                    <span class="payMethodRight">
+                        <span class="switchTypeW80">
+                          <input class="radio " type="radio" checked="checked" name="sendInfh1">生成订单
+                        </span>
+                        <input class="radio" type="radio" name="sendInfh1">支付成功
+                    </span>
+                </li>
+
+                <li>
+                    <div class="payMethodLeft w170">订单自动完成时间&nbsp; :</div>
+                    <span class="payMethodRight">
+                          <span class="switchTypeW80">
+                               <input class="radio" type="radio" checked="checked" name="sendInfof">从不
+                          </span>
+                           <input class="radio" type="radio" name="sendInfof">收货后
+                          <input type="text" class="txt inputW-20 margin-LR5"/>
+                        <span>天自动完成</span>
+                    </span>
+                </li>
+                <li>
+                    <div class="payMethodLeft w170">商品金额显示位数&nbsp;:</div>
+                                <span class="payMethodRight">
+                                    <span class="switchTypeW80">
+                                    <input class="radio" type="radio" checked="checked" name="showMoneygn">无小位数</span>
+                                    <span class="switchTypeW80">
+                                    <input class="radio" type="radio" name="showMoneygn">1位小数
+                                        </span>
+                                    <span class="switchTypeW80">
+                                    <input class="radio" type="radio" name="showMoneygn">2位小数
+                                        </span>
+                                    <span class="switchTypeW80">
+                                    <input class="radio" type="radio" name="showMoneygn">3位小数
+                                        </span>
+                                </span>
+                </li>
+                <li>
+                    <div class="payMethodLeft w170">商品价格进位方式&nbsp;:</div>
+                                <span class="payMethodRight">
+                                   <span class="switchTypeW80">
+                                     <input class="radio" type="radio" checked="checked" name="showMoney2fv">四舍五入
+                                   </span>
+                                    <span class="switchTypeW80">
+                                     <input class="radio" type="radio" name="showMoney2fv">向上取整
+                                   </span>
+                                    <span class="switchTypeW80">
+                                     <input class="radio" type="radio" name="showMoney2fv">向下取整
+                                   </span>
+                                </span>
+                </li>
+                <li>
+                    <div class="payMethodLeft w170">无市场价，前端显示规则&nbsp;:</div>
+                                <span class="payMethodRight">
+                                     <input name="linkname" type="text" class="txt input-w158"/>
+                                </span>
+                </li>
+            </ul>
+        </div>
+        <div class="webDescribeBtn">
+            <span class="gen-sureBtn">保存</span>
+        </div>
+    </div>
+</div>
+<script src="../js/libs/jquery/jquery-1.9.1.js"></script>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+</body>
+</html>

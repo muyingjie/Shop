@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>图片列表</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/contentManage.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">图片管理<span>-图片设置</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont">
+    <div class="settingImgT1">
+        <div class="imgSetmargin">
+            <span>一张图片上传后，会自动生成三张图片，分别出现在商店的三类页面，如下：</span>
+            <ul class="settingImgCon">
+                <li>1：显示在商品列表页、首页商品板块内的图片，我们称为"列表页缩略图";</li>
+                <li>2：显示在商品详情页内的图片，我们称为"商品页详细图";</li>
+                <li>3：显示在商品相册页内的图片，我们称为"商品相册图";</li>
+            </ul>
+            <span class="setImgNotice">注意：如果尺寸修改过大，可能导致前台页面显示不正常！</span>
+        </div>
+    </div>
+    <div>
+        <ul class="Tab-ul">
+            <li class="Tab-li Tab-li-select Tab-li-first">商品缩略图设置</li>
+            <li class="Tab-li">商品相册图设置</li>
+            <li class="Tab-li">商品详情图设置</li>
+        </ul>
+        <div class="Tab-content">
+            <!--商品缩略图设置-->
+            <div class="tabs-infor1" style="display: none">
+                <div class="setting-tab-head"><span>商品缩略图设置</span></div>
+                <div class="uploadtxt">默认图：</div>
+                <div class="uploader uploadTop">
+                    <a href="javascript:;" class="file fl">选择图片<input type="file" name="" id=""></a>
+                    <span class="uploaderImg fl"><img src="../images/default_image.jpg"/></span>
+                </div>
+                <div class="uploadtxt settingSize">
+                    <span>尺寸：</span>
+                    <span class="">
+                        <span>宽</span><input type="text " class="txt input-w60 sizeInput"/>
+                        <span>x</span>
+                        <span>高</span><input type="text " class="txt input-w60 sizeInput"/>
+                    </span>
+                </div>
+                <div class="viewImg">预览</div>
+                <div class="box-btn setImgBtn1">
+                    <span class="gen-sureBtn ">保存</span>
+                    <span class="gen-cancelBtn ">取消</span>
+                </div>
+            </div>
+            <!--商品相册图设置-->
+            <div class="tabs-infor1" style="display: none">
+                <div class="setting-tab-head ft-14"><span>商品相册图设置</span></div>
+
+                <div class="uploadtxt">默认图：</div>
+                <div class="uploader uploadTop">
+                    <a href="javascript:;" class="file fl">选择图片<input type="file" name=""></a>
+                    <span class="uploaderImg fl"><img src="../images/default_image.jpg"/></span>
+                </div>
+                <div class="settingSize">
+                    <span>尺寸：</span>
+                    <span class="">
+                        <span>宽</span><input type="text " class="txt input-w60 sizeInput"/>
+                        <span>x</span>
+                        <span>高</span><input type="text " class="txt input-w60 sizeInput"/>
+                    </span>
+                </div>
+                <div class="settingSize">
+                    <span>水印：</span>
+                    <label for=""><input type="radio" class="radio" name="togImg"/>无水印</label>
+                    <label for=""><input type="radio"class="radio" name="togImg"/>图片水印</label>
+                    <label for=""><input type="radio" class="radio" name="togImg"/>文字水印</label>
+                   <div class="setPhotoCon">
+                       <div class="setPhotoList"><span style="margin-left: 15px">水印设置</span></div>
+                       <ul class="setPhotoSelctUl">
+                           <li >
+                               <div class="uploadtxt">水印图片：</div>
+                               <div class="uploader uploadTop">
+                                   <a href="javascript:" class="file fl">选择图片<input type="file" name=""></a>
+                                   <span class="uploaderImg fl"><img src="../images/default_image.jpg"/></span>
+                               </div>
+                           </li>
+                           <li>
+                               <div class="uploadtxt">水印位置：</div>
+                               <table class="waterLocationTable" cellpadding="0" cellspacing="0">
+                                   <tr>
+                                       <td class="bg-4587da">左上</td>
+                                       <td>左中</td>
+                                       <td>右上</td>
+                                   </tr>
+                                   <tr>
+                                       <td>左中</td>
+                                       <td>正中</td>
+                                       <td>右中</td>
+                                   </tr>
+                                   <tr>
+                                       <td>左下</td>
+                                       <td>中下</td>
+                                       <td>右下</td>
+                                   </tr>
+                               </table>
+                           </li>
+                           <li>
+                               <div class="uploadtxt">透明度：</div>
+                               <input type="text" class="txt input-w60 marginL70"/>
+                               <span>%</span>
+                           </li>
+                       </ul>
+                   </div>
+                </div>
+                <div class="viewImg">预览</div>
+                <div class="box-btn setImgBtn1">
+                    <span class="gen-sureBtn ">保存</span>
+                    <span class="gen-cancelBtn ">取消</span>
+                </div>
+            </div>
+            <!--商品详情图设置-->
+            <div class="tabs-infor1" style="display: block">
+                <div class="setting-tab-head ft-14"><span>商品相册图设置</span></div>
+                <div class="uploadtxt">默认图：</div>
+                <div class="uploader uploadTop">
+                    <a href="javascript:;" class="file f-l">选择图片<input type="file" name=""></a>
+                    <span class="uploaderImg f-l"><img src="../images/default_image.jpg"/></span>
+                </div>
+                <div class="settingSize">
+                    <span>尺寸：</span>
+                    <span class="">
+                        <span>宽</span><input type="text " class="txt input-w60 sizeInput"/>
+                        <span>x</span>
+                        <span>高</span><input type="text " class="txt input-w60 sizeInput"/>
+                    </span>
+                </div>
+                <div class="settingSize">
+                    <span>水印：</span>
+                    <label for=""><input type="radio" class="radio" name="togImg"/>无水印</label>
+                    <label for=""><input type="radio" class="radio" name="togImg"/>图片水印</label>
+                    <label for=""><input type="radio" class="radio" name="togImg"/>文字水印</label>
+                    <div class="setPhotoCon">
+                        <div class="setPhotoList"><span style="margin-left: 15px">水印设置</span></div>
+                        <ul class="setPhotoSelctUl">
+                            <li >
+                                <div class="uploadtxt">文字水印：</div>
+                                <div class="uploadTop">
+                                   <input type="text" class="txt input-w60" value="很好"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uploadtxt">水印位置：</div>
+                                <table class="waterLocationTable" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="bg-4587da">左上</td>
+                                        <td>左中</td>
+                                        <td>右上</td>
+                                    </tr>
+                                    <tr>
+                                        <td>左中</td>
+                                        <td>正中</td>
+                                        <td>右中</td>
+                                    </tr>
+                                    <tr>
+                                        <td>左下</td>
+                                        <td>中下</td>
+                                        <td>右下</td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>
+                                <div class="uploadtxt">透明度：</div>
+                                <input type="text" class="txt input-w60 marginL70"/>
+                                <span>%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="viewImg">预览</div>
+                <div class="box-btn setImgBtn1">
+                    <span class="gen-sureBtn ">保存</span>
+                    <span class="gen-cancelBtn ">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

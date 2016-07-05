@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/box.css" rel="stylesheet" type="text/css">
+    <link href="../css/systemSetting.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">系统设置<span>-系统消息</span></div>
+    <span class="refreshBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont noBottom">
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+        <tr>
+            <th class="paddingL20">消息内容</th>
+            <th>发布时间</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+        <div class="tclist">
+            <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>  <tr id="1">
+                <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                <td>2016-03-08 10:56:56 </td>
+            </tr>
+
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+                <tr id="1">
+                    <td class="paddingL20">系统将在 2016-03-02 10:56:56 维护，请注意</td>
+                    <td>2016-03-08 10:56:56 </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="../js/libs/jquery/jquery-1.9.1.js"></script>
+<script>
+    function listInit() {//列表初始化
+        $(".tableTitle th").each(function (i) {
+            var _width = $(this).width();
+            $(".tableList tr:eq(0) td").eq(i).width(_width)
+        });
+        $(".checkbox").removeClass("checked")
+    }
+    listInit();
+</script>
+</body>
+</html>

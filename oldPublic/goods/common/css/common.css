@@ -1,0 +1,501 @@
+@charset "utf-8";
+/*fontFamily*/
+.ft-Arial{
+    font-family: Arial;
+}
+/*fontSize*/
+.ft-t-14{
+    font-size: 14px;
+    font-weight: bold;
+}
+.ft-12{
+    font-size: 12px;
+}
+.ft-14{
+    font-size: 14px;
+}
+.ft-16{
+    font-size: 16px;
+}
+.ft-18{
+    font-size: 18px;
+}
+/*fontColor*/
+.ft-col-a9a9a9{
+    color: #a9a9a9;
+}
+
+.ft-col-333{
+    color: #333;
+}
+.ft-col-666{
+    color: #666;
+}
+
+.ft-col-999{
+    color: #999;
+}
+
+.ft-col-4587da{
+    color: #4587da;
+}
+
+.ft-col-f13848{
+    color: #f13848;
+}
+
+.ft-col-6a6c6f{
+    color: #6a6c6f;
+}
+
+.ft-col-6d6d6d{
+    color: #6d6d6d;
+}
+
+/*float*/
+.f-l{
+    float: left;
+}
+.f-r{
+    float: right;
+}
+/*background*/
+.c-grey{
+    background: #d7d7d7;
+}
+
+/*hide&show*/
+.c-hide{
+    display: none;
+}
+
+/*重要按钮 begin*/
+/*sureBtn*/
+.imp-sureBtn{
+    height: 34px;
+    line-height: 34px;
+    padding: 0 25px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #4587da;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+
+.imp-sureBtn:hover{
+
+    background-color: #4b91eb;
+}
+
+.imp-sureBtn:active{
+    background-color: #3c78c4;
+}
+
+/*cancelBtn*/
+.imp-cancelBtn{
+    height: 32px;
+    line-height: 32px;
+    padding: 0 23px;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+
+.imp-cancelBtn:hover{
+    border: 1px solid #4587da;
+    color: #4587da;
+}
+
+/*guiBtn*/
+.imp-guiBtn{
+    height: 32px;
+    line-height: 32px;
+    padding: 0 23px;
+    font-size: 14px;
+    color: #666;
+    background-color: #ededed;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+.imp-guiBtn:hover{
+    border: 1px solid #4587da;
+    color: #4587da;
+}
+/*禁用按钮*/
+.imp-forbiddenBtn{
+    height: 34px;
+    line-height: 34px;
+    padding: 0 25px;
+    font-size: 14px;
+    color: #bababa;
+    background-color: #e8e7ec;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+/*重要按钮 end*/
+
+/*普通按钮 begin*/
+/*sureBtn*/
+.gen-sureBtn{
+    height: 26px;
+    line-height: 26px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #4587da;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+
+.gen-sureBtn:hover{
+    background-color: #4b91eb;
+}
+
+.gen-sureBtn:active{
+    background-color: #3c78c4;
+}
+
+/*cancelBtn*/
+.gen-cancelBtn{
+    height: 24px;
+    line-height: 24px;
+    padding: 0 13px;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+
+.gen-cancelBtn:hover{
+    border: 1px solid #4587da;
+    color: #4587da;
+}
+
+/*guiBtn*/
+.gen-guiBtn{
+    height: 24px;
+    line-height: 24px;
+    padding: 0 13px;
+    font-size: 14px;
+    color: #666;
+    background-color: #ededed;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+.gen-guiBtn:hover{
+    border: 1px solid #4587da;
+    color: #4587da;
+}
+
+/*禁用按钮*/
+.imp-forbiddenBtn{
+    height: 26px;
+    line-height: 26px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #bababa;
+    background-color: #e8e7ec;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+/*普通按钮 end*/
+
+/*list-tittle begin*/
+.lt-tittle{
+    padding: 15px 0 15px 13px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.handleWarning{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 35px 0 51px;
+    color: #4c4b4c;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    /*display: none;*/
+}
+.handleSuccess{
+    border: 1px solid #c0d4ed;
+    margin-left: -74px;
+    background: #f0f3fb url("../../common/img/icon01.png") no-repeat 32px center;
+}
+
+.handleDefeat{
+    border: 1px solid #f9bebe;
+    margin-left: -102px;
+    background: #ffe1e1 url("../../common/img/icon02.png") no-repeat 32px center;
+}
+
+.handleLoad{
+    border: 1px solid #a2c3ec;
+    margin-left: -95px;
+    background: #fff url("../../common/img/icon03.png") no-repeat 26px center;
+}
+/*list-tittle end*/
+
+/*copyright begin*/
+.copyright{
+    line-height: 56px;
+    padding-left: 26px;
+    border-top: 1px solid #e5e5e7;
+}
+/*copyright end*/
+
+/*list-main begin*/
+.lt-main{
+    min-width: 1093px;
+}
+/*list-main end*/
+
+
+/***一些公共的样式2016.4.23 by liqin***/
+/***单行文本***/
+.txt {
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    font-size: 12px;
+    vertical-align: middle;
+    /*color: #a9a9a9;*/
+    outline: none;
+}
+.txt:hover {
+    border: 1px solid #4587da;
+    color: #666;
+}
+.txtError {
+    border: 1px solid #f13848;
+}
+
+/***多行文本***/
+.textarea {
+    font-size: 12px;
+    outline: none;
+    border: 1px solid #ddd;
+    /*color: #a9a9a9*/;
+    margin: 15px 0 15px 10px;
+    padding: 10px;
+}
+.textarea:hover {
+    border: 1px solid #4587da;
+    color: #666;
+}
+
+/***单选按钮***/
+.radio {
+    vertical-align: text-bottom;
+    margin-bottom: -1px;
+    margin-bottom: -2px \9;
+}
+
+/***超链接a的编辑和删除按钮***/
+a {
+    text-decoration: none;
+    color: #0f8beb;
+}
+.edit:hover,.delect:hover {
+    text-decoration: underline;
+}
+.edit:link{
+    color: #4587da;
+}
+.edit{
+    margin-right: 10px;
+}
+/***复选按钮***/
+.checkbox{display:inline-block;width:12px;height:12px;overflow:hidden;background:url(../../images/mainSprite.png) no-repeat -40px -75px;}
+
+/***新增列表项的公共样式（具体层级结构参照新增会员的样式结构）***/
+#box_user{
+    width:100%;
+    float:none;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+/***选项卡的公共样式***/
+.Tab-ul {
+    height: 28px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    margin: 20px 20px 0;
+}
+.Tab-li{
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #666;
+    border-bottom: 1px solid #d2d7dd;
+    border-radius: 3px 3px 0 0;
+    background-color: #fff;
+}
+/*第一个和最后一个的li的宽度是可变的*/
+.Tab-li-first {
+    width: 48px;
+    border: none;
+    border-bottom: 1px solid #d2d7dd;
+    cursor: Auto;;
+}
+.Tab-li-last {
+    width: 20%;
+    cursor: Auto;
+}
+.Tab-li-select{
+    border: 1px solid #d2d7dd;
+    border-bottom: none;
+    color: #2f79b6;
+    font-size: 14px;
+}
+/*内容区域根据具体的情况设定*/
+.Content{
+}
+/***选项卡的公共样式结束***/
+.userinfo{
+    margin-top:20px;
+    width:100%;
+}
+.userinfo ul{
+    margin:0;
+    padding:0;
+}
+.userinfo ul li{
+    float:left;
+    width:100%;
+    padding:5px 0;
+}
+.userinfo .title {
+    float: left;
+    line-height:26px;
+    text-align: right;
+    width:89px;
+    color:#666;
+}
+.userinfo .text-oper {
+    float: left;
+    margin-left:2px;
+    line-height:26px;
+}
+.userinfo .input1{
+    margin: 0;
+    width: 229px;
+    border-radius:2px;
+}
+.userinfo .alert-error{
+    display: none;
+    height: 15px;
+    color:#f13848;
+}
+.userinfo .text-tip {
+    color: #a9a9a9;
+    float: left;
+    margin: 0 0 0 10px;
+    line-height:26px;
+}
+.userinfo .radio {
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.userinfo .select {
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 2px;
+    color:#888;
+}
+.userinfo .sellevel{
+    vertical-align: middle;
+    width: 250px;
+    border: 1px solid #ddd;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 2px;
+    color:#ddd;
+}
+.userinfo .btn-sub{
+    text-align:center;
+    margin-top:10px;
+    margin-left: 88px;
+    margin-bottom: 24px;
+}
+.gen-sureBtn{
+    margin-right: 15px
+}
+.clearBoth{
+    clear:both;
+    width:100%;
+    height:0;
+    line-height:0;
+    font-size:0;
+    overflow:hidden;
+}
+/***新增列表项的公共样式结束***/
+
+
+
+
+
+

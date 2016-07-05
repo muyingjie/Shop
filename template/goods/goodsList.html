@@ -1,0 +1,113 @@
+﻿<h2 class="lt-title">
+    <div class="mtitle">商品管理<span>-商品列表</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont">
+    <div class="mainCtrl">
+        <ul>
+            <li><span class="addBtn">添加商品</span></li>
+            <li>
+                <span class="ex">批量操作<i></i></span>
+                <dl class="levellist">
+                    <dd v="1">白金级</dd>
+                    <dd v="2">黄金级</dd>
+                    <dd v="3">钻石级</dd>
+                </dl>
+            </li>
+            <li>
+                <span class="ex ck">标签设置<i></i></span>
+                <div>
+                    <dl>
+                        <dd v="1"><i></i>第一组</dd>
+                        <dd v="2"><i></i>第二组</dd>
+                        <dd v="3"><i></i>第三组</dd>
+                        <dd v="4"><i></i>第四组</dd>
+                    </dl>
+                    <a>新增标签</a>
+                </div>
+            </li>
+            <li><span class="exportBtn">导入</span></li>
+            <li><span class="importBtn">导出</span></li>
+        </ul>
+        <div>
+            <div class="select listSearch">
+                <input type="hidden" value="1">
+                <span>会员姓名</span>
+                <i></i>
+                <ul>
+                    <li v="1">会员ID</li>
+                    <li v="2">会员姓名</li>
+                </ul>
+            </div>
+            <div class="searchTxt"><input type="text"><i class="searchIcon"></i></div>
+            <span class="searchBtn">高级筛选></span>
+
+        </div>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+        <tr>
+            <th width="30" class="t-center"><i class="checkbox checkAll"></i></th>
+            <th width="50" class="t-center">查看</th>
+            <th>缩略图</th>
+            <th>商品货号</th>
+            <th>商品名称</th>
+            <th>类型</th>
+            <th>品牌</th>
+            <th>标签</th>
+            <th>市场价格</th>
+            <th>更新时间</th>
+            <th  width="180">操作</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+        <div class="tclist">
+            <div class="checkTip">已勾选本页<span class="n"></span>条,<a class="selectAll">勾选会员列表中全部35条信息</a><input type="hidden" value=1 class="isAll"></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                <tr id="1">
+                    <td class="t-center"><i class="checkbox"></i></td>
+                    <td class="t-center"><i class="viewBtn"></i></td>
+                    <td><img src="/ng/images/commonImg.png" alt=""/></td>
+                    <td>Gskjgkrjsojgoprj</td>
+                    <td >芳草集 绿茶小米草胶囊</td>
+                    <td>美容护肤</td>
+                    <td>芳草集</td>
+                    <td>爆款</td>
+                    <td>22000</td>
+                    <td>2016-4-22 7:09:05</td>
+                    <td><a href="">新增相似商品</a>          <a class="edit">编辑</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="pages">
+
+            <div class="pageLeft">每页
+                <div class="select pagePer">
+                    <input type="hidden" value="20">
+                    <span>20</span>
+                    <i></i>
+                    <ul>
+                        <li v="20" class="sel">20</li>
+                        <li v="40">40</li>
+                        <li v="60">60</li>
+                    </ul>
+                </div>
+                条，共<span class="pageCount">35</span>条
+            </div>
+            <a class="dis">首页</a><a class="dis">上一页</a>
+            <div class="select pageList">
+                <input type="hidden" class="currPage" value="1">
+                <span>第1页</span>
+                <i></i>
+                <ul>
+                    <li><a class="" >第1页</a></li>
+                    <li><a href="1.html">第2页</a></li>
+                    <li><a href="">第3页</a></li>
+                    <li><a href="">第4页</a></li>
+                </ul>
+            </div>
+            <a href="">下一页</a><a href="">尾页</a>
+        </div>
+    </div>
+</div>

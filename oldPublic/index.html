@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>会员列表</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/frame.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body style="overflow:hidden;">
+<div class="sideBar">
+	<div class="sideList">
+    	<dl>
+        	<dt>会员管理<i></i></dt>
+            <dd><a href="memberManage/index.html" target="main">会员列表</a></dd>
+            <dd><a href="orderManage/addOrder.html" target="main" >会员等级</a></dd>
+            
+        </dl>
+        <dl>
+        	<dt>会员设置<i></i></dt>
+            <dd><a href="index?app=Member&act=setLicense&dsp=page&argc=" target="main" >注册条款和设置</a></dd>
+            <dd><a href="index?app=Auth&act=GetOauthConfigView&dsp=page&argc=" target="main" >第三方登录设置</a></dd>
+            
+        </dl>
+        <dl>
+        	<dt>商品管理<i></i></dt>
+            <dd><a href="index?app=goods&act=getListByHook&dsp=finder&argc=" target="main" >商品列表</a></dd>
+            <dd><a href="index?app=goods&act=getCatList&dsp=page&argc=" target="main" >分类管理</a></dd>
+            <dd><a href="index?app=goods&act=getGoodsTypeListByHook&dsp=finder&argc=" target="main" >类型管理</a></dd>
+            <dd><a href="index?app=Tag&act=getTagView&dsp=page&argc={&quot;type&quot;:1,&quot;parent_title&quot;:&quot;\u5546\u54c1\u7ba1\u7406&quot;,&quot;title&quot;:&quot;\u5546\u54c1\u6807\u7b7e&quot;}" target="main" >商品标签</a></dd>
+        </dl>
+        <dl>
+        	<dt>品牌管理<i></i></dt>
+            <dd></dd>
+            <dd></dd>
+            <dd></dd>
+        </dl>
+        <dl>
+        	<dt>会员设置<i></i></dt>
+            <dd></dd>
+            <dd></dd>
+            <dd></dd>
+        </dl>
+        <dl>
+        	<dt>会员设置<i></i></dt>
+            <dd></dd>
+            <dd></dd>
+            <dd></dd>
+        </dl>
+        <dl>
+        	<dt>会员设置<i></i></dt>
+            <dd></dd>
+            <dd></dd>
+            <dd></dd>
+        </dl>
+    </div>
+</div>
+<div class="header">
+	<div class="logo">
+    	<a href=""><img src="images/logo.png"></a><i class="sideBarBtn"></i>
+    </div>
+	<span class="search"></span>
+    <span class="alert"></span>
+    <span class="msg"><i>5</i></span>
+    <span class="logout"></span>
+</div>
+
+<div class="container">
+	<div class="frameCont">
+    	<iframe src="memberManage/index.html" scrolling="auto" frameborder="0" class="mainFrame" name="main" id="main"></iframe>
+    </div>
+</div>
+<div class="copyright">Company 2015-2020  1.0</div>
+<script src="js/libs/seajs/sea-debug.js"></script>
+<script src="js/base.js"></script>
+<script>
+appManager.use("common")
+seajs.use("libs/plugs/dialog/dialog-plus",function(dialog){
+	window.dialog=dialog;
+})
+</script>
+</body>
+</html>

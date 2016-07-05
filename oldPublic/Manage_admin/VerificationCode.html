@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/systemSetting.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">系统设置<span>-验证码设置</span></div>
+    <span class="refreshBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont">
+    <div class="tclist noBottom">
+        <div class="">
+            <!--验证码-->
+                <div class="info webDescribe">
+                    <ul>
+                        <li>
+                            <div class="payMethodLeft w130">注册验证码类型&nbsp; :</div>
+                <span class="payMethodRight">
+
+                    <span class="switchTypeW90"><input class="radio" type="radio" checked="checked" name="validCode1">纯数字5位 </span>
+                    <span class="switchTypeW90"><input class="radio" type="radio"  name="validCode1">纯字母5位</span>
+                    <input class="radio" type="radio"  name="validCode1">数字和字母组合5位
+                </span>
+                        </li>
+                        <li>
+                            <div class="payMethodLeft w130">是否显示验证码&nbsp; :</div>
+                <span class="payMethodRight">
+                     <span class="switchTypeW90"><input class="radio" type="radio" checked="checked" name="validCode2">是</span>
+                     <span class="switchTypeW90"><input class="radio" type="radio"  name="validCode2">否</span>
+                    <input class="radio" type="radio" name="validCode1">密码输入错误3次后显示
+                </span>
+                        </li>
+                        <li>
+                            <div class="payMethodLeft w130">验证短信间隔时间&nbsp; :</div>
+                <span class="payMethodRight">
+                    <input name="linkname" type="text" class="txt w90 margin-LR5"/>
+                    <span>秒</span>
+                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="webDescribeBtn">
+                    <span class="gen-sureBtn">保存</span>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="../js/libs/jquery/jquery-1.9.1.js"></script>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>会员标签</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+    <link rel="stylesheet" href="../css/plugs/colpick.css"/>
+    <style>
+        .example{
+            line-height: 30px;
+            background-color: #e8e7ec;
+            padding-left: 24px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="lt-main">
+
+    <h2 class="lt-title">
+        <div class="mtitle">拾色器插件</div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+
+    <div class="labelOuter">
+        <div class="example">
+         示例操作
+        </div>
+        <!--表头部分-->
+        <ul class="labelTop ft-t-14">
+            <li class="labelTopList">标签名称</li>
+            <li class="labelTopList">标签背景色</li>
+            <li class="labelTopList">标签字体颜色</li>
+            <li class="labelTopList">操作</li>
+        </ul>
+        <!--内容列表-->
+        <ul>
+            <li>
+                <ul class="labelListLast ft-12">
+                    <li class="labelTopList1">
+                        <input class="labelInput labelInputBord" value="">
+                        </input>
+                    </li>
+                    <li class="labelTopList1">
+                        <input class="labelInput labelInputBord picker" readonly="readonly">
+                        <div class="labelColor2 labelChooseRed"></div>
+                    </li>
+                    <li class="labelTopList1">
+                        <input class="labelInput labelInputBord picker">
+                        <div class="labelColor2 labelChooseYellow"></div>
+                    </li>
+                    <li class="labelTopList1">
+                        <div class="f-l gen-sureBtn labelMarginR">保存</div>
+                        <div class="f-l gen-cancelBtn">取消</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="example">
+            dom结构
+        </div>
+        <pre>
+            <cod>
+                &lt;li&gt;
+                    &lt;input type="text" class="picker"&gt;
+                    &lt;div class="labelColor2"&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            </cod>
+        </pre>
+        <div class="example">
+            示例代码
+        </div>
+        <ul>
+            <li class="goodsClassify">
+                <span class="tittle">调用拾色器:</span>
+                <div class="text-oper">colPick.colorPickInit($('.picker'));</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('colorPicker');
+</script>
+</body>
+<html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>会员等级</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+</head>
+<body>
+<div class="lt-main">
+    <h2 class="lt-title" style="height: 23px">
+        <div class="mtitle">会员管理<span>-会员等级</span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="levelOuter">
+        <div class="gen-guiBtn levelAdd">新增</div>
+        <div  class="hiddenBox" style="display: none">
+            <li>
+                <ul class="levelList ft-12">
+                    <li class="levelTopList1">
+                        <input class="levelInput levelInputBord" value="">
+                        </input>
+                    </li>
+                    <li class="levelTopList1">
+                        <img src="../images/memberLevel.png" class="levelImg" style="display: none"/>
+
+                        <div class="levelInput ft-14 levelChange">上传图片</div>
+                    </li>
+                    <li class="levelTopList1">
+                        <input class="levelInput levelInputBord discount" value=""/>
+                        <span class="levelPercent levelPercent1">%</span>
+                    </li>
+                    <li class="levelTopList1">
+                        <input class="levelInput levelInputBord" value="">
+                        </input>
+                    </li>
+                    <li class="levelTopList1">
+                        <div class="f-l gen-sureBtn levelMarginR saveButton" data-state="new">保存</div>
+                        <div class="f-l gen-cancelBtn cancelButton" data-state="new">取消</div>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <!--表头部分-->
+        <ul class="levelTop ft-t-14">
+            <li class="levelTopList">等级名称</li>
+            <li class="levelTopList">等级图标</li>
+            <li class="levelTopList">
+                默认折扣率%
+                <img src="../images/arrowDown.png"/>
+            </li>
+            <li class="levelTopList">
+                消费额度（元）
+                <img src="../images/arrowDown.png"/>
+            </li>
+            <li class="levelTopList">操作</li>
+        </ul>
+        <!--内容列表-->
+        <ul class="add-hiddenBox">
+            <!--默认的样式-->
+            <li>
+                <ul class="levelList ft-12">
+                    <li class="levelTopList1">
+                        <input class="levelInput" value="普通会员" readonly="readonly">
+                        </input>
+                    </li>
+                    <li class="levelTopList1">
+                        <img src="../images/memberLevel.png" class="levelImg"/>
+                        <input class="levelInput" readonly="readonly">
+                        <!--<div class="levelColor1"></div>-->
+                    </li>
+                    <li class="levelTopList1">
+                        <input class="levelInput discount" value="90%" readonly="readonly"/>
+                        <span class="levelPercent">%</span>
+                    </li>
+                    <li class="levelTopList1">
+                        <input class="levelInput" value="15000" readonly="readonly">
+                        </input>
+                    </li>
+                    <li class="levelTopList1">
+                        <div class="levelOpera f-l editBtn">编辑</div>
+                        <div class="levelOpera f-l deleteBtn">删除</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="levelList ft-12">
+                    <li class="levelTopList1">
+                        <input class="levelInput levelInputBord" value="普通会员">
+                    </li>
+                    <li class="levelTopList1">
+                        <img src="../images/memberLevel.png" class="levelImg"/>
+
+                        <div class="levelInput ft-14 levelChange">更改图片</div>
+                    </li>
+                    <li class="levelTopList1">
+                        <input class="levelInput levelInputBord discount" value="10"/>
+                        <span class="levelPercent levelPercent1">%</span>
+                    </li>
+                    <li class="levelTopList1">
+                        <input class="levelInput levelInputBord" value="1000">
+                    </li>
+                    <li class="levelTopList1">
+                        <div class="f-l gen-sureBtn levelMarginR saveButton">保存</div>
+                        <div class="f-l gen-cancelBtn cancelButton">取消</div>
+                    </li>
+                </ul>
+            </li>
+            <!--最后一个新增按钮-->
+        </ul>
+    </div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('inlineEdit');
+</script>
+</body>
+<html>

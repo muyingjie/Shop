@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>商品评论</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+</head>
+<body>
+<div class="lt-main look-comment commCon">
+    <h2 class="lt-title comment-goods-head">
+        <div class="mtitle">评论商品</div>
+    </h2>
+    <div class="goods-comment">
+        <table class="goods-norms comment-list" cellpadding="0" cellspacing="0">
+            <tr class="goods-tr4">
+                <th>商品名称</th>
+                <th>商品</th>
+                <th>评论次数</th>
+                <th>发表人</th>
+                <th>发表时间</th>
+                <th>联系方式</th>
+                <th>发表IP</th>
+            </tr>
+            <tr>
+                <td><span>BEll漆皮纯色女鞋</span></td>
+                <td><span><img src="../images/commonImg.png" alt=""/></span></td>
+                <td><span>10</span></td>
+                <td><span>小王</span></td>
+                <td><span>2016-03-23 15:05:56</span></td>
+                <td><span>12455787@qq.com</span></td>
+                <td><span>127.0.1.59</span></td>
+            </tr>
+        </table>
+    </div>
+    <div class="customer-comment">
+        <h2 class="">顾客评价</h2>
+        <ul class="customer-comment-user">
+            <li class="comment-content bg-f0f0fc no-border-bottom">
+                <div class="comm-left">评论人 ： <span>顾客</span></div>
+                <div class="comm-right">
+                    <span>【关闭显示】</span>
+                    <span>【删除】</span>
+                </div>
+            </li>
+            <li class="comment-content">
+                <ul>
+                    <li>评论时间 ： <span>2016-03-15 15:12</span></li>
+                    <li>评论内容 ： <span>衣服不错，很棒！</span></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="comment-scroll-height">
+             <ul class="customer-comment-admin">
+            <li class="comment-content bg-eee no-border-bottom">
+                <div class="comm-left">评论人 ： <span>管理员</span></div>
+                <div class="comm-right">
+                    <span>【关闭显示】</span>
+                    <span>【删除】</span>
+                </div>
+            </li>
+            <li class="comment-content">
+                <ul>
+                    <li>回复时间 ： <span>2016-04-16 15:12</span></li>
+                    <li>评论内容 ： <span>谢谢光临本店！</span></li>
+                </ul>
+            </li>
+        </ul>
+            <ul class="customer-comment-admin">
+                <li class="comment-content bg-eee no-border-bottom">
+                    <div class="comm-left">评论人 ： <span>管理员</span></div>
+                    <div class="comm-right">
+                        <span>【关闭显示】</span>
+                        <span>【删除】</span>
+                    </div>
+                </li>
+                <li class="comment-content">
+                    <ul>
+                        <li>回复时间 ： <span>2016-04-16 15:12</span></li>
+                        <li>评论内容 ： <span>谢谢光临本店！</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="customer-comment reply">
+            <h2 class="">回复用户</h2>
+            <textarea  name=""  class="comment-text answer-con" data-max="20"></textarea>
+            <div class="answer-tip">
+                <i class="answer-icon"></i>
+                <span>最多输入128个字符</span>
+            </div>
+    </div>
+    <div class="btn-sub comment-btn">
+        <span class="f-l gen-sureBtn com-anser-btn">立即回复</span>
+    </div>
+</div>
+<script src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var comLen=0;
+        $(".answer-con").on("blur",function(){
+             comLen=$(".answer-con").val().length;
+            if(comLen>128){
+                $(".answer-tip").show();
+                $(".answer-con").css("border","1px solid #f13848");
+            }else {
+                $(".answer-con").css("border","1px solid #ddd");
+                $(".answer-tip").hide()
+            }
+        });
+        $(".com-anser-btn").on("click",function(){
+            if(comLen>128){
+                return false;
+            }
+        })
+    });
+</script>
+</body>
+</html>

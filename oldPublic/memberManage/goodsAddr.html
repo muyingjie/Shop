@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>收货地址</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/list.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+</head>
+<body>
+<div class="lt-main">
+    <h2 class="lt-title">
+        <div class="mtitle">会员管理<span>-收货地址</span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+        <div class="mainCont info-container" >
+            <ul class="Tab-ul">
+                <li class="Tab-li Tab-li-first" >会员信息</li>
+                <li class="Tab-li Tab-li-select switchTabs">收货地址</li>
+            </ul>
+            <div class="info addmember">
+                <ul>
+                    <li class="account">
+                        <span class="title title1">新增收货地址&nbsp;&nbsp;&nbsp;</span>
+                        <div class="text-oper">
+                            <span>电话号码、手机号选项一项，其余是必选项</span>
+                        </div>
+                    </li>
+
+                    <li class="account">
+                        <span class="title">收货人：</span>
+                        <div class="text-oper ">
+                            <input name="name" type="text" class="txt input1 name" regName="realName"/>
+                            <div class="err-tip"><i></i><span></span></div>
+                        </div>
+                    </li>
+
+                    <li class="address">
+                        <span class="title">所在地区：</span>
+                        <div class="text-oper">
+                            <div class="select belong-address">
+                                <span>请选择</span>
+                                <i></i>
+                                <ul>
+                                    <li v="选中之后真实值">北京市</li>
+                                    <li v="选中之后真实值">上海市</li>
+                                </ul>
+                            </div>
+
+                            <div class="select belong-address">
+                                <span>请选择</span>
+                                <i></i>
+                                <ul>
+                                    <li v="选中之后真实值">北京市</li>
+                                    <li v="选中之后真实值">上海市</li>
+                                </ul>
+                            </div>
+
+                            <div class="select belong-address">
+                                <span>请选择</span>
+                                <i></i>
+                                <ul>
+                                    <li v="选中之后真实值">北京市</li>
+                                    <li v="选中之后真实值">上海市</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="detail-addr" style="height: 100px">
+                        <span class="title">详细地址：</span>
+                        <div class="text-oper">
+                           <textarea name="MSG" class="addr-textarea"   regName="address">建议您如实填写详细的收货地址，例如街道名称，门牌号码，楼层和房间号等信息
+                           </textarea>
+                        </div>
+
+                    </li>
+
+                    <li class="mobile">
+                        <span class="title">手机号码：</span>
+                        <div class="text-oper">
+                            <input name="mobile" type="text" class="txt input1"  regName="cellPhone"/>
+                            <div class="err-tip"><i></i><span></span></div>
+                        </div>
+                    </li>
+
+                    <li class="tel">
+                        <span class="title">固定电话：</span>
+                        <div class="text-oper">
+                            <input name="tel" type="text" class="txt input1" regName="telePhone"/>
+                            <div class="err-tip"><i></i><span></span></div>
+                        </div>
+                    </li>
+                    <li class="code">
+                        <span class="title">邮政编码：</span>
+                        <div class="text-oper">
+                            <input name="code" type="text" class="txt input1" regName="mailCode"/>
+                            <div class="err-tip"><i></i><span></span></div>
+                        </div>
+                    </li>
+                    <li class="default-addr">
+                        <span class="title opacity">：</span>
+                        <div class="text-oper">
+                                <i class="checkbox" v=""></i>&nbsp; 设置为默认收货地址
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn-sub">
+                    <span class="f-l gen-sureBtn">保存</span>
+                    <span class="f-l gen-cancelBtn">重置</span>
+                </div>
+            </div>
+            <!-- 保存收货地址的部分-->
+            <!-- 保存收货地址的部分-->
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle tableTitleAddress">
+                <tr>
+                    <th>收货人</th>
+                    <th>所在地区</th>
+                    <th>详细地址</th>
+                    <th>邮编</th>
+                    <th>电话/手机</th>
+                    <th>操作</th>
+                    <th><span style="visibility: hidden">地址</span></th>
+                </tr>
+            </table>
+            <div class="tableCont" style="margin-bottom: 10px">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList tableListAddress">
+                    <tr id="1">
+                        <td>李凯</td>
+                        <td><span>北京市大兴区亦庄经济技术开发区 </span></td>
+                        <td><span>地盛西路1号数码庄园B1-3</span></td>
+                        <td><span>10010</span></td>
+                        <td><span>13145985986</span></td>
+                        <td>
+                            <a href="#" class="goods-edit f-l">编辑</a>
+                            <a href="#" class="goods-delect f-l">删除</a>
+                        </td>
+                        <td><span>设为地址</span></td>
+                    </tr>
+                    <tr id="1">
+                        <td>李凯</td>
+                        <td><span>北京市大兴区亦庄经济技术开发区 </span></td>
+                        <td><span>地盛西路1号数码庄园B1-3</span></td>
+                        <td><span>10010</span></td>
+                        <td><span>13145985986</span></td>
+                        <td>
+                            <a href="#" class="goods-edit f-l">编辑</a>
+                            <a href="#" class="goods-delect f-l">删除</a>
+                        </td>
+                        <td><span>默认地址</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</div>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/userRegister.js"></script>
+<script type="text/javascript" src="../js/memberManager.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

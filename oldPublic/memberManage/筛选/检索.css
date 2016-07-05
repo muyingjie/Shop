@@ -1,0 +1,110 @@
+@charset "UTF-8";
+.searchSet{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 738px;
+    border: 1px solid #cfcfd1;
+    background: #edecf1;
+    width: 206px;
+
+}
+.searchHead{
+    height: 42px;
+    line-height: 42px;
+    margin-left: 30px;
+
+}
+.searchSetTop{
+    height: 23px;
+    line-height: 23px;
+    color: #4587db;
+    /* border: 1px solid forestgreen;*/
+    margin-left: 7px;
+}
+.searchCon{
+    width: 180px;
+    border:1px solid #4587db;
+    margin-left: 8px;
+}
+
+.searchLI{
+    cursor: pointer;
+    margin-top: 2px;
+    padding-left: 18px;
+    width: 162px;
+    height: 16px;
+    line-height: 16px;
+}
+.searchMar7{
+    cursor: pointer;
+    margin-left: 7px;
+}
+.searchMar10{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.bb-col-4587db{
+    background: #4587db;
+}
+.bg-col-fff{
+    background: #fff;
+}
+.search-top{
+    margin-left: 9px;
+    margin-bottom: 11px;
+}
+.search-f{
+    width:178px ;
+    height: 24px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.search-s{
+    width:117px ;
+    height: 24px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.searchTitle{
+    float: left;
+    width: 70px;
+    height: 24px;
+    line-height: 24px;
+    text-align: right;
+}
+.search-top,.search-list{
+    margin-bottom: 10px;
+}
+.select-t{
+    margin-top: 3px;
+    height: 24px;
+    width: 55px;
+    border: 1px solid #ddd;
+}
+.select-f{
+    margin-top: 3px;
+    height: 24px;
+    width: 125px;
+    border: 1px solid #ddd;
+}
+.margin-top-3{
+    margin-top: 3px;
+}
+.searchIcon{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    margin-top:13px ;
+    margin-left:-20px;
+    background: url("../images/searchIcon.png") no-repeat 100% 100%;
+}
+.searchClose{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    margin-top:13px ;
+    margin-left:82px;
+    background: url("../images/searchClose.png") no-repeat 100% 100%;
+}

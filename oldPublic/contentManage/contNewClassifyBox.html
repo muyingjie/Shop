@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>新增咨询分类</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">资讯分类<span>-添加资讯分类</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont" style="overflow: hidden">
+    <div class="mainCtrl">
+            <!-- 内容区 -->
+            <div class="box-con info newsClassify">
+                <ul>
+                    <li>
+                        <span class="title"><i class="red">*</i>上级分类：</span>
+                        <div class="text-oper">
+                            <div class="select select-w166">
+                                <span>--无--</span>
+                                <i></i>
+                                <ul>
+                                    <li v="选中之后真实值">选择项一</li>
+                                    <li v="选中之后真实值">选择项二</li>
+                                </ul>
+                            </div>
+                            <div class="default-tip">没有上级可选无</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title"><i class="red">*</i>分类名称：</span>
+                        <div class="text-oper">
+                            <input name="linkname" type="text" class="txt input1" />
+                            <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>
+                            <div class="err-tip"><i></i><span></span></div>
+                        </div>
+                    </li>
+                    <li class="or-display">
+                        <span class="title">是否发布：</span>
+                        <div class="text-oper">
+                            <input class="radio" type="radio" checked="checked" name="yes">是&nbsp;&nbsp;
+                            <input class="radio" type="radio" name="yes">否
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">排序码：</span>
+                        <div class="text-oper">
+                            <input name="linknum" type="text" class="txt input1" />
+                            <div class="default-tip">数字小展示靠前</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">URL路径：</span>
+                        <div class="text-oper">
+                            <input name="" type="text" class="txt input1" />
+                            <div class="default-tip">默认为分类名称的拼音全拼</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">SEO标题：</span>
+                        <div class="text-oper">
+                            <input name="" type="text" class="txt input1" />
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">SEO关键字：</span>
+                        <div class="text-oper">
+                            <input name="" type="text" class="txt input1" />
+                            <div class="default-tip">多个关键字时，用中文逗号分隔</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="title">SEO描述：</span>
+                        <div class="text-oper">
+                            <input name="" type="text" class="txt input1" />
+                        </div>
+                    </li>
+                    <li class="or-display">
+                        <span class="title">使用单独页：</span>
+                        <div class="text-oper">
+                            <input class="radio" type="radio" checked="checked" name="yes1">是&nbsp;&nbsp;
+                            <input class="radio" type="radio" name="yes1">否
+                        </div>
+                    </li>
+                    <li class="or-display">
+                        <span class="title">单独内容：</span>
+                        <div class=" cEditor">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 按钮区 -->
+            <div class="box-btn">
+                <span class="gen-sureBtn boxSave">保存</span>
+                <span class="gen-cancelBtn boxSave">取消</span>
+            </div>
+    </div>
+</div>
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

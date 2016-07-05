@@ -1,0 +1,80 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0}
+input{border: none;}
+body{background: #1f2024}
+#outer{
+    width: 400px; height:520px;position: absolute;top:50%;left: 50%;
+    margin-top: -225px;margin-left: -200px;background: white;
+}
+#outer .inner{
+    width: 300px;height: 50px;margin: 0 auto;position: relative;margin-bottom: 20px;
+}
+#outer .inner-sort{
+    width: 120px;height: 50px;margin-left: 50px;position: relative;
+}
+.text1{
+    text-align: center;
+    position: relative;
+    margin: 30px auto;
+}
+#outer input {
+    /* margin-left: 49px;*/
+    border: 1px solid #ccc;
+    width: 283px;
+    height: 48px;
+    line-height: 48px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    vertical-align: middle;
+    border-radius: 5px;
+
+}
+.com_left{
+    position: absolute;left: 0;top: 0;
+}
+.com_right{
+    position: absolute;right: 0;top: 0;
+}
+.login{
+    background: #7ab55c;
+    color: white;
+}
+#inner span{
+
+    /* margin-left: 30px;*/
+}
+#footer {
+    padding-left: 80px;
+    float: left;
+}
+#footer div{
+    margin:20px auto ;
+    float: left;
+}
+#outer .span1{
+    display: inline-block;
+    /*margin-left: 30px;*/
+}
+#outer .span2{
+    display: inline-block;
+    /*margin-left: 15px;*/
+}
+#footer{
+    padding-left: 50px;
+    font-size: 10px;
+}
+#footer img{
+    cursor: pointer;
+    padding-left: 8px;
+    position: relative;
+    top:2px
+}
+#footer span{
+    margin-left: 8px;
+
+}
+#validCode{
+    cursor: pointer;
+    border: 1px solid #ccc;
+    width: 158px;height: 48px;
+}

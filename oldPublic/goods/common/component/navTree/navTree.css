@@ -1,0 +1,53 @@
+@charset "utf-8";
+html,body { overflow-x:hidden; }
+.nt-box{
+    width: 180px;
+    border-right: 1px solid #e4e5e7;
+    background: #fff;
+}
+.nt-first{
+
+}
+.nt-first p{
+    margin-left: 24px;
+    margin-right: 21px;
+    height: 41px;
+    line-height: 41px;
+    background: url("img/ntArrowUp.png") 120px 19px no-repeat;
+}
+.nt-first p.nt-sel{
+    background: url("img/ntArrowDown.png") 120px 19px no-repeat;
+}
+.nt-first p span{
+    display: inline-block;
+    height: 41px;
+    line-height: 41px;
+}
+.nt-first p img{
+    float: right;
+    width: 9px;
+    margin-top: 17px;
+}
+.nt-second{
+    background: #fcfcfc;
+    border-bottom: 1px solid #e4e5e7;
+}
+.nt-second li{
+    height: 33px;
+    line-height: 33px;
+
+}
+.nt-second a{
+    margin-left: 28px;
+    padding-left: 20px;
+}
+.nt-list-sel{
+    background: #eeeeee;
+}
+.nt-list-grey{
+    color: #555;
+}
+.nt-list-sel .nt-list-grey:link{
+    background: #3b6fcc;
+    background: url("img/ntSel.png") 0 3px no-repeat;
+}

@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/***添加商品开始***/
+.Goods-L1{
+    height: 30px;
+    line-height: 30px;
+    background: #e8e7ec;
+    width: 100%;
+}
+.Goods-Sp1{
+    margin-left: 30px;
+    background: #e8e7ec;
+    width: 100%;
+}
+.select-113{
+    width: 113px;
+    height: 26px;
+    border: 1px solid #ddd;
+}
+.input-91{
+    margin: 0;
+    width: 91px;
+    border-radius:2px;
+
+}
+.goodsImgList{
+    margin-top: 5px;
+}
+.addGoodsImg{
+    height: 100px;width: 100px;border: 1px solid #ddd;float: left;margin-right: 10px;
+}
+.editPrice{
+    margin: 0;
+    margin-left: 10px;
+    width: 150px;
+    border-radius:2px;
+}
+.colorCheck{
+    vertical-align: middle;
+    display: inline-block;
+    height: 15px;
+    line-height: 15px;
+    width: 75px;
+ /*   border: 1px solid forestgreen;*/
+}
+.sizeCheck{
+    vertical-align: middle;
+    display: inline-block;
+    height: 15px;
+    line-height: 15px;
+    width: 99px;
+   /* border: 1px solid forestgreen;*/
+}
+.w-1000{
+    width: 1000px;
+}
+.addGoods,.addGoods1{
+    width: 100%;
+}
+.addGoods tr,.addGoods1 tr{
+   border-bottom: 1px solid #ddd;
+}
+.addGoods th,.addGoods td{
+    width: 33.3%;
+    padding: 0 10px;
+}
+.addGoods1 th,.addGoods1 td{
+    width: 9%;
+    padding: 0 10px;
+}
+.addGoods input{
+    padding: 0 10px;
+}
+
+.selectGoods{
+    margin: 0 auto;
+    width: 940px;
+    height: 568px;
+}
+
+.Goods-L1{
+    height: 30px;
+    line-height: 30px;
+    background: #e8e7ec;
+    width: 100%;
+
+}
+.Goods-input1{
+    margin: 0;
+    width: 140px;
+}
+
+.Goods-input2{
+    margin: 0;
+    width: 64px;
+}
+
+.select-goods{
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    width:90px ;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    font-size: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #ededed;
+
+    /*color: #a9a9a9;*/
+}
+.SEO-input{
+    width: 210px;
+}
+.GoodsSave{
+    overflow: hidden;
+    width: 130px;
+    margin-left:400px;
+    margin-bottom: 60px;
+}
+/***添加商品结束***/
+

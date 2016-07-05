@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>系统设置</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/system_adm.css">
+</head>
+<body>
+<div class="lt-main">
+    <h2 class="lt-title" >
+        <div class="mtitle">系统设置<span>-发票管理</span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="labelOuter">
+        <div class="gen-guiBtn labelAdd invoiceAdd">新增发票</div>
+        <div class="hiddenBox" style="display: none">
+            <li>
+                <ul class="labelList ft-12">
+                    <input type="hidden" value="1"/>
+                    <li class="labelTopList1 percent-75">
+                        <input class="labelInput labelInputBord" value="">
+                    </li>
+                    <li class="labelTopList1 percent-25">
+                        <div class="f-l gen-sureBtn labelMarginR saveButton" data-state="new">保存</div>
+                        <div class="f-l gen-cancelBtn cancelButton" data-state="new">取消</div>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <!--表头部分-->
+        <ul class="labelTop ft-t-14">
+            <li class="labelTopList percent-75 ">发票内容</li>
+            <li class="labelTopList percent-25">操作</li>
+        </ul>
+        <!--内容列表-->
+        <ul class="add-hiddenBox">
+
+            <li>
+                <ul class="labelList ft-12">
+                    <input type="hidden" value="1"/>
+                    <li class="labelTopList1 percent-75">
+                        <input class="labelInput" value="办公用品" readonly="readonly">
+                    </li>
+                    <li class="labelTopList1 percent-25">
+                        <div class="labelOpera f-l editBtn">编辑</div>
+                        <div class="labelOpera f-l deleteBtn">删除</div>
+                    </li>
+                </ul>
+            </li>
+            <!--最后一个保存按钮-->
+        </ul>
+    </div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('inlineEdit');
+</script>
+</body>
+<html>

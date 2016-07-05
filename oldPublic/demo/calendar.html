@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="your tags"/>
+    <meta name="description" content="150 words"/>
+    <title>日历控件</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/goodsManage.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/jscal2.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/border-radius.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/steel/steel.css"/>
+    <style>
+     table.mytable { border-collapse: collapse; border-spacing: 0; }
+     table.mytable a{ color:#214fa3;font-size:12px}
+     table.mytable td{ color:#666;}
+     table.mytable,#cnblogs_post_body .mytable th,#cnblogs_post_body .mytable td { border-width: 1px; border-style: solid; margin: 0; font-family:'Microsoft Yahei', tahoma, arial!important; font-family:'宋体', tahoma, arial; }
+     table.mytable { table-layout: fixed; width: 100%; margin-bottom: 6px; padding: 0 1px 1px 0; border-spacing: 0; border-collapse: separate; *border-collapse:collapse; border-color: #abb8ce; background: #ededed; }
+     .mytable th { padding: 5px 4px; font-weight: bold; border-color: #fff #fff #fff #fff; text-align: left; text-shadow: 1px 1px 0 #e4edfb; vertical-align: middle; background: #d0dbee; }
+     .mytable thead th { text-align:center; vertical-align:middle; }
+     .mytable th strong { color:#090; border-bottom:1px dashed #090;  text-decoration:underline; }
+     .mytable th b{ color:#666; font-weight:normal;}
+     .mytable td { padding:0; }
+     .mytable th.separate { text-align:center; border-color: #e1f196 #aecd1b #aecd1b #f3fad6; background-color: #f3f7fd; }
+     .mytable td { padding: 4px; font: 12px/18px consolas, "Courier New", courier, monospace; text-align: left; vertical-align: middle; }
+     .mytable td { border-color: #fff #fff #fff #fff; background: #e0e8f5; }
+     .mytable tr.odd th { background: #dbe4f4; }
+     .mytable tr.odd td { background: #e6eef9; }
+     .mytable br { margin-bottom:1.8em; }
+     table.mytable .parameter,#cnblogs_post_body table.mytable .type,#cnblogs_post_body table.mytable .default { width:7em; }
+</style>
+</head>
+<body>
+<div class="lt-main">
+    <h2 class="lt-title add-goods-head">
+        <div class="mtitle add-goods-page">日历控件<span></span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="container">
+        <div class="info">
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例操作</span>
+                </li>
+                <li class="birthday">
+                    <span class="title">选择日期：</span>
+                    <div class="text-oper">
+                        <input name="birthday" id="birthday" class="txt input1 date-ico" readonly="readonly" type="text" style="color: rgb(102, 102, 102);">
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">示例代码</span>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">初始化日历控件:</span>
+                    <div class="text-oper">
+                    //以下初始化只配置了基本的需要的参数，其他参数可以根据需要进行配置<br/>
+                    //以元素id初始化日历控件<br/>
+                        var calendar_w=require('../widgets/calendar_w');//引入js模块;<br/>
+                        calendar_w.calendarInit({ <br/>
+                        &nbsp; &nbsp;    inputField : "birthday",&nbsp; &nbsp; //显示日期值的元素id,也可以是Dom元素<br/>
+                        &nbsp; &nbsp;    trigger    : "birthday" &nbsp; &nbsp;//触发日历控件的元素id,也可以是Dom元素<br/> 
+                       
+                        });<br/>
+                        //以dom对象初始化日历控件<br/>
+                        var dom=$(".input1")[0];<br/>
+                        calendar_w.calendarInit({<br/>
+                            inputField : dom,<br/>
+                            trigger    : dom<br/>
+                        });
+                    </div>
+                </li>
+               
+                 <li class="goodsClassify">
+                    <span class="title">分钟增减的幅度:<br/></span>
+                    <div class="text-oper">
+                       minuteStep: 1; //默认是5
+                    </div>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">获取日期和时间:<br/></span>
+                    <div class="text-oper">
+                        showTime: true; //默认是false<br/>
+                        dateFormat : "%Y-%m-%d %H:%M" //默认只获取日期;
+                    </div>
+                </li>
+                 <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">配置参数对象中的常用属性及说明</span>
+                </li>
+                <li class="goodsClassify">
+                    <span class="title">初始化日历控件:</span>
+                    <div class="text-oper">
+                     主要包括以下属性，可以根据需要进行配置  
+                    </div>
+                                     <table class="mytable" style="width: 98%;" border="1">
+                        <tbody>
+                        <tr><th width="160">属性</th><th>描述</th></tr>
+
+                        <tr><th><a>animation</a></th>                       
+                        <td>是否有动画效果。默认值为true（对于IE6，默认值为false）</td>
+                        </tr>
+                        <tr><th><a>bottomBar</a></th>
+                        <td>是否显示Bottom Bar（用于显示今天按钮和时分）。默认值是true。</td>
+                        </tr>
+                        <tr><th><a>selection</a></th>                      
+                        <td>指定日历选中的初始日期。默认值是empty</td>
+                        </tr>
+                        <tr><th><a>date</a></th>                      
+                        <td>日历默认显示的日期（如：20091001）。它也确定了日历显示的年月。</td>
+                        </tr>
+                        <tr><th><a>fdow</a></th>                       
+                        <td>指定星期的第一天（first day of week）。默认值在语言JS文件（如：cn.js）中定义，0代表星期日，1代表星期一，依次类推。</td>
+                        </tr>
+                        <tr><th><a>min</a></th>                      
+                        <td>日历控件允许选择的最小日期（如：20010801）。</td>
+                        </tr>
+                        <tr><th><a>max</a></th>
+                        <td>日历控件允许选择的最大日期（如：20121229）</td>
+                        </tr>
+                         <tr><th><a>reverseWheel</a></th>
+                        <td>默认值为false。如果你想使日历翻页的方向与鼠标滚动的方向相反，设置该属性为true。</td>
+                        </tr>
+                         <tr><th><a>selectionType</a></th>
+                        <td>默认值为Calendar.SEL_SINGLE（只能选择单个日期）。如果你想选择多个日期，设置该属性为Calendar.MULTIPLE</td>
+                        </tr>
+                         <tr><th><a>checkRange</a></th>
+                        <td>是否检查日期的范围。默认值为false，当你允许选择范围日期，但要求不能选择失效日期时，应该设置该属性为true</td>
+                        </tr>
+                         <tr><th><a>weekNumbers</a></th>
+                        <td>是否显示周数列。默认值为false。</td>
+                        </tr>
+                         <tr><th><a>opacity</a></th>
+                        <td>指定动画效果的透明度。IE浏览器的默认值为1，其他浏览器为3。</td>
+                        </tr>
+                         <tr><th><a>titleFormat</a></th>
+                        <td>指定Title Bar的格式，默认值是"%b %Y"，显示月的简称和年的全称。</td>
+                        </tr>
+                        <tr><th><a>showTime</a></th>
+                        <td>是否显示时间。默认值为false，不显示时间选择器。值为true时，显示24小时制的时间；值为12时，显示12小时制的时间。</td>
+                        </tr>
+                        <tr><th><a>timePos</a></th>
+                        <td>指定时间选择器在Bottom Bar上的位置。默认值为"right"，如果你想让时间选择器显示在"Today"按钮的左侧，设置此属性为left。</td>
+                        </tr>
+                        <tr><th><a>time</a></th>
+                        <td>指定时间选择器初始显示的时间，默认显示当前时间，格式为"HHMM"（如果你想显示9:45PM，指定属性为2145）</td>
+                        </tr>
+                        <tr><th><a>minuteStep</a></th>
+                        <td>指定分钟增加或减少的幅度，默认值为5</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <br/>
+                    <span>内联式（Inline）日历控件相关的属性</span>
+                    <table class="mytable" style="width: 98%;" border="1">
+                        <tbody>
+                        <tr><th><a>cont</a></th>
+                        <td>容器元素（适用于inline式，不适用于popup式）。包含日历控件的元素（如：div）的id</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                     <br/>
+                    <span>弹出式（Popup）日历控件相关的属性</span>
+                    <table class="mytable" style="width: 98%;" border="1">
+                        <tbody>
+                        <tr><th><a>align</a></th>
+                        <td>默认对齐方式，只适用于popup日历控件</td>
+                        </tr>
+                         <tr><th><a>inputField</a></th>
+                        <td>只适用于popup日历控件，值为input元素的id</td>
+                        </tr>
+                         <tr><th><a>trigger</a></th>
+                        <td>触发popup日历控件的元素的id</td>
+                        </tr>
+                         <tr><th><a>dateFormat</a></th>
+                        <td>显示的日期格式。默认值为%Y-%m-%d格式，如2016-05-09。如要显示时间，可设置为格式%Y-%m-%d %H:%M</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+
+                </li>  
+                 <li class="Goods-L1">
+                    <span class="ft-t-14 Goods-title">回调函数</span>
+                </li>
+                <li class="goodsClassify">
+                    <table class="mytable" style="width: 98%;" border="1">
+                        <tbody>
+                            <tr><th><a>onSelect</a></th>
+                            <td>当改变日期时执行的回调方法</td>
+                            </tr>
+                            <tr><th><a>onChange</a></th>
+                            <td>当日历改变位置（年或月改变）时执行的回调方法</td>
+                            </tr>
+                            <tr><th><a>onTimeChange</a></th>
+                            <td>当时间选择器的时间改变时执行的回调方法</td>
+                            </tr>
+                            <tr><th><a>disabled</a></th>
+                            <td>确定失效日期时执行的回调方法。</td>
+                            </tr>
+                            <tr><th><a>dateInfo</a></th>
+                            <td>获取日期信息时执行的回调方法</td>
+                            </tr>
+                            <tr><th><a>onFocus</a></th>
+                            <td>当日历获取焦点时执行的回调方法。</td>
+                            </tr>
+                            <tr><th><a>onBlur</a></th>
+                            <td>当日历失去焦点时执行的回调方法</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </li>
+                         
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+</div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<!-- <script src="../js/libs/plugs/calendar/jscal2.js"></script>
+<script src="../js/libs/plugs/calendar/cn.js"></script> -->
+
+<script>
+    appManager.use('calendar');
+    
+    
+    
+</script>
+</body>
+</html>

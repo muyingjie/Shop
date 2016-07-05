@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>系统设置—管理员设置</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/system_adm.css">
+</head>
+<body>
+<div class="s_wrap">
+
+<h3>系统设置<span>-管理员设置</span></h3>
+<div class="s_main">
+      <h4 class="s_nav"><span class="s_dink ">账号列表</span><span class="">角色列表</span></h4>
+      <div class="con_m3 ">
+        <h5><span>新增账号</span></h5>
+        <ul class="uls">
+            <li class="first"><span class="sm1"><b>编号</b></span><span class="sm2"><b>账号名称</b></span><span class="sm3"><b>最近登录时间</b></span><span class="sm4"><b>操作</b></span></li>
+            <li><span class="sm1">1</span><span class="sm2">tom</span><span class="sm3">2016-03-11&nbsp;23:58</span><span class="sm4"><a href="javascript:;">修改</a><a href="javascript:;">删除</a><a href="javascript:;">停用</a></span></li>
+            <li><span class="sm1">2</span><span class="sm2">biliy</span><span class="sm3">2016-03-11&nbsp;23:58</span><span class="sm4"><a href="javascript:;">修改</a><a href="javascript:;">删除</a><a href="javascript:;">停用</a></span></li>
+            <li><span class="sm1">3</span><span class="sm2">alex</span><span class="sm3">2016-03-11&nbsp;23:58</span><span class="sm4"><a href="javascript:;">修改</a><a href="javascript:;">删除</a><a href="javascript:;">停用</a></span></li>
+            <li><span class="sm1">4</span><span class="sm2">tom</span><span class="sm3">2016-03-11&nbsp;23:58</span><span class="sm4"><a href="javascript:;">修改</a><a href="javascript:;">删除</a><a href="javascript:;">停用</a></span></li>
+            <li><span class="sm1">5</span><span class="sm2">biliy</span><span class="sm3">2016-03-11&nbsp;23:58</span><span class="sm4"><a href="javascript:;">修改</a><a href="javascript:;">删除</a><a href="javascript:;">停用</a></span></li>
+           
+        </ul>
+    </div>
+      <div class="con_m3 " style="display: none">
+            <h5><span>新增角色</span></h5>
+
+            <ul class="uls">
+                <li class="first"><span class="sn1"><b>编号</b></span><span class="sn2"><b>角色名称</b></span><span class="sn3"><b>操作</b></span></li>
+                <li><span class="sn1">1</span><span class="sn2">管理角色</span><span class="sn3"><a href="javascript:;">包含用户</a><a href="javascript:;">修改</a></span></li>
+                <li><span class="sn1">2</span><span class="sn2">销售角色</span><span class="sn3"><a href="javascript:;">包含用户</a><a href="javascript:;">修改</a></span></li>
+                <li><span class="sn1">3</span><span class="sn2">商品管理角色</span><span class="sn3"><a href="javascript:;">包含用户</a><a href="javascript:;">修改</a></span></li>
+                <li><span class="sn1">4</span><span class="sn2">销售角色</span><span class="sn3"><a href="javascript:;">包含用户</a><a href="javascript:;">修改</a></span></li>
+                <li ><span class="sn1">5</span><span class="sn2">销售角色</span><span class="sn3"><a href="javascript:;">包含用户</a><a href="javascript:;">修改</a></span></li>
+            </ul>
+            <!--<div class="pages">
+            <div class="pageLeft">每页
+                <div class="select pagePer">
+                    <input type="hidden" value="20">
+                    <span>20</span>
+                    <i></i>
+                    <ul>
+                        <li v="20" class="sel">20</li>
+                        <li v="40">40</li>
+                        <li v="60">60</li>
+                    </ul>
+                </div>
+                条，共<span class="pageCount">35</span>条
+            </div>
+            <a class="dis">首页</a><a class="dis">上一页</a>
+
+            <div class="select pageList">
+                <input type="hidden" class="currPage" value="1">
+                <span>第1页</span>
+                <i></i>
+                <ul>
+                    <li><a class="">第1页</a></li>
+                    <li><a href="1.html">第2页</a></li>
+                    <li><a href="">第3页</a></li>
+                    <li><a href="">第4页</a></li>
+                </ul>
+            </div>
+            <a href="">下一页</a><a href="">尾页</a>
+        </div>-->
+        </div>
+</div>
+</div>
+<script src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    /***选项卡的页签的切换***/
+    $(function(){
+        $(".s_nav span").css("cursor","pointer").on("click", function () {
+            $(this).siblings().removeClass("s_dink");
+            $(this).addClass("s_dink");
+            var _index = $(this).index();
+            $(".con_m3").eq(_index).show().siblings(".con_m3").hide();
+        });
+    })
+</script>
+</body>
+</html>

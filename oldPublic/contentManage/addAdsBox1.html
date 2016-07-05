@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>新增广告</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/jscal2.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/border-radius.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/calendar/steel/steel.css"/>
+</head>
+<body>
+<!-- 新增广告 开始 -->
+<div class="box"  style="display: block" >
+    <!-- 内容区 -->
+    <div class="box-con info">
+        <ul>
+            <li>
+                <span class="title w100"><i class="red">*</i>广告名称：</span>
+                <div class="text-oper">
+                    <input name="linkname" type="text" class="txt inputW-205" />
+                  <!--  <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>-->
+                    <div class="err-tip"><i></i><span></span></div>
+                </div>
+            </li>
+            <li>
+                <span class="title w100"><i class="red">*</i>开始时间：</span>
+                <div class="text-oper">
+                    <input name="linkdress" type="text" class="txt input-w98 birthday" />
+                </div>
+            </li>
+            <li>
+                <span class="title w100"><i class="red">*</i>结束时间：</span>
+                <div class="text-oper">
+                    <input name="linkdress" type="text" class="txt input-w98 birthday" />
+                </div>
+            </li>
+            <li>
+                <span class="title w100"><i class="red">*</i>广告是否显示：</span>
+                <div class="text-oper">
+                    <input class="radio showAds" type="radio" checked="checked" name="adsshow">是&nbsp;&nbsp;
+                    <input class="radio hideAds" type="radio" name="adsshow">否
+                </div>
+            </li>
+            <div class="show-ad-location" style="display: block">
+                <li>
+                    <span class="title w100"><i class="red">*</i>图片：</span>
+                    <div class="uploader">
+                        <a href="javascript:;" class="file f-l">添加广告图<input type="file" name="" id=""></a>
+                        <div class="default-tip f-l">建议每次添加尺寸相同</div>
+                        <span class="uploaderImg f-l"><img src="../images/default_image.jpg" /></span>
+                    </div>
+                </li>
+                <li class="margin-Top5" >
+                    <span class="title w100"><i class="red">*</i>图片链接地址：</span>
+                    <div class="text-oper">
+                        <input name="linkname" type="text" class="txt inputW-205" />
+                        <!--  <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>-->
+                        <div class="err-tip"><i></i><span></span></div>
+                    </div>
+                </li>
+            </div>
+            <li>
+                <span class="title w100"><i class="red">*</i>排序码：</span>
+                <div class="text-oper">
+                    <input name="linknum" type="text" class="txt input-w98" />
+                    <div class="default-tip">数字小展示靠前</div>
+                    <div class="err-tip"><i></i><span></span></div>
+                </div>
+            </li>
+            <div class="hide-ad-location" style="display: none">
+                <li>
+                    <span class="title w100"><i class="red">*</i>文字/代码：</span>
+                    <div class="text-oper">
+                        <textarea rows="10" cols="30" class="textarea adsTextarea"></textarea>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <!-- 按钮区 -->
+    <div class="box-btn">
+        <span class="gen-sureBtn boxSave">保存</span>
+    </div>
+</div>
+<!-- 新增广告位 结束 -->
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    appManager.use('addAdsBox');
+</script>
+</body>
+</html>

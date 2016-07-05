@@ -1,0 +1,208 @@
+@charset "UTF-8";
+.ft-col-e6611e{
+    color: #e6611e;
+}
+.ft-l{
+    float: left;
+}
+.ft-r{
+    float: right;
+}
+.lt-main{
+    min-width: 1093px;
+}
+.lt-tittle{
+    padding: 15px 0 15px 13px;
+    margin-left: 10px;
+    position: relative;
+}
+
+/***订单列表开始***/
+#box_main {
+    min-height: 670px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    color: #666;
+}
+.lookUl {
+    height: 28px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    margin: 10px 5px ;
+}
+.lookLi {
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #666;
+    border-bottom: 1px solid #d2d7dd;
+    border-radius: 3px 3px 0 0;
+    background-color: #fff;
+}
+.lookBorder {
+    border: 1px solid #d2d7dd;
+    border-bottom: none;
+    color: #2f79b6;
+}
+.lookLif {
+    width: 48px;
+    border: none;
+    border-bottom: 1px solid #d2d7dd;
+    cursor: Auto;;
+}
+.lookLil {
+    width: 20%;
+    cursor: Auto;
+}
+.order-list tr{
+    display: table-row;
+}
+.order-list th{
+    line-height: 26px;
+    background: #eee;
+    text-align: left;
+}
+table th,table td{
+    border-bottom: 1px solid #ddd;
+    line-height: 26px;
+    word-wrap:break-word;
+}
+.order-th1{
+    width: 50px;
+}
+.order-th2{
+    width: 80px;
+}
+.order-th3{
+    width: 140px;
+}
+.order-th4{
+    width: 77px;
+}
+.order-th5{
+    width: 155px;
+}
+.order-th6{
+    width:184px;
+}
+.order-th7{
+    width: 160px;
+}
+.order-th8{
+     width: 106px;
+ }
+.order-th9{
+      width: 120px;
+}
+.order-list a{
+    text-decoration: underline;
+}
+/***订单列表结束***/
+
+
+/***添加订单开始***/
+.orderWrap{
+    height: 45px;
+    line-height: 45px;
+}
+.orderInput{
+    border: 1px solid #ddd;
+    height: 26px;
+    line-height: 26px;
+    margin: 15px auto 10px 10px;
+    padding: 0 10px;
+}
+.orderInput:hover{
+    border: 1px solid #4587da;
+}
+.orderSp1{
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    width: 100px;
+    text-align: right;
+}
+.orderChose{
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #ddd;
+    background: #eee;
+    padding: 0 10px;
+    margin-left: 9px;
+    cursor: pointer;
+}
+.orderSp2{
+    margin-left: 14px;
+    color: #a9a9a9;
+    text-align: center;
+}
+.orderBtn{
+    position: absolute;
+    margin-left: 510px;
+    margin-top:500px;
+}
+.gen-cancelBtn{
+    margin-left: 14px;
+}
+/***添加订单结束***/
+
+
+/***选择货品开始***/
+.selectOpra{
+   height: 24px;
+    width: 940px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+}
+.pop-up{
+    max-width: 980px;
+    height:957px;
+    background: #fff;
+}
+.pop-top{
+    height: 55px;
+    width: 940px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+}
+.pop-tittle{
+   padding-top: 30px;
+}
+.selectGoods{
+    margin: 0 auto;
+    width: 940px;
+    height: 568px;
+    overflow-y: auto;
+
+}
+.selectGoods table{
+    width: 100%;
+
+}
+.selectGoods th{
+    line-height: 26px;
+    background: #eee;
+    text-align: left;
+}
+.selectG-th1{
+    width: 28px;
+}
+.selectG-th2{
+    width: 250px;
+}
+.selectG-th3{
+    width: 216px;
+}
+.selectG-th4{
+
+}
+.selectSave{
+    margin:109px auto;
+    margin-left: 495px;
+}
+/***选择货品结束***/
+

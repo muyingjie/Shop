@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/memberManage.css"/>
+	<style>
+		body { margin: 0; padding: 0; }
+		pre {
+		    background-color: #303030;
+		    font-size: 13px;
+		    line-height: 19px;
+		    overflow: auto;
+		    padding: 6px 10px;
+		  }
+		pre code {
+		    color: #f2f2f2;
+		    border: none;
+		    padding: 0;
+		    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
+		    margin-bottom: 30px;
+		    font-size: 14px;
+		  }
+	</style>
+	<script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
+</head>
+<body>
+	<h2 class="lt-title add-goods-head">
+        <div class="mtitle add-goods-page">tabs<span></span></div>
+        <span class="refreshBtn"></span>
+        <span class="configBtn"></span>
+
+        <div class="handleWarning handleSuccess"></div>
+    </h2>
+	<ul class="info">
+		<li class="Goods-L1">
+			<span class="ft-t-14 Goods-title">示例操作</span>
+		</li>
+	</ul>
+	<div class="lt-main">
+   <h2 class="lt-title">
+        <div class="mtitle">会员管理<span>-新增会员</span></div>
+         <span class="refreshBtn"></span>
+         <span class="configBtn"></span>
+       <div class="handleWarning handleSuccess"></div>
+    </h2>
+    <div class="mainCont info-container">
+        <ul class="Tab-ul tabs">
+            <li class="Tab-li Tab-li-first">会员信息</li>
+            <li class="Tab-li Tab-li-select">收货地址</li>
+        </ul>
+        <div class="Tab-content">
+            <div class="tabs-infor1" style="display: none;">
+                <div class="info addmember">
+                    <ul>
+                        <li class="account">
+                            <span class="title">用户名：</span>
+                            <div class="text-oper">
+                                <input name="account" type="text" class="txt input1 username" regname="userName">
+                                <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+
+                        </li>
+
+                        <li class="password">
+                            <span class="title">密码：</span>
+                            <div class="text-oper">
+                                <input name="password" type="text" class="txt input1 pwd" regname="pwd">
+                                <div class="default-tip"><i></i>建议使用字母、数字和符号两种及以上的组合，6-20个字符</div>
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="name">
+                            <span class="title">姓名：</span>
+                            <div class="text-oper ">
+                                <input name="name" type="text" class="txt input1 name" regname="realName">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="sex">
+                            <span class="title">性别：</span>
+                            <div class="text-oper">
+                                <input class="radio" type="radio" checked="checked" name="sex">男&nbsp;&nbsp;
+                                <input class="radio" type="radio" name="sex">女
+                            </div>
+                        </li>
+
+                        <li class="birthday">
+                            <span class="title">出生日期：</span>
+                            <div class="text-oper">
+                                <input name="birthday" class="txt input1 date-ico" readonly type="text">
+                            </div>
+                        </li>
+
+                        <li class="id-card">
+                            <span class="title">身份证号：</span>
+                            <div class="text-oper">
+                                <input name="id-card" type="text" class="txt input1" regname="idNumber">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="mobile">
+                            <span class="title">手机号码：</span>
+                            <div class="text-oper">
+                                <input name="mobile" type="text" class="txt input1 mobile" regname="cellPhone">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                            <div class="text-tip check-right">
+                                <i class="checkbox" v=""></i>&nbsp;接收企业短信</div>
+                        </li>
+
+                        <li class="mail">
+                            <span class="title">邮箱：</span>
+                            <div class="text-oper">
+                                <input name="mail" type="text" class="txt input1 mail" regname="email">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                            <div class="text-tip check-right">
+                                <i class="checkbox" v=""></i>&nbsp;接收企业邮箱</div>
+                        </li>
+
+                        <li class="tel">
+                            <span class="title">固定电话：</span>
+                            <div class="text-oper">
+                                <input name="tel" type="text" class="txt input1" regname="telePhone">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="code">
+                            <span class="title">邮政编码：</span>
+                            <div class="text-oper">
+                                <input name="code" type="text" class="txt input1" regname="mailCode">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="address">
+                            <span class="title">所在地区：</span>
+                            <div class="text-oper">
+                                <div class="select belong-address addmember-select">
+                                    <span>请选择</span>
+                                    <i></i>
+                                    <ul style="display: none;">
+                                        <li v="选中之后真实值">北京市</li>
+                                        <li v="选中之后真实值">上海市</li>
+                                    </ul>
+                                </div>
+                                <div class="select belong-address addmember-select">
+                                    <span>请选择</span>
+                                    <i></i>
+                                    <ul style="display: none;">
+                                        <li v="选中之后真实值">北京市</li>
+                                        <li v="选中之后真实值">上海市</li>
+                                    </ul>
+                                </div>
+                                <div class="select belong-address addmember-select">
+                                    <span>请选择</span>
+                                    <i></i>
+                                    <ul style="display: none;">
+                                        <li v="选中之后真实值">北京市</li>
+                                        <li v="选中之后真实值">上海市</li>
+                                    </ul>
+                                </div>
+                                <input name="address" type="text" class="txt input1 addr-location" regname="address">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="level">
+                            <span class="title">会员级别：</span>
+                            <div class="text-oper ">
+                                <div class="select belong-level addmember-select">
+                                    <span>请选择</span>
+                                    <i></i>
+                                    <ul style="display: none;">
+                                        <li v="选中之后真实值">普通</li>
+                                        <li v="选中之后真实值">高级</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="customer">
+                            <span class="title">客户分组：</span>
+                            <div class="text-oper">
+                                <div class="select belong-group addmember-select">
+                                    <span>请选择</span>
+                                    <i></i>
+                                    <ul style="display: none;">
+                                        <li v="选中之后真实值">普通</li>
+                                        <li v="选中之后真实值">VIP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="source">
+                            <span class="title">会员来源：</span>
+                            <div class="text-oper">PC商城注册</div>
+                        </li>
+
+                        <li class="integral">
+                            <span class="title">积分：</span>
+                            <div class="text-oper">
+                                <input name="integral" type="text" class="txt input1" regname="score">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="qq">
+                            <span class="title">QQ：</span>
+                            <div class="text-oper">
+                                <input name="qq" type="text" class="txt input1" regname="qq">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="refer-person">
+                            <span class="title">推荐人用户名：</span>
+                            <div class="text-oper">
+                                <input name="person" type="text" class="txt input1" regname="referrName">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+                        <li class="custom">
+                            <span class="title">自定义项：</span>
+                            <div class="text-oper">
+                                <input name="custom" type="text" class="txt input1">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-sub">
+                    <span class="f-l gen-sureBtn add-member-save">保存</span>
+                    <span class="f-l gen-cancelBtn add-member-delect">取消</span>
+                </div>
+            </div>
+            <div class="tabs-infor1" style="display: block;">
+                <div class="info addmember">
+                    <ul>
+                        <li class="account">
+                            <span class="title title1">新增收货地址&nbsp;&nbsp;&nbsp;</span>
+                            <div class="text-oper">
+                                <span>电话号码、手机号选项一项，其余是必选项</span>
+                            </div>
+                        </li>
+
+                        <li class="account">
+                            <span class="title">收货人：</span>
+                            <div class="text-oper ">
+                                <input name="name" type="text" class="txt input1 name" regname="realName">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="address">
+                            <span class="title">所在地区：</span>
+                            <div class="text-oper">
+                                <div class="select belong-address">
+                                    <span>请选择</span>
+                                    <i></i>
+                                    <ul style="display: none;">
+                                        <li v="选中之后真实值">北京市</li>
+                                        <li v="选中之后真实值">上海市</li>
+                                    </ul>
+                                </div>
+
+                                <div class="select belong-address">
+                                    <span>请选择</span>
+                                    <i></i>
+                                    <ul style="display: none;">
+                                        <li v="选中之后真实值">北京市</li>
+                                        <li v="选中之后真实值">上海市</li>
+                                    </ul>
+                                </div>
+
+                                <div class="select belong-address">
+                                    <span>请选择</span>
+                                    <i></i>
+                                    <ul style="display: none;">
+                                        <li v="选中之后真实值">北京市</li>
+                                        <li v="选中之后真实值">上海市</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="detail-addr" style="height: 100px">
+                            <span class="title">详细地址：</span>
+                            <div class="text-oper">
+                           <textarea name="MSG" class="addr-textarea" regname="address">建议您如实填写详细的收货地址，例如街道名称，门牌号码，楼层和房间号等信息
+                           </textarea>
+                            </div>
+
+                        </li>
+
+                        <li class="mobile">
+                            <span class="title">手机号码：</span>
+                            <div class="text-oper">
+                                <input name="mobile" type="text" class="txt input1" regname="cellPhone">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+
+                        <li class="tel">
+                            <span class="title">固定电话：</span>
+                            <div class="text-oper">
+                                <input name="tel" type="text" class="txt input1" regname="telePhone">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+                        <li class="code">
+                            <span class="title">邮政编码：</span>
+                            <div class="text-oper">
+                                <input name="code" type="text" class="txt input1" regname="mailCode">
+                                <div class="err-tip"><i></i><span></span></div>
+                            </div>
+                        </li>
+                        <li class="default-addr">
+                            <span class="title opacity">：</span>
+                            <div class="text-oper">
+                                <i class="checkbox" v=""></i>&nbsp; 设置为默认收货地址
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn-sub">
+                        <span class="f-l gen-sureBtn">保存</span>
+                        <span class="f-l gen-cancelBtn">重置</span>
+                    </div>
+                </div>
+                <!-- 保存收货地址的部分-->
+                <table class="bottmAddr" cellpadding="0" cellspacing="0">
+                    <tbody><tr class="addrTop ft-t-14 addr-col-ececec">
+                        <th class="addrTopList addr-80">收货人</th>
+                        <th class="addrTopList addr-100">所在地区</th>
+                        <th class="addrTopList addr-220">详细地址</th>
+                        <th class="addrTopList addr-100">邮编</th>
+                        <th class="addrTopList addr-100">电话/手机</th>
+                        <th class="addrTopList addr-100">操作</th>
+                        <th class="addrTopList addr-150 opacity">设为默认</th>
+                    </tr>
+                    <tr class="addrList">
+                        <td class="addrList1 addr-80">李凯</td>
+                        <td class="addrList1 addr-100 addrDoubText">
+                            <span>北京市大兴区亦庄经济技术开发区 </span>
+                        </td>
+                        <td class="addrList1 addr-220">
+                            <span>地盛西路1号数码庄园B1-3</span>
+                        </td>
+                        <td class="addrList1 addr-100">
+                            <span>10010</span>
+                        </td>
+                        <td class="addrList1 addr-100">
+                            <span>13145985986</span>
+                        </td>
+                        <td class="addrList1 addr-100">
+                            <span class="goods-edit f-l">编辑</span>
+                            <span class="goods-delect f-l">删除</span>
+                        </td>
+                        <td class="addrList1 addr-150">
+                            <span>默认地址</span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+
+    </div>
+ </div>
+	<div class="lt-main">
+	    <div class="container">
+	    	<div class="info">
+	    		<ul>
+	    			<li class="Goods-L1">
+	    				<span class="ft-t-14 Goods-title">结构代码</span>
+	    			</li>
+	    			<li class="goodsClassify">
+	    				<pre>
+                            <code>
+&lt;ul id="tabs"&gt;
+  &lt;li data-tab="users"&gt;Users&lt;/li&gt;
+  &lt;li data-tab="groups"&gt;Groups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id="tabsContent"&gt;
+  &lt;div data-tab="users"&gt; Users &lt;/div&gt;
+  &lt;div data-tab="groups"&gt; Groups &lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                        <p>说明：如果data-tab值存在，则列表区和内容区值要对应</p>
+	    			</li>
+	    			<li class="Goods-L1">
+	    				<span class="ft-t-14 Goods-title">示例代码</span>
+	    			</li>
+	    			<li class="goodsClassify">
+	    				<pre>
+                            <code>
+$('.Tab-ul').tabs(null, null, 'Tab-li-select');
+                            </code>
+                        </pre>
+                        <p>说明：tabs调用，第一个参数是内容区父元素的选择器名称，可以填null，第二个参数是列表区选择器名称，可以填null，第三个参数是列表区被选中项的class名称。</p>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    </div>
+	</div>
+	<script src="../js/libs/seajs/sea-debug.js"></script>
+	<script src="../js/base.js"></script>
+	<script>
+	  seajs.use(["../js/widgets/dialogs","demoApp/tabs"],function(m){
+		 
+		$(".refreshBtn").click(function(){
+				m.closeDialog()
+		})	  
+	})
+	</script>
+</body>
+</html>

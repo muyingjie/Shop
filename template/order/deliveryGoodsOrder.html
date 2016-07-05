@@ -1,0 +1,138 @@
+﻿<h2 class="lt-title">
+    <div class="mtitle">订单管理<span>-发货单</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+<div class="mainCont">
+    <div id="box_main">
+        <div id="box_user" class="orderList">
+            <ul class="Tab-ul">
+                <li class="Tab-li Tab-li-select">待支付<span>(8)</span></li>
+                <li class="Tab-li">已支付</li>
+                <li class="Tab-li">货到付款</li>
+                <li class="Tab-li">待发货</li>
+                <li class="Tab-li">已发货</li>
+                <li class="Tab-li">未完成</li>
+                <li class="Tab-li">已作废</li>
+                <li class="Tab-li">已完成</li>
+                <li class="Tab-li">全部</li>
+            </ul>
+        </div>
+        <div class="mainCtrl">
+            <ul>
+                <li><span class="add">添加订单</span></li>
+                <li>
+                    <span class="ex ck">指定标签<i></i></span>
+
+                    <div>
+                        <dl>
+                            <dd><i></i>青年组</dd>
+                            <dd><i></i>青年组</dd>
+                            <dd><i></i>青年组</dd>
+                            <dd><i></i>青年组</dd>
+                        </dl>
+                        <a>新增标签</a>
+                    </div>
+                </li>
+                <li><span class="export">导出</span></li>
+            </ul>
+            <div>
+                <div class="select memSearch f-l" style="width:100px">
+                    <span>订单号</span>
+                    <i></i>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="searchTxt"><input type="text"><i class="searchIcon"></i></div>
+                <span class="searchBtn">高级筛选></span>
+            </div>
+        </div>
+        <div class="order-list">
+            <table id="dg" class="easyui-datagrid" cellpadding="0" style="width:100%;height:auto" cellspacing="0" border="0" data-options="
+				iconCls: 'icon-edit',
+				singleSelect: true,
+				toolbar: '#tb',
+				url: 'datagrid_data2.json',
+				method: 'get',
+				onClickCell: onClickCell,
+				onEndEdit: onEndEdit
+			">
+                <thead>
+                <tr>
+                    <th width="30" data-options="field:'selectcheck',width:40,editor:'numberbox',resizable:false"class="t-center"><i class="checkbox checkAll"></i></th>
+                    <th data-options="field:'lookinfor',width:50,editor:'textbox',resizable:false" class="t-center">查看
+                    </th>
+                    <th data-options="field:'username',width:90,editor:'textbox'">用户名</th>
+                    <th data-options="field:'ordernumber',width:200,editor:'numberbox'">订单号</th>
+                    <th data-options="field:'label',width:100">标签</th>
+                    <th data-options="field:'lastdate',width:180,editor:'textbox'">最后更新时间</th>
+                    <th data-options="field:'goodsaddress',width:200,editor:'textbox'">收货地址</th>
+                    <th data-options="field:'buydate',width:180,editor:'textbox'">下单日期</th>
+                    <th data-options="field:'paymethod',width:180">支付方式</th>
+                    <th data-options="field:'opera',width:200" style="cursor: pointer">操作</th>
+                </tr>
+                </thead>
+            </table>
+            <div class="tableCont">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>12345654897895</td>
+                        <td>VIP</td>
+                        <td>2016-4-13 13:26</td>
+                        <td>北京-北京市-大兴区</td>
+                        <td>2016-3-31 13:03:25</td>
+                        <td>货到付款</td>
+                        <td class="order-handle">
+                         <span class="handle-list">处理订单<i id="2" class="arrow"></i>
+                            <ul class="order-proce">
+                                <li>订单编辑</li>
+                                <li>支付</li>
+                                <li>发货</li>
+                                <li>完成</li>
+                                <li>作废</li>
+                                <li>订单备注</li>
+                            </ul>
+                         </span>
+
+                        </td>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="pages">
+        <div class="pageLeft">每页
+            <div class="select pagePer">
+                <input type="hidden" value="20">
+                <span>20</span>
+                <i></i>
+                <ul>
+                    <li v="20" class="sel">20</li>
+                    <li v="40">40</li>
+                    <li v="60">60</li>
+                </ul>
+            </div>
+            条，共<span class="pageCount">35</span>条
+        </div>
+        <a class="dis">首页</a><a class="dis">上一页</a>
+
+        <div class="select pageList">
+            <input type="hidden" class="currPage" value="1">
+            <span>第1页</span>
+            <i></i>
+            <ul>
+                <li><a class="">第1页</a></li>
+                <li><a href="1.html">第2页</a></li>
+                <li><a href="">第3页</a></li>
+                <li><a href="">第4页</a></li>
+            </ul>
+        </div>
+        <a href="">下一页</a><a href="">尾页</a>
+    </div>
+</div>

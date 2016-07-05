@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>会员列表</title>
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<link href="../css/form.css" rel="stylesheet" type="text/css">
+<link href="../css/list.css" rel="stylesheet" type="text/css">
+<link href="../css/box.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">会员管理<span>-会员列表</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn" title="会员分类排序" tag="memberManage/config.html"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont">
+	<div class="mainCtrl">
+    	<ul>
+
+
+        
+        	<li><span class="addBtn">新增</span></li>
+            <li><span class="delBtn">删除</span></li>
+            <li><span class="useBtn">启用</span></li>
+            <li><span  class="unuseBtn">停用</span></li>
+            <li>
+            	<span class="ex">指定会员等级<i></i></span>
+                <dl class="levellist">
+                	<dd v="1">白金级</dd>
+                    <dd v="2">黄金级</dd>
+                    <dd v="3">钻石级</dd>
+                </dl>
+            </li>
+            <li>
+                <span class="ex ck">指定标签<i></i></span>
+                <div>
+                    <dl>
+                        <dd v="1"><i></i>第一组</dd>
+                        <dd v="2"><i></i>第二组</dd>
+                        <dd v="3"><i></i>第三组</dd>
+                        <dd v="4"><i></i>第四组</dd>
+                    </dl>
+                    <a>新增标签</a>
+                </div>
+            </li>
+            <li><span class="exportBtn">导出会员</span></li>
+
+
+
+        </ul>
+        <div>
+        	<div class="select listSearch">
+            	<input type="hidden" value="1">
+                <span>会员ID</span>
+                <i></i>
+                <ul>
+                	<li v="1">会员ID</li>
+                    <li v="2">会员姓名</li>
+                </ul>
+            </div>
+            <div class="searchTxt"><input type="text"><i class="searchIcon"></i></div>
+            <span class="searchBtn">高级筛选></span>
+            
+        </div>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+    	<tr>
+        	<th width="30" class="t-center"><i class="checkbox checkAll"></i></th>
+            <th width="50" class="t-center">查看</th>
+            <th>会员姓名</th>
+            <th>用户名</th>
+            <th>会员等级</th>
+            <th>会员标签</th>
+            <th>会员来源</th>
+            <th>注册日期</th>
+            <th>积分</th>
+            <th>消费金额</th>
+            <th>会员状态</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+    	<div class="tclist">
+            <div class="checkTip">已勾选本页<span class="n"></span>条,<a class="selectAll">勾选会员列表中全部35条信息</a><input type="hidden" value=1 class="isAll"></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                <tr id="1">
+                    <td class="t-center"><i class="checkbox"></i></td>
+                    <td class="t-center"><i class="viewBtn"></i></td>
+                    <td>李凯</td>
+                    <td>likai</td>
+                    <td class="level">白金级</td>
+                    <td class="group">青年组,中年组</td>
+                    <td>PC商城注册</td>
+                    <td>2016-4-22</td>
+                    <td>229202</td>
+                    <td>22000</td>
+                    <td class="use"><i class="yes"></i></td>
+                    <td><a href="">编辑</a><a class="del-link ">删除</a></td>
+                </tr>
+                <tr id="2">
+                    <td class="t-center"><i class="checkbox"></i></td>
+                    <td class="t-center"><i class="viewBtn"></i></td>
+                    <td>李凯</td>
+                    <td>likai</td>
+                    <td class="level">白金级</td>
+                    <td class="group">青年组,中年组</td>
+                    <td>PC商城注册</td>
+                    <td>2016-4-22</td>
+                    <td>229202</td>
+                    <td>22000</td>
+                    <td class="use"><i class="yes"></i></td>
+                    <td><a href="">编辑</a><a class="del-link ">删除</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="pages">
+        	
+        	<div class="pageLeft">每页
+                <div class="select pagePer">
+                	<input type="hidden" value="20">
+                    <span>20</span>
+                	<i></i>
+                    <ul>
+                        <li v="20" class="sel">20</li>
+                        <li v="40">40</li>
+                        <li v="60">60</li>
+                    </ul>
+                </div>
+                条，共<span class="pageCount">35</span>条
+            </div>
+            <a class="dis">首页</a><a class="dis">上一页</a>
+            <div class="select pageList">
+            	<input type="hidden" class="currPage" value="1">
+                <span>第1页</span>
+                <i></i>
+                <ul>      
+                	<li><a class="" >第1页</a></li>
+                    <li><a href="1.html">第2页</a></li>
+                    <li><a href="">第3页</a></li>
+                    <li><a href="">第4页</a></li>
+                </ul>
+            </div>
+            <a href="">下一页</a><a href="">尾页</a>
+        </div>
+    </div>
+</div>
+
+<!--弹出框页面 配置列表-->
+
+
+<!--导出会员-->
+<div class="box w-450 small-box exportBox" >
+    <!-- 标题区 -->
+    <div class="box-title  ft-12">
+        <h2 class="box-h2 f-l">导出会员</h2>
+        <span class="box-close f-r"></span>
+    </div>
+    <!-- 内容区 --> 
+    <div class="box-con info">
+      <ul>
+        <li>
+        	<span class="title">文件类型：</span>
+            <div class="text-oper">
+                <select class="select w120">
+                	<option>.csv</option>
+                </select>
+            </div>    
+         </li>
+          <li>
+            <span class="title">导出描述：</span>
+            <div class="text-oper">
+                <input name="describe" type="text" class="txt input1 w200" />
+            </div>            
+         </li>
+       </ul> 
+    </div>    
+    <!-- 按钮区 -->
+    <div class="box-btn">
+        <span class="gen-sureBtn boxSave">导出</span>
+    </div>    
+</div>
+<!--高级筛选-->
+
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+appManager.use("main")
+</script>
+</body>
+</html>

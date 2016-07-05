@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>新增广告</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" href="../css/plugs/colpick.css"/>
+    <style>
+.example{
+line-height: 30px;
+background-color: #e8e7ec;
+padding-left: 24px;
+margin: 10px 0;
+font-size: 14px;
+}
+.info .w186{width: 180px; }
+.info .input127{width: 128px}
+.new-label-btn{float: left;margin-top: 16px}
+    </style>
+</head>
+
+<body>
+<!-- 新增标签 开始  宽度450px-->
+<div class="box"  >
+    <!-- 内容区 -->
+    <div class="box-con info">
+        <ul>
+            <li>
+                <span class="title w186">标签名称：</span>
+                <div class="text-oper">
+                    <input name="linkname" type="text" class="txt input127" />
+                </div>
+            </li>
+            <li>
+                <span class="title w186">标签背景色：</span>
+                <div class="text-oper">
+                    <input name="linkdress" type="text" class="txt input127 picker" readonly="readonly" />
+                    <div class="labelColor2">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="title w186">标签字体颜色：</span>
+                <div class="text-oper">
+                    <input name="linkdress" type="text" class="txt input127 picker" readonly="readonly"/>
+                    <div class="labelColor2">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 按钮区 -->
+    <div class="box-btn new-label-btn">
+        <span class="gen-sureBtn ">保存</span>
+    </div>
+</div>
+<!-- 新增标签 结束 -->
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+  appManager.use('colorPicker');
+
+</script>
+</body>
+</html>

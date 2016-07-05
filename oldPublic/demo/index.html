@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>会员列表</title>
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<link href="../css/frame.css" rel="stylesheet" type="text/css">
+<link href="../css/form.css" rel="stylesheet" type="text/css">
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="sideBar">
+	<div class="sideList">
+    	<dl>
+        	<dt>控件示例<i></i></dt>
+            <dd><a href="goodsStandard.html" target="main">类型添加</a></dd>
+            <dd><a href="ckeditor.html" target="main">CKEditor编辑器</a></dd>
+            <dd><a href="dialog.html" target="main">dialog控件</a></dd>
+            <dd><a href="tab.html" target="main">tabs控件</a></dd>
+            <dd><a href="select.html" target="main">下拉选择控件</a></dd>
+            <dd><a href="specialSelect.html" target="main">特殊下拉选择控件</a></dd>
+            <dd><a href="validate.html" target="main">验证控件</a></dd>
+            <dd><a href="calendar.html" target="main">日历控件</a></dd>
+            <dd><a href="colorpick.html" target="main">拾色器控件</a></dd>
+            <dd><a href="swfupload.html" target="main">图片上传控件</a></dd>
+            <dd><a href="selectAddress.html" target="main">地址三级联动</a></dd>
+            <dd><a href="pagination.html" target="main">翻页控件</a></dd>
+            <dd><a href="ztree.html" target="main">树形菜单控件</a></dd>
+			<dd><a href="datagrid.html" target="main">表格控件</a></dd>
+            <dd><a href="treetable.html" target="main">树形表格控件</a></dd>
+            <dd><a href="samplePictures.html" target="main">图片上传预览操作示例</a></dd>
+        </dl>
+    </div>
+</div>
+<div class="header">
+	<div class="logo">
+    	<a href=""><img src="../images/logo.png"></a><i class="sideBarBtn"></i>
+    </div>
+	<span class="search"></span>
+    <span class="alert"></span>
+    <span class="msg"><i>5</i></span>
+    <span class="logout"></span>
+</div>
+
+<div class="container">
+	<div class="frameCont">
+    	<iframe src="indexInclude.html" frameborder="0" class="mainFrame" name="main" id="main" style="height:700px"></iframe>
+    </div>
+</div>
+
+<div class="mask"></div>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script>
+seajs.use('PageParam',function(a){
+	a.setParam({baseUrl:'testUrl',param1:'param1',param2:'param2'});
+	appManager.use('index')
+})
+
+seajs.use('../js/libs/plugs/dialog/dialog-plus',function(dialog){
+	window.dialog=dialog;
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>内容管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+</head>
+<body>
+<div class="info"><div class="err-tip"><i></i></div></div>
+<h2 class="lt-title">
+    <div class="mtitle">内容管理<span>-站内消息</span></div>
+    <span class="refreshBtn"></span>
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+
+<div class="mainCont">
+    <div class="info-container">
+        <ul class="Tab-ul">
+            <li class="Tab-li Tab-li-select Tab-li-first" >发消息</li>
+            <li class="Tab-li">发件箱</li>
+            <li class="Tab-li">收件箱</li>
+        </ul>
+        <div class="info message new-message" style="display:none;">
+            <!-- 发消息 开始 -->
+             <ul>
+                <li class="account">
+                    <span class="title">收件人：</span>
+                    <div class="text-oper">
+                        <input name="linkname" type="text" class="txt inputM" />
+                        <span class="gen-guiBtn">选择收件人</span>
+                    </div>
+                </li>
+                <li class="account">
+                    <span class="title">标题：</span>
+                    <div class="text-oper">
+                        <input name="linkname" type="text" class="txt inputM" />
+                    </div>
+                </li>
+                <li class="account">
+                    <span class="title">内容：</span>
+                    <div class="text-oper">
+                        <textarea name="MSG" class="mail-textarea"   regName="address"></textarea>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn-sub">
+                <span class="f-l imp-sureBtn">发送</span>
+            </div>
+            <!-- 发消息 结束 -->            
+        </div>  
+        <!-- 发件箱 内容 -->
+        <div class="info message send-message" style="display:block;">
+            <div class="mainCtrl">
+                <ul>
+                    <li><span class="gen-guiBtn del">删除</span></li>
+                </ul>
+                <div>
+                    <div class="select memSearch f-l" style="width:100px">
+                        <span></span>
+                        <i></i>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="searchTxt"><input type="text"><i class="searchIcon"></i></div>
+                    <span class="searchBtn">高级筛选></span>                    
+                </div>                    
+            </div>    
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="50" class="t-center"><i class="checkbox checkAll"></i></th>
+                    <th width="50" class="t-center">查看</th>
+                    <th>发件人</th>
+                    <th>标题</th>
+                    <th>内容</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="">删除</a></td>
+                    </tr>
+                    <tr id="2">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="">删除</a></td>
+                    </tr>
+                    <tr id="3">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="">删除</a></td>
+                    </tr>
+                    <tr id="4">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="">删除</a></td>
+                    </tr>
+                    <tr id="5">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="">删除</a></td>
+                    </tr>
+                    <tr id="6">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="">删除</a></td>
+                    </tr>
+                    <tr id="7">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="">删除</a></td>
+                    </tr>
+                </table>
+                <!-- 分页 -->
+                <div class="pages">         
+                    <div class="pageLeft">每页
+                        <div class="select pagePer">
+                            <input type="hidden" value="20">
+                            <span>20</span>
+                            <i></i>
+                            <ul>
+                                <li v="20" class="sel">20</li>
+                                <li v="40">40</li>
+                                <li v="60">60</li>
+                            </ul>
+                        </div>
+                        条，共<span class="pageCount">35</span>条
+                    </div>
+                    <a class="dis">首页</a><a class="dis">上一页</a>
+                    <div class="select pageList">
+                        <input type="hidden" class="currPage" value="1">
+                        <span>第1页</span>
+                        <i></i>
+                        <ul>      
+                            <li><a class="" >第1页</a></li>
+                            <li><a href="1.html">第2页</a></li>
+                            <li><a href="">第3页</a></li>
+                            <li><a href="">第4页</a></li>
+                        </ul>
+                    </div>
+                    <a href="">下一页</a><a href="">尾页</a>
+                </div>
+            </div>
+        </div> 
+        <!-- 收件箱 内容 -->
+        <!-- <div class="info message take-message" style="display:block;">
+            <div class="mainCtrl">
+                <ul>
+                    <li><span class="gen-guiBtn del">删除</span></li>
+                </ul>
+                <div>
+                    <div class="select memSearch" style="width:100px">
+                        <span>发件人</span>
+                        <i></i>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="searchTxt"><input type="text"><i class="searchIcon"></i></div>
+                    <span class="searchBtn">高级筛选></span>                    
+                </div>                    
+            </div>    
+            <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+                <tr>
+                    <th width="50" class="t-center"><i class="checkbox checkAll"></i></th>
+                    <th width="50" class="t-center">查看</th>
+                    <th>发件人</th>
+                    <th>标题</th>
+                    <th>内容</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+            </table>
+            <div class="tableCont">
+                <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+                    <tr id="1">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="" class="a-mt15">回复</a><a href="">删除</a></td>
+                    </tr>
+                    <tr id="2">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="" class="a-mt15">回复</a><a href="">删除</a></td>
+                    </tr>
+                    <tr id="3">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="" class="a-mt15">回复</a><a href="">删除</a></td>
+                    </tr>
+                    <tr id="4">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="" class="a-mt15">回复</a><a href="">删除</a></td>
+                    </tr>
+                    <tr id="5">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="" class="a-mt15">回复</a><a href="">删除</a></td>
+                    </tr>
+                    <tr id="6">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="" class="a-mt15">回复</a><a href="">删除</a></td>
+                    </tr>
+                    <tr id="7">
+                        <td class="t-center"><i class="checkbox"></i></td>
+                        <td class="t-center"><i class="viewBtn"></i></td>
+                        <td>李凯</td>
+                        <td>什么时候上线？</td>
+                        <td>初步估计是6月15日</td>
+                        <td>2016-03-26&nbsp;09:26:30</td>
+                        <td><a href="" class="a-mt15">回复</a><a href="">删除</a></td>
+                    </tr>
+                </table> -->
+                <!-- 分页 -->
+                <!-- <div class="pages">         
+                    <div class="pageLeft">每页
+                        <div class="select pagePer">
+                            <input type="hidden" value="20">
+                            <span>20</span>
+                            <i></i>
+                            <ul>
+                                <li v="20" class="sel">20</li>
+                                <li v="40">40</li>
+                                <li v="60">60</li>
+                            </ul>
+                        </div>
+                        条，共<span class="pageCount">35</span>条
+                    </div>
+                    <a class="dis">首页</a><a class="dis">上一页</a>
+                    <div class="select pageList">
+                        <input type="hidden" class="currPage" value="1">
+                        <span>第1页</span>
+                        <i></i>
+                        <ul>      
+                            <li><a class="" >第1页</a></li>
+                            <li><a href="1.html">第2页</a></li>
+                            <li><a href="">第3页</a></li>
+                            <li><a href="">第4页</a></li>
+                        </ul>
+                    </div>
+                    <a href="">下一页</a><a href="">尾页</a>
+                </div>
+            </div> -->
+        </div>            
+    </div> 
+</div>
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/main.js"></script>
+<!-- 发件箱 查看  开始 -->
+<div class="box" style="display:none;">
+    <!-- 标题区 -->
+    <div class="box-title  ft-12">
+        <h2 class="box-h2 f-l">查看信息</h2>
+        <span class="box-close f-r"></span>
+    </div>
+    <!-- 内容区 --> 
+    <div class="box-con info">
+      <ul>
+        <li>
+            <span class="title">发送人：</span>
+            <div class="text-oper">
+                likai@300.cn
+            </div>         
+        </li>
+        <li>
+            <span class="title">发送时间：</span>
+            <div class="text-oper">
+                2016-03-26 06:26:21
+            </div>         
+         </li>
+         <li>
+            <span class="title">标题：</span>
+            <div class="text-oper">
+                测试测试内容
+            </div>         
+         </li>
+         <li class="or-display">
+            <span class="title">内容：</span>
+            <div class="text-oper">
+                为什么还没完成？
+            </div>
+        </li>
+       </ul> 
+    </div> 
+</div>
+<!-- 发件箱 查看 结束 -->
+
+</body>
+</html>

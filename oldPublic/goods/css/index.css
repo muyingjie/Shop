@@ -1,0 +1,40 @@
+@charset "UTF-8";
+html,body{
+    overflow: hidden;
+}
+iframe{
+    width: 100%;
+    overflow-x: hidden;
+}
+.head iframe{
+    width: 100%;
+    height: 51px;
+}
+.head{
+    width: 100%;
+    min-width: 1280px;
+}
+.main{
+    /* position: relative;*/
+    width: 100%;
+}
+.nav-tree{
+    /*position: absolute;*/
+    top: 0;
+    width:180px;
+}
+.content{
+    width: 100%;
+    /*   width: 80%;*/
+}
+.nav-tree {
+    float: left;
+    *float: left;
+    /* *float:left !important;*/
+}
+.content {
+    margin-left: 181px;
+    *margin-left: 175px;
+    _float: right;
+    _width: 100%;
+}

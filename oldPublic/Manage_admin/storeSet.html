@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/list.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/systemSetting.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">系统设置<span>-商城设置</span></div>
+    <span class="refreshBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont">
+    <div class="tclist noBottom">
+                <div class="info webDescribe">
+                    <ul>
+                        <li>
+                            <div class="payMethodLeft w130">商铺名称&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input name="linkname" type="text" class="txt input-w249"/>
+                    <!-- <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>-->
+                    <div class="err-tip"><i></i><span></span></div>
+                </span>
+                        </li>
+                        <li>
+                            <div class="payMethodLeft w130 vertical-top">商铺logo&nbsp;:</div>
+                <span class="payMethodRight">
+                   <div class="uploader">
+                       <a href="javascript:;" class="file f-l">上传图片<input type="file" name="" id=""></a>
+                       <div class="default-tip f-l">建议每次添加尺寸相同</div>
+                       <span class="uploaderImg f-l"><img src="../images/default_image.jpg" /></span>
+                   </div>
+                </span>
+                        </li>
+                        <li>
+                            <div class="payMethodLeft w130">是否关闭会员注册&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input class="radio" type="radio" checked="checked" name="mess1">是&nbsp;&nbsp;
+                    <input class="radio marginL15" type="radio" name="mess1">否
+                </span>
+                        </li>
+                        <li>
+                            <div class="payMethodLeft w130">是否关闭网站&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input class="radio" type="radio" checked="checked" name="mess2">是&nbsp;&nbsp;
+                    <input class="radio marginL15" type="radio" name="mess2">否
+                </span>
+                        </li>
+                        <li>
+                            <div class="payMethodLeft w130 ">ICP备案号&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input name="linkname" type="text" class="txt input-w249 "/>
+                    <!-- <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>-->
+                    <div class="err-tip"><i></i><span></span></div>
+                </span>
+                        </li>
+                        <li>
+                            <div class="payMethodLeft w130 ">统计代码&nbsp;:</div>
+                <span class="payMethodRight">
+                    <input name="sumcode" type="text" class="txt input-w249 "/>
+                    <!-- <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>-->
+                    <div class="err-tip"><i></i><span></span></div>
+                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="webDescribeBtn">
+                    <span class="gen-sureBtn">保存</span>
+                </div>
+    </div>
+</div>
+<script src="../js/libs/jquery/jquery-1.9.1.js"></script>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+
+</body>
+</html>

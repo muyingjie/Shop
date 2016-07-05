@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>内容管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+</head>
+<body>
+<div class="info"><div class="err-tip"><i></i></div></div>
+<h2 class="lt-title">
+    <div class="mtitle">图片管理<span>-图片列表</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning handleSuccess"></div>
+</h2>
+
+<div class="mainCont">
+    <div class="mainCtrl">
+        <ul>
+            <li><span class="add">上传新图片</span></li>
+            <li><span class="add">添加网络图片</span></li>
+            <li><span class="add">生成缩略图</span></li>
+            <li><span class="add">使用水印</span></li>
+            <li>
+                <span class="ex">标签设置<i></i></span>
+                <dl class="levellist">
+                    <dd v="1">top</dd>
+                    <dd v="2">right</dd>
+                    <dd v="3">bottom</dd>
+                    <dd v="3">left</dd>
+                </dl>
+            </li>
+            <li><span class="del">删除</span></li>
+        </ul>
+        <div>
+            <div class="select memSearch f-l" style="width:100px">
+                <span>图片名称</span>
+                <i></i>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="searchTxt"><input type="text"><i class="searchIcon"></i></div>
+            <span class="searchBtn ">高级筛选></span>
+        </div>
+    </div>
+
+    <table cellpadding="0" cellspacing="0" border="0" class="tableTitle">
+        <tr>
+            <th width="40" class="t-center"><i class="checkbox checkAll"></i></th>
+            <th width="60" class="t-center">查看</th>
+            <th>图片名称</th>
+            <th>宽度</th>
+            <th>高度</th>
+            <th>使用水印</th>
+            <th>标签</th>
+            <th>图片</th>
+            <th>图片ID</th>
+            <th>更新时间</th>
+        </tr>
+    </table>
+    <div class="tableCont">
+        <table cellpadding="0" cellspacing="0" border="0" class="tableList">
+            <tr id="1">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td class="t-center"><i class="viewBtn"></i></td>
+                <td>韩版连衣裙</td>
+                <td>500</td>
+                <td>500</td>
+                <td>是</td>
+                <td>null</td>
+                <td><img src="../images/commonImg.png" alt=""/></td>
+                <td>fvrldfjdlsjf.jpg</td>
+                <td>2016-03-30 12:26:26</td>
+            </tr>
+            <tr id="2">
+                <td class="t-center"><i class="checkbox"></i></td>
+                <td class="t-center"><i class="viewBtn"></i></td>
+                <td>韩版连衣裙</td>
+                <td>500</td>
+                <td>500</td>
+                <td>是</td>
+                <td>null</td>
+                <td><img src="../images/commonImg.png" alt=""/></td>
+                <td>fvrldfjdlsjf.jpg</td>
+                <td>2016-03-30 12:26:26</td>
+            </tr>
+            <tr id="3">
+            <td class="t-center"><i class="checkbox"></i></td>
+            <td class="t-center"><i class="viewBtn"></i></td>
+            <td>韩版连衣裙</td>
+            <td>500</td>
+            <td>500</td>
+            <td>是</td>
+            <td>null</td>
+            <td><img src="../images/commonImg.png" alt=""/></td>
+            <td>fvrldfjdlsjf.jpg</td>
+            <td>2016-03-30 12:26:26</td>
+        </tr>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <div class="pageLeft">每页
+                <div class="select pagePer">
+                    <input type="hidden" value="20">
+                    <span>20</span>
+                    <i></i>
+                    <ul>
+                        <li v="20" class="sel">20</li>
+                        <li v="40">40</li>
+                        <li v="60">60</li>
+                    </ul>
+                </div>
+                条，共<span class="pageCount">35</span>条
+            </div>
+            <a class="dis">首页</a><a class="dis">上一页</a>
+            <div class="select pageList">
+                <input type="hidden" class="currPage" value="1">
+                <span>第1页</span>
+                <i></i>
+                <ul>
+                    <li><a class="" >第1页</a></li>
+                    <li><a href="1.html">第2页</a></li>
+                    <li><a href="">第3页</a></li>
+                    <li><a href="">第4页</a></li>
+                </ul>
+            </div>
+            <a href="">下一页</a><a href="">尾页</a>
+        </div>
+    </div>
+</div>
+<script src="jquery-1.9.1.min.js"></script>
+<script src="../js/libs/seajs/sea-debug.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

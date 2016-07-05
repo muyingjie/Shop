@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>新增咨询</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/box.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentManage.css"/>
+</head>
+<body>
+<h2 class="lt-title">
+    <div class="mtitle">资讯分类<span>-添加资讯信息</span></div>
+    <span class="refreshBtn"></span>
+    <span class="configBtn"></span>
+    <div class="handleWarning"></div>
+</h2>
+<div class="mainCont" style="overflow: hidden">
+    <div class="mainCtrl">
+        <!-- 内容区 -->
+        <div class="box-con info newsClassify">
+            <ul>
+                <li>
+                    <span class="title"><i class="red">*</i>资讯标题：</span>
+                    <div class="text-oper">
+                        <input name="linkname" type="text" class="txt " />
+                        <div class="default-tip">支持中文、字母、数字、“-”、“_”的组合，4-20个字符</div>
+                        <div class="err-tip"><i></i><span></span></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="title"><i class="red">*</i>资讯分类：</span>
+                    <div class="text-oper">
+                        <div class="select select-w166">
+                            <span>请选择类目</span>
+                            <i></i>
+                            <ul>
+                                <li v="选中之后真实值">北京市</li>
+                                <li v="选中之后真实值">上海市</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="title">发布人：</span>
+                    <div class="text-oper">
+                        <input name="linknum" type="text" class="txt input1" />
+                    </div>
+                </li>
+                <li>
+                    <span class="title">发布时间：</span>
+                    <div class="text-oper">
+                        <input name="linknum" type="text" class="txt input1" />
+                    </div>
+                </li>
+                <li class="or-display">
+                    <span class="title">是否发布：</span>
+                    <div class="text-oper">
+                        <input class="radio" type="radio" checked="checked" name="yes">是&nbsp;&nbsp;
+                        <input class="radio" type="radio" name="yes">否
+                    </div>
+                </li>
+                <li>
+                    <span class="title">文章配图：</span>
+                    <div class="uploader">
+                        <a href="javascript:" class="file f-l">选择图片<input type="file" name="" id=""></a>
+                        <div class="default-tip f-l">建议每次添加尺寸相同</div>
+                        <span class="uploaderImg f-l"><img src="../images/default_image.jpg" /></span>
+
+                    </div>
+                </li>
+                <li>
+                    <span class="title">搜索标题：</span>
+                    <div class="text-oper">
+                        <input name="linknum" type="text" class="txt input1" />
+                    </div>
+                </li>
+                <li>
+                    <span class="title">搜索关键字：</span>
+                    <div class="text-oper">
+                        <input name="linknum" type="text" class="txt input1" />
+                        <div class="default-tip">多个关键字时，用中文逗号分隔</div>
+                    </div>
+                </li>
+                <li>
+                    <span class="title">搜索描述：</span>
+                    <div class="text-oper">
+                        <input name="linknum" type="text" class="txt input1" />
+                    </div>
+                </li>
+                <li class="or-display">
+                    <span class="title"><i class="red">*</i>内容：</span>
+                        <div class=" cEditor">
+                        </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 按钮区 -->
+        <div class="box-btn">
+            <span class="gen-sureBtn boxSave">保存</span>
+            <span class="gen-cancelBtn boxSave">取消</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
