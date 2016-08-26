@@ -1,0 +1,8 @@
+*{ margin: 0; padding: 0; color: #666666;}
+.fl{ float: left;}
+.fr{ float: right;}
+/* 清除浮动 IE8+ */
+.clear:after{ clear: both; content: ""; display: block;}
+/* 清除浮动 IE6-8 */
+.clear{ zoom:1;}
+a{ text-decoration: none;}

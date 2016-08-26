@@ -2,49 +2,102 @@
 <html ng-app="shop">
 <head>
     <meta charset="utf-8">
-    <title>会员列表</title>
-    <link href="libs/bootstrap.css" rel="stylesheet"  type="text/css"/>
-    <link href="css/common.css" rel="stylesheet" type="text/css">
-    <link href="css/frame.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/form.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/box.css">
-    <link rel="stylesheet" type="text/css" href="css/list.css">
-    <link rel="stylesheet" type="text/css" href="css/orderManage.css"/>
-    <link rel="stylesheet" type="text/css" href="css/plugs/easyui.css">
-    <link href="css/goodsManage.css" rel="stylesheet" type="text/css">
-    <style>
-        .sideList dd { display: block; }
+    <title>ngShop</title>
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style type="text/css">
+        .bddddddd{ border-color: #dddddd;}
+
+        .ft12{ font-size: 12px;}
+        .ft14{ font-size: 14px;}
+        .ft16{ font-size: 16px;}
+        .ft20{ font-size: 20px;}
+
+        .top-items{ width: 100%; border-bottom-width: 1px; border-bottom-style: solid;}
+        .top-items .logo{ width: 186px; text-align: center;border-right-width: 1px; border-right-style: solid; padding: 12px 0;}
+
+        .speci-content .nav{ width: 186px; border-right-width: 1px; border-right-style: solid;}
+        .speci-content .nav .item{ overflow: hidden;}
+        .speci-content .nav .item40h{ height: 40px;}
+        .speci-content .nav .item .nav-title,.speci-content .nav .item .nav-item{ height: 40px; line-height: 40px;}
+        .speci-content .nav .item .nav-title a,.speci-content .nav .item .nav-item a{ display: block;}
+        .speci-content .nav .item .nav-title a{ padding-left: 20px; }
+        .speci-content .nav .item .nav-item a{ padding-left: 40px;}
+        .speci-content .nav .item .nav-item a.highlight{ background: #eee;}
+
+        .speci-content .contentWrap{ position: relative; margin-left: 187px;}
+        .speci-content .contentWrap .copyRight{ width: 100%; height: 50px; line-height: 50px; position: absolute; bottom: 0; border-top-width: 1px; border-top-style: solid;}
+        .speci-content .contentWrap .topMenu{ height: 60px;}
+        .speci-content .contentWrap .title{ padding-left: 30px; line-height: 60px; font-weight: normal;}
+        .speci-content .contentWrap .content-padding{ padding: 10px;}
+        .speci-content .contentWrap .content{ margin-top: 0; border-width: 1px; border-style: solid;}
     </style>
 </head>
 
-<body style="overflow: hidden;" ng-controller="MainController">
-    <div class="sideBar">
-        <div class="sideList">
-            <dl ng-repeat="item in menu track by $index">
-                <dt ng-click="navShow($index)">{{item.name}}<i></i></dt>
-                <dd ng-repeat="childItem in item.items track by $index" ng-show="item.isShow"><a ui-sref="{{childItem.hash}}">{{childItem.name}}</a></dd>
-            </dl>
+<body>
+    <div class="ngshop">
+        <div class="top-items bddddddd clear">
+            <a href="javascript:;" class="logo fl bddddddd"><img src="images/logo.png" alt=""></a>
+            <div class="menu fl">
+                <div class="hide-logo"></div>
+                <ul class="operate-list"></ul>
+            </div>
+        </div>
+        <div class="speci-content clear" ng-controller="MainController">
+            <div class="nav fl bddddddd">
+                <dl ng-class="{item:true,item40h:!firstLevelMenu.isShow}" ng-repeat="firstLevelMenu in menu track by $index">
+                    <dt class="nav-title ft16"><a href="javascript:;" ng-click="navShow($index)">{{firstLevelMenu.name}}</a></dt>
+                    <!--<dd ng-class="{nav-item:true, ft14:true, highlight:secondLevelMenu.highlight}" ng-repeat="secondLevelMenu in firstLevelMenu.items track by $index">-->
+                        <!--<a ng-href="#/{{secondLevelMenu.hash}}" ng-click="highlight($index,$index)">{{secondLevelMenu.name}}</a>-->
+                    <!--</dd>-->
+                    <dd class="nav-item ft14" ng-repeat="secondLevelMenu in firstLevelMenu.items track by $index">
+                        <a ng-href="#/{{secondLevelMenu.hash}}" ng-click="highlight($parent.$index,$index)" class="{{secondLevelMenu.highlight ? 'highlight' : ''}}">{{secondLevelMenu.name}}</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="contentWrap clear">
+                <div class="topMenu" ng-if="curState.isShow">
+                    <h2 class="title ft20">{{curState.title}}<span class="subTitle ft12">-{{curState.subTitle}}</span></h2>
+                </div>
+                <div class="content-padding">
+                    <div class="content bddddddd" ui-view></div>
+                </div>
+                <div class="copyRight bddddddd">Company 2015-2020 1.0</div>
+            </div>
         </div>
     </div>
-    <div class="header">
-        <div class="logo">
-            <a href="">
-                <img src="images/logo.png"></a><i class="sideBarBtn"></i>
-        </div>
-        <span class="search"></span>
-        <span class="alert"></span>
-        <span class="help"></span>
-        <span class="logout"></span>
-    </div>
-
-    <div class="container">
-        <div class="frameCont" ui-view>
-        </div>
-    </div>
-    <div class="copyright">Company 2015-2020  1.0</div>
-
     <script src="libs/jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            autoHeight();
+            window.onresize=autoHeight;
+
+            var eachNavH=40;
+
+//            var $lastItem;
+//            $(".speci-content .nav .item .nav-title").click(function(){
+//                $lastItem && $lastItem.animate({"height":eachNavH});
+//
+//                var $this=$(this);
+//                var $item;
+//                if($this!==$lastItem){
+//                    $item=$this.parents(".item");
+//                    $item.animate({"height":$item.children().length*eachNavH});
+//                    $lastItem=$item;
+//                }
+//            });
+
+            function autoHeight(){
+                var ch=$(document).height();
+                var navH=ch-54;
+                $(".speci-content").height(navH);
+                $(".speci-content .nav").height("100%");
+                $(".speci-content .contentWrap").height("100%");
+
+                $(".speci-content .content").height(navH-72);
+            }
+        });
+    </script>
     <script src="libs/angular.js"></script>
     <script src="libs/angular-animate.js"></script>
     <script src="libs/angular-route.js"></script>
@@ -61,8 +114,13 @@
         //    });
         //}]);
         shop.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.otherwise("/orderList");
+            $urlRouterProvider.otherwise("/index");
             //订单
+            $stateProvider.state("index",{
+                url:"/index",
+                templateUrl:"template/index.html"
+            });
+
             $stateProvider.state("orderList", {
                 url: "/orderList",
                 templateUrl: "template/order/orderList.html"
@@ -78,26 +136,59 @@
             }).state("goodsCategory", {
                 url: "/goodsCategory",
                 templateUrl: "template/goods/goodsCategory.html"
+            }).state("goodsType",{
+                url:"/goodsType",
+                templateUrl: "template/goods/goodsType.html"
             });
         }]);
         shop.controller("MainController", ["$scope", "MainMenuService", function ($scope, MainMenuService) {
             $scope.menu = MainMenuService.menu;
 
             setAllMenuHide();
+            setAllNavNonHightlight();
+
+            //右侧内容区域标题和副标题
+            $scope.curState={
+                isShow:false,
+                title:$scope.menu[0].name,
+                subTitle:$scope.menu[0].items[0].name
+            };
+
+            $scope.navShow = function (i) {
+                setAllMenuHide();
+                $scope.menu[i].isShow = true;
+            };
+
+            $scope.highlight = function(i1,i2){
+                $scope.curState.isShow=true;
+                setAllNavNonHightlight();
+                //当前行显示高亮
+                $scope.menu[i1].items[i2].highlight=true;
+                //更换右侧标题和副标题
+                $scope.curState.title=$scope.menu[i1].name;
+                $scope.curState.subTitle=$scope.menu[i1].items[i2].name;
+            };
 
             function setAllMenuHide() {
                 angular.forEach($scope.menu, function (d, i) {
                     d.isShow = false;
                 });
             }
-
-            $scope.navShow = function (i) {
-                setAllMenuHide();
-                $scope.menu[i].isShow = true;
-            };
+            function setAllNavNonHightlight(){
+                angular.forEach($scope.menu,function(d,i){
+                    angular.forEach(d.items,function(d3,i3){
+                        d.items[i3].highlight=false;
+                    });
+                });
+            }
         }]);
     </script>
+    <!--service-->
     <script src="service/MainMenuService.js"></script>
+    <!--controller-->
     <script src="controller/addNewGoodsCategoryController.js"></script>
+    <script src="controller/addNewGoodsController.js"></script>
+    <!--directive-->
+    <script src="directive/m_btn.js"></script>
 </body>
 </html>
