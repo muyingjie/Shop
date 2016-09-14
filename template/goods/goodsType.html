@@ -1,6 +1,5 @@
 <div ng-controller="goodsTypeListController">
-    <div class="list-operation-btns">
-        <m-btn></m-btn>
-        <m-btn></m-btn>
+    <div class="list-operation-btns clear" style="padding: 10px;">
+        <m-btn c="operation.cont" ng-repeat="operation in operations" ng-click="operation.fnOper()"></m-btn>
     </div>
 </div>
