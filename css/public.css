@@ -6,3 +6,4 @@
 /* 清除浮动 IE6-8 */
 .clear{ zoom:1;}
 a{ text-decoration: none;}
+input{ outline: none; border: 1px solid #a9a9a9;}
